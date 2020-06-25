@@ -13,8 +13,32 @@
     <ch5-list size="3" orientation="vertical">
       <template>
         <div class="slider-container container">
-          <ch5-slider> </ch5-slider>
+          <ch5-slider min="0" max="100" receivestatevalue="receive_blind_value">
+          </ch5-slider>
         </div>
+        <div class="flex justify-content-center">
+          <ch5-button
+            id="open_blind"
+            label="Open"
+            shape="circle"
+            sendeventonclick="open_blind"
+          >
+          </ch5-button>
+          <ch5-button
+            id="stop_blind"
+            label="Stop"
+            shape="circle"
+            sendeventonclick="stop_blind"
+          >
+          </ch5-button>
+          <ch5-button
+            id="close_blind"
+            label="Close"
+            shape="circle"
+            sendeventonclick="close_blind"
+          >
+          </ch5-button>
+
       </template>
     </ch5-list>
   </div>
@@ -24,7 +48,31 @@
     <ch5-list size="6" orientation="horizontal">
       <template>
         <div class="slider-container container">
-          <ch5-slider> </ch5-slider>
+          <ch5-slider min="0" max="100" receivestatevalue="receive_blind_value">
+          </ch5-slider>
+        </div>
+        <div class="flex justify-content-center">
+          <ch5-button
+            id="open_blind"
+            label="Open"
+            shape="circle"
+            sendeventonclick="open_blind"
+          >
+          </ch5-button>
+          <ch5-button
+            id="stop_blind"
+            label="Stop"
+            shape="circle"
+            sendeventonclick="stop_blind"
+          >
+          </ch5-button>
+          <ch5-button
+            id="close_blind"
+            label="Close"
+            shape="circle"
+            sendeventonclick="close_blind"
+          >
+          </ch5-button>
         </div>
       </template>
     </ch5-list>

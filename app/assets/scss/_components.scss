@@ -481,13 +481,13 @@
 }
 
 // blinds page
-$day-time-img: "url(/img/day-time.jpg)";
+$day-time-img: "url(/images/day-time.jpg)";
 
 .blinds-page {
   .slider-container {
     border: 0.8rem solid rgb(109, 118, 121);
     border-radius: 5px;
-    background-image: url("/img/day-time.jpg");
+    background-image: url("/images/day-time.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 0 0 0;

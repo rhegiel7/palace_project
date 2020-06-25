@@ -7,9 +7,14 @@
       "actions": [
         {
           "state": "receive_blind_value",
-          "type": "number",
+          "type": "object",
           "logic": "set",
-          "value": 50
+          "value": {
+            "rcb": {
+              "value": 50,
+              "time": 1000
+            }
+          }
         }
       ]
     },
@@ -26,7 +31,7 @@
           "value": {
             "rcb": {
               "value": 0,
-              "time": 5000
+              "time": 7000
             }
           }
         }

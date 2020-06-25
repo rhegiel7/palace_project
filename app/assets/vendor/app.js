@@ -248,6 +248,13 @@ var appModule = (function () {
     ) {
       serviceModule.initEmulator(JSON.parse(response));
     });
+
+    // Blinds Emulator
+    serviceModule.loadJSON("./assets/data/blinds-page-emulator.json", function (
+      response
+    ) {
+      serviceModule.initEmulator(JSON.parse(response));
+    });
   }
 
   /**
@@ -273,7 +280,7 @@ var appModule = (function () {
   function onLoadInit() {
     loadEmulator();
     changeTheme("LIGHT");
-    translateModule.getLanguage(translateModule.defaultLng);
+    // translateModule.getLanguage(translateModule.defaultLng);
     getAppVersionInfo();
     versionInformation();
     setTimeout(function () {
