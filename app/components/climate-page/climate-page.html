@@ -1,0 +1,146 @@
+<section class="climate-page">
+  <!-- <nav class="navbar navbar-dark"> -->
+  <div class="navbar-text pl-3">
+    <div class="room-info mb-1 pt-3 text-uppercase text-white">
+      <span class="d-sm-block">Climate</span>
+      <h2 class="mb-0" data-ch5-textcontent="Room.NameOfRoom">Great Room</h2>
+    </div>
+    <div class="room-temp d-flex align-items-center">
+      <h5>Room Temp: 30ºC</h5>
+    </div>
+  </div>
+
+  <hr />
+  <!-- </nav> -->
+  <div class="row">
+    <div
+      class="col-6 col-sm-5 pr-0 d-flex justify-content-center align-items-center"
+    >
+      <div class="mode-buttons-container d-flex flex-column align-items-center">
+        <div class="align-self-start"><h3 class="">Mode</h3></div>
+        <div class="mode-buttons horizontal">
+          <ch5-button
+            class="shadow-pulse-button"
+            id="fan-btn"
+            label="Fan"
+            stretch="both"
+            shape="rounded-rectangle"
+            sendeventonclick=""
+          >
+          </ch5-button>
+          <ch5-button
+            id="auto-btn"
+            label="Auto"
+            stretch="both"
+            shape="rounded-rectangle"
+            sendeventonclick=""
+          >
+          </ch5-button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="col-6 col-sm-7 on-off-container pl-0 pr-0 d-flex justify-content-center align-items-center"
+    >
+      <div class="on-off-btn">
+        <ch5-button
+          id="on-btn"
+          label="ON"
+          shape="circle"
+          stretch="both"
+          sendeventonclick="_clicked"
+        >
+        </ch5-button>
+
+        <ch5-button
+          id="off-btn"
+          label="OFF"
+          shape="circle"
+          stretch="both"
+          sendeventonclick="_clicked"
+        >
+        </ch5-button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-5 pr-0 d-flex justify-content-center align-items-center">
+      <div
+        class="fan-buttons-container mt-3 d-flex flex-column align-items-center"
+      >
+        <div class="align-self-start"><h3 class="">Fan</h3></div>
+        <div class="mode-buttons">
+          <ch5-button
+            id="fan-high-btn"
+            label="High"
+            shape="rounded-rectangle"
+            stretch="both"
+            sendeventonclick=""
+          >
+          </ch5-button>
+
+          <ch5-button
+            id="fan-medium-btn"
+            label="Medium"
+            shape="rounded-rectangle"
+            stretch="both"
+            sendeventonclick=""
+          >
+          </ch5-button>
+          <ch5-button
+            id="fan-low-btn"
+            label="Low"
+            shape="rounded-rectangle"
+            stretch="both"
+            sendeventonclick=""
+          >
+          </ch5-button>
+          <ch5-button
+            id="fan-off-btn"
+            label="Off"
+            shape="rounded-rectangle"
+            stretch="both"
+            sendeventonclick=""
+          >
+          </ch5-button>
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="row">
+        <div class="col-12 col-sm p-0">
+          <div
+            class="temp-container d-flex align-items-center justify-content-center"
+          >
+            <h1>23ºC</h1>
+          </div>
+        </div>
+        <div class="col-12 col-sm p-0">
+          <div class="on-off-btn plus-minus-btn">
+            <div></div>
+            <ch5-button
+              id="plus-btn"
+              label=""
+              shape="circle"
+              stretch="both"
+              iconclass="fas fa-plus"
+              sendeventonclick="btn_clicked"
+            >
+            </ch5-button>
+
+            <ch5-button
+              id="plus-btn"
+              label=""
+              shape="circle"
+              stretch="both"
+              iconclass="fas fa-minus"
+              sendeventonclick="btn_clicked"
+            >
+            </ch5-button>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
