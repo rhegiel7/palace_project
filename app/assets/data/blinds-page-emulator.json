@@ -2,11 +2,35 @@
   "cues": [
     {
       "type": "b",
-      "event": "stop_blind",
+      "event": "trig_shades",
+      "trigger": true,
+      "actions": [
+        { "state": "show_shades", "value": true, "type": "b", "logic": "set" },
+        {
+          "state": "show_blackout",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "b",
+      "event": "trig_blackout",
+      "trigger": true,
+      "actions": [
+        { "state": "show_shades", "value": false, "type": "b", "logic": "set" },
+        { "state": "show_blackout", "value": true, "type": "b", "logic": "set" }
+      ]
+    },
+
+    {
+      "type": "b",
+      "event": "stop_shades",
       "trigger": true,
       "actions": [
         {
-          "state": "receive_blind_value",
+          "state": "receive_shades_value",
           "type": "object",
           "logic": "set",
           "value": {
@@ -21,17 +45,17 @@
 
     {
       "type": "b",
-      "event": "open_blind",
+      "event": "open_shades",
       "trigger": true,
       "actions": [
         {
-          "state": "receive_blind_value",
+          "state": "receive_shades_value",
           "type": "object",
           "logic": "set",
           "value": {
             "rcb": {
               "value": 0,
-              "time": 7000
+              "time": 5000
             }
           }
         }
@@ -39,11 +63,11 @@
     },
     {
       "type": "b",
-      "event": "close_blind",
+      "event": "close_shades",
       "trigger": true,
       "actions": [
         {
-          "state": "receive_blind_value",
+          "state": "receive_shades_value",
           "type": "object",
           "logic": "set",
           "value": {
@@ -56,14 +80,58 @@
       ]
     },
     {
-      "type": "number",
-      "event": "slider_value_on_change",
-      "trigger": "&change",
+      "type": "b",
+      "event": "stop_blackout",
+      "trigger": true,
       "actions": [
         {
-          "state": "receive_slider_value",
-          "type": "number",
-          "logic": "link"
+          "state": "receive_blackout_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 50,
+              "time": 1000
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "b",
+      "event": "open_blackout",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "receive_blackout_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 5000
+            }
+          }
+        }
+      ]
+    },
+
+    {
+      "type": "b",
+      "event": "close_blackout",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "receive_blackout_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 100,
+              "time": 5000
+            }
+          }
         }
       ]
     }

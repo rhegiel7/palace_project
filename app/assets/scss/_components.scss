@@ -480,50 +480,84 @@
   }
 }
 
-// blinds page
-$day-time-img: "url(/images/day-time.jpg)";
+// blinds page (includes styles for blackout and shades)
 
 .blinds-page {
+  span.window-label {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .blackout-shades-btn {
+    position: absolute;
+    left: 35%;
+    top: 1.5rem;
+    display: inline-block;
+    .ch5-button {
+      margin-right: 0.5rem;
+    }
+  }
+
+  // background img for shades slider
+
+  .shades-container {
+    .ch5-slider {
+      .noUi-connect {
+        display: block;
+        position: relative;
+        background-image: none;
+      }
+      .noUi-connect::after {
+        background-image: url("/assets/img/blinds/window_view1.jpeg");
+        background-size: 37rem 18rem;
+        background-repeat: no-repeat;
+        content: "";
+        opacity: 0.2;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        position: absolute;
+        z-index: -1;
+      }
+    }
+  }
+
   .slider-container {
-    border: 0.8rem solid rgb(109, 118, 121);
+    border-top: 1rem solid rgb(48, 26, 2);
+    box-shadow: 0px 5px 6px 5px rgb(85, 83, 83);
     border-radius: 5px;
-    background-image: url("/images/day-time.jpg");
-    background-size: cover;
+    background-image: url("/assets/img/blinds/window_view1.jpeg");
+    background-size: 25rem 17.2rem;
     background-repeat: no-repeat;
     padding: 0 0 0 0;
+    height: 18rem;
     width: 25rem;
+
     .ch5-slider {
+      transform: rotate(180deg);
+      transform-origin: center center;
       padding: 0 !important;
+      height: 17.2rem;
       .noUi-connects {
-        height: 17rem;
+        // height: 20rem;
+        position: static;
       }
+
+      // background img for blackout slider
+
       .noUi-connect {
-        // opacity: 0.5;
-        // background-color: rgb(92, 133, 133);
-        // opacity: 0.5;
-        background: #005aa7; /* fallback for old browsers */
-        background: -webkit-linear-gradient(
-          to right,
-          #fffde4,
-          #005aa7
-        ); /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(
-          to right,
-          #fffde4,
-          #005aa7
-        ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background-image: url("/assets/img/blinds/wood-blinds.jpg");
+        background-size: 37rem 18rem;
+        background-repeat: no-repeat;
       }
+
+      //
       .noUi-base {
-        width: 23.5rem;
-        background-color: rgb(69, 84, 94);
         border-radius: 5px;
       }
       .noUi-target {
-        width: 23rem;
-        border: 0;
-      }
-      .noUi-handle {
-        background-color: #354b55;
+        width: 25rem;
+        height: 17rem;
         border: 0;
       }
     }
@@ -531,14 +565,9 @@ $day-time-img: "url(/images/day-time.jpg)";
   ch5-list {
     .list-item {
       background-color: transparent !important;
+      border: none;
     }
   }
-  // .slider-container {
-  //   background-color: red;
-  // }
-  // .ch5-slider {
-  //   width: 200px;
-  // }
 }
 
 // lighting page

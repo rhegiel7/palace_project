@@ -1,0 +1,87 @@
+<section id="" class="blackout">
+
+      <!-- show vertical list when below large -->
+  <div
+  class="blinds-list-container d-flex d-lg-none justify-content-center align-items-center"
+>
+  <ch5-list size="3" orientation="vertical" indexId="idx">
+    <template>
+        <span class="window-label">Window #{{idx}} </span>
+
+      <div class="slider-container container">
+        <ch5-slider nohandle="true" orientation="vertical" min="0" max="100" receivestatevalue="receive_blackout_value">
+        </ch5-slider>
+      </div>
+      <div class="open-close-btn-container "></div>
+
+      <div class="open-close-btn mt-3 d-flex justify-content-around ">
+        <ch5-button
+          id="open_blind"
+          
+          label="Open"
+          shape="circle"
+          sendeventonclick="open_blackout"
+        >
+        </ch5-button>
+        <ch5-button
+          id="stop_blind"
+          label="Stop"
+          shape="circle"
+          sendeventonclick="stop_blackout"
+        >
+        </ch5-button>
+        <ch5-button
+          id="close_blind"
+          label="Close"
+          shape="circle"
+          sendeventonclick="close_blackout"
+        >
+        </ch5-button>
+
+    </template>
+  </ch5-list>
+</div>
+
+  <!-- show horizontal list when large and above -->
+
+<div
+  class="blinds-list-container d-lg-flex d-none justify-content-center align-items-center"
+>
+  <ch5-list size="6" orientation="horizontal" indexId="idx">
+    <template>
+        <span class="window-label">Window #{{idx}} </span>
+
+      <div class="slider-container container">
+        <ch5-slider nohandle="true" orientation="vertical" min="0" max="100" receivestatevalue="receive_blackout_value">
+        </ch5-slider>
+      </div>
+      <div class="open-close-btn-container"></div>
+      <div class=" open-close-btn mt-3 d-flex justify-content-around ">
+        <ch5-button
+          id="open_blind"
+          label="Open"
+          shape="circle"
+          sendeventonclick="open_blackout"
+        >
+        </ch5-button>
+        <ch5-button
+          id="stop_blind"
+          label="Stop"
+          shape="circle"
+          sendeventonclick="stop_blackout"
+        >
+        </ch5-button>
+        <ch5-button
+          id="close_blind"
+          label="Close"
+          shape="circle"
+          sendeventonclick="close_blackout"
+        >
+        </ch5-button>
+      </div>
+    </template>
+  </ch5-list>
+</div>
+
+
+</section>
