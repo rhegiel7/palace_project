@@ -31,7 +31,7 @@
     </ch5-list>
 
     <div class="navbar-action">
-      <!-- <a class="btn-link text-uppercase" data-ch5-i18n="-+lighting.alllights+-"
+      <!-- <a class="btn-link text-uppercase" data-ch5-i18n="-+lighting.alllights+-"sssss
         >All Lights</a
       > -->
       <button
@@ -52,20 +52,21 @@
         orientation="vertical"
         indexId="idx"
         scrollbar="true"
-        receiveStateSize="Room.NumberOfLights"
+        receiveStateSize="Floor[0].Room[0].Lighting.NumberOfLights"
       >
         <template>
           <div class="vertical-list-item">
             <span
               class="label"
-              data-ch5-textcontent="Room.DimmableLights[{{idx}}].NameOfLight"
+              data-ch5-textcontent="Floor[0].Room[0].DimmableLights[0].NameOfLight"
               >Label</span
             >
             <div class="d-flex align-items-center">
               <ch5-button
                 class="lighting-button"
                 shape="circle"
-                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOff"
+               
+                sendeventonclick="Floor[0].Room[0].DimmableLights[0].TurnLightOff"
                 iconurl="./assets/img/lighting/fa-icon-lightbulb.svg"
               ></ch5-button>
               <ch5-slider
@@ -73,14 +74,14 @@
                 stretch="width"
                 handleShape="circle"
                 toolTipShowType="auto"
-                sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
-                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel"
+                sendEventOnChange="Floor[0].Room[0].DimmableLights[0].SetLightLevel"
+                receiveStateValue="Floor[0].Room[0].DimmableLights[0].LightIsAtLevel"
                 orientation="horizontal"
               ></ch5-slider>
               <ch5-button
                 class="lighting-button"
                 shape="circle"
-                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOn"
+                sendEventOnClick="Floor[0].Room[0].DimmableLights[0].TurnLightOn"
                 iconClass="fas fa-lightbulb"
               >
               </ch5-button>
@@ -96,7 +97,7 @@
         mode="panel"
         maxWidth="none"
         indexId="idx"
-        receiveStateSize="Room.NumberOfScenes"
+        receiveStateSize="Floor[0].Room[0].Lighting.NumberOfScenes"
         noneSelectedPrompt="-+lighting.sceneTitle+-"
         receiveStateValue="NotDefinedOnPurpose"
         signalValueSyncTimeout="2500"
@@ -104,10 +105,10 @@
       >
         <template>
           <ch5-select-option
-            sendEventOnClick="Room.Scenes[{{idx}}].TriggerSceneStart"
+            sendEventOnClick="Floor[0].Room[0].Scene[0].TriggerSceneStart"
           >
             <span
-              data-ch5-textContent="Room.Scenes[{{idx}}].NameOfScene"
+              data-ch5-textContent="Floor[0].Room[0].Scene[0].NameOfScene"
             ></span>
           </ch5-select-option>
         </template>
