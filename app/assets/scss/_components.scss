@@ -486,6 +486,7 @@
   span.window-label {
     display: block;
     margin-bottom: 1rem;
+    padding-left: 30px;
   }
   .blackout-shades-btn {
     position: absolute;
@@ -494,6 +495,42 @@
     display: inline-block;
     .ch5-button {
       margin-right: 0.5rem;
+    }
+    @include media-breakpoint-up(lg) {
+      left: 42%;
+    }
+  }
+
+  .open-close-btn-container {
+    display: flex;
+    justify-content: center;
+    // margin-bottom: 1rem;
+  }
+
+  .open-close-btn {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(auto, 20vmin));
+    grid-auto-rows: 1fr;
+    grid-gap: 2rem;
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(3, minmax(auto, 17vmin));
+      grid-gap: 1.5rem;
+    }
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(3, minmax(auto, 16vmin));
+      grid-gap: 1.5rem;
+    }
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, minmax(auto, 14vmin));
+      grid-gap: 1.5rem;
+    }
+    @include media-breakpoint-up(xl) {
+      grid-template-columns: repeat(3, minmax(auto, 11vmin));
+      grid-gap: 1.6rem;
+    }
+
+    .ch5-button {
+      border: none;
     }
   }
 
@@ -504,18 +541,22 @@
       .noUi-connect {
         display: block;
         position: relative;
-        background-image: none;
+        background-image: none !important;
+        background-color: transparent;
+        // background-size: 37rem 18rem;
+        background-size: 100% 100%;
       }
       .noUi-connect::after {
-        background-image: url("/assets/img/blinds/window_view1.jpeg");
-        background-size: 37rem 18rem;
+        transform: rotate(180deg);
+        background-image: url("/assets/img/blinds/blinds_transp_white.png");
+        // background-size: 37rem 18rem;
         background-repeat: no-repeat;
         content: "";
-        opacity: 0.2;
+        opacity: 0.75;
         top: 0;
         left: 0;
-        bottom: 0;
-        right: 0;
+        bottom: -15rem;
+        right: -15rem;
         position: absolute;
         z-index: -1;
       }
@@ -527,45 +568,81 @@
     box-shadow: 0px 5px 6px 5px rgb(85, 83, 83);
     border-radius: 5px;
     background-image: url("/assets/img/blinds/window_view1.jpeg");
-    background-size: 25rem 17.2rem;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 0 0 0 0;
     height: 18rem;
     width: 25rem;
+    @include media-breakpoint-up(sm) {
+      height: 15rem;
+      width: 21rem;
+    }
+    @include media-breakpoint-up(md) {
+      height: 20rem;
+      width: 30rem;
+    }
 
     .ch5-slider {
       transform: rotate(180deg);
       transform-origin: center center;
       padding: 0 !important;
       height: 17.2rem;
+      @include media-breakpoint-up(sm) {
+        height: 14.2rem;
+      }
+      @include media-breakpoint-up(md) {
+        height: 19.2rem;
+      }
       .noUi-connects {
-        // height: 20rem;
         position: static;
       }
-
+      .noUi-target {
+        height: 17rem;
+        width: 25rem;
+        border: 0;
+        @include media-breakpoint-up(sm) {
+          height: 15rem;
+          width: 21rem;
+        }
+        @include media-breakpoint-up(md) {
+          height: 20rem;
+          width: 30rem;
+        }
+      }
+      .noUi-base {
+        border-radius: 5px;
+      }
       // background img for blackout slider
 
       .noUi-connect {
         background-image: url("/assets/img/blinds/wood-blinds.jpg");
-        background-size: 37rem 18rem;
+        background-size: 150% 100%;
         background-repeat: no-repeat;
       }
 
       //
-      .noUi-base {
-        border-radius: 5px;
-      }
-      .noUi-target {
-        width: 25rem;
-        height: 17rem;
-        border: 0;
-      }
     }
   }
   ch5-list {
     .list-item {
       background-color: transparent !important;
       border: none;
+    }
+    .ch5-list-vertical {
+      .list-item {
+        border-bottom: 1px solid rgb(78, 78, 78);
+        margin-bottom: 1rem;
+      }
+    }
+    .ch5-list-horizontal {
+      .list-item {
+        border-right: 1px solid rgb(78, 78, 78);
+        padding: 0 3rem 2rem;
+
+        @include media-breakpoint-up(xl) {
+          padding-top: 2rem;
+        }
+      }
     }
   }
 }
@@ -778,7 +855,7 @@
   }
   .mode-buttons.horizontal {
     grid-template-columns: repeat(2, minmax(auto, 20vmin));
-    grid-auto-rows: 9vh;
+    grid-auto-rows: 7vh;
   }
 
   .on-off-btn {
