@@ -659,10 +659,268 @@
   ],
   "onStart": [
     {
+      "state": "Floor[0].NumberOfFloors",
+      "type": "n",
+      "value": 2
+    },
+    
+    {
+      "state": "Floor[1].NumberOfFloors",
+      "type": "n",
+      "value": 2
+    }, 
+
+    {
       "state": "Floor[0].Room[0].RoomName",
       "type": "s",
-      "value": "Room 0"
+      "value": "Cinema"
     },
+
+    {
+      "state": "Floor[0].Room[1].RoomName",
+      "type": "s",
+      "value": "Entrance"
+  },
+ 
+  {
+      "state": "Floor[0].Room[2].RoomName",
+      "type": "s",
+      "value": "Game Room"
+  },
+ 
+  {
+      "state": "Floor[0].Room[3].RoomName",
+      "type": "s",
+      "value": "Guest Bedroom"
+  },
+ 
+  {
+      "state": "Floor[0].Room[4].RoomName",
+      "type": "s",
+      "value": "Kitchen"
+  },
+ 
+  {
+      "state": "Floor[0].Room[5].RoomName",
+      "type": "s",
+      "value": "Lounge Area"
+  },
+ 
+  {
+      "state": "Floor[0].Room[6].RoomName",
+      "type": "s",
+      "value": "Office"
+  },
+ 
+  {
+      "state": "Floor[0].Room[7].RoomName",
+      "type": "s",
+      "value": "Parking"
+  },
+ 
+  {
+      "state": "Floor[0].Room[8].RoomName",
+      "type": "s",
+      "value": "Pool Lounge"
+  },
+ 
+  {
+      "state": "Floor[0].Room[9].RoomName",
+      "type": "s",
+      "value": "Swimming Pool"
+  },
+ 
+  {
+      "state": "Floor[0].Room[10].RoomName",
+      "type": "s",
+      "value": "Tv Room 1"
+  },
+ 
+  {
+      "state": "Floor[0].Room[11].RoomName",
+      "type": "s",
+      "value": "Tv Room 2"
+  },
+
+  {
+      "state": "Floor[0].Room[0].NumberOfRooms",
+      "type": "n",
+      "value": 12
+  },
+
+  {
+    "state": "Floor[0].Room[1].NumberOfRooms",
+    "type": "n",
+    "value": 12
+},
+
+
+{
+  "state": "Floor[0].Room[2].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
+{
+"state": "Floor[0].Room[3].NumberOfRooms",
+"type": "n",
+"value": 12
+},
+
+
+
+{
+  "state": "Floor[0].Room[4].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
+{
+"state": "Floor[0].Room[5].NumberOfRooms",
+"type": "n",
+"value": 12
+},
+
+
+{
+  "state": "Floor[0].Room[6].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
+{
+"state": "Floor[0].Room[7].NumberOfRooms",
+"type": "n",
+"value": 12
+},
+
+
+{
+  "state": "Floor[0].Room[8].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
+{
+"state": "Floor[0].Room[9].NumberOfRooms",
+"type": "n",
+"value": 12
+},
+
+
+{
+  "state": "Floor[0].Room[10].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
+{
+"state": "Floor[0].Room[11].NumberOfRooms",
+"type": "n",
+"value": 12
+},
+
+{
+  "state": "Floor[1].Room[0].RoomName",
+  "type": "s",
+  "value": "Bedroom 1"
+},
+
+{
+  "state": "Floor[1].Room[1].RoomName",
+  "type": "s",
+  "value": "Bedroom 2"
+},
+
+{
+  "state": "Floor[1].Room[2].RoomName",
+  "type": "s",
+  "value": "Bedroom 3"
+},
+
+{
+  "state": "Floor[1].Room[3].RoomName",
+  "type": "s",
+  "value": "Bedroom 4"
+},
+
+{
+  "state": "Floor[1].Room[4].RoomName",
+  "type": "s",
+  "value": "Master Bedroom"
+},
+
+{
+  "state": "Floor[1].Room[5].RoomName",
+  "type": "s",
+  "value": "GYM"
+},
+
+{
+  "state": "Floor[1].Room[6].RoomName",
+  "type": "s",
+  "value": "Hangout Room"
+},
+
+{
+  "state": "Floor[1].Room[7].RoomName",
+  "type": "s",
+  "value": "Lounge Area"
+},
+
+{
+  "state": "Floor[1].Room[0].NumberOfRooms",
+  "type": "n",
+  "value": 8
+},
+
+{
+"state": "Floor[1].Room[1].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+
+{
+"state": "Floor[1].Room[2].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+{
+"state": "Floor[1].Room[3].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+
+
+{
+"state": "Floor[1].Room[4].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+{
+"state": "Floor[1].Room[5].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+
+{
+"state": "Floor[1].Room[6].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+{
+"state": "Floor[1].Room[7].NumberOfRooms",
+"type": "n",
+"value": 8
+},
+
+
     {
       "state": "Floor[0].Room[0].Lighting.NumberOfLights",
       "type": "n",

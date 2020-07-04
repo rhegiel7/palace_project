@@ -1,18 +1,8 @@
 <section id="room-list-templ">
   <div class="room-list-templ">
-    <!-- Dropdown start -->
+   
     <div class="dropdown left">
-      <!-- <ch5-button iconurl="../../assets/img/villa_icon.svg"
-        ><a
-          class="btn btn-secondary"
-          href="#"
-          role="button"
-          id="dropdownMenuLink"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        ></a
-      ></ch5-button> -->
+      
       <button
         class="btn btn-lg"
         type="button"
@@ -20,6 +10,7 @@
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
+        
       >
         <i class="fas fa-home"></i>
        
@@ -29,6 +20,7 @@
         class="dropdown-menu"
         id="rooms-dropdown"
         aria-labelledby="dropdownMenuButton"
+       
       >
         <div class="row">
           <div class="col-3">
@@ -37,7 +29,7 @@
               class="ch5-custom-list"
               orientation="vertical"
               indexId="idx"
-              size="2"
+              receivestatesize="Floor[0].NumberOfFloors"
              
             >
               <template>
@@ -46,20 +38,94 @@
                   id="btn_id"
                   type="default"
                   shape="rectangle"
-                  size="regular"
-                  stretch="both"
-                  iconposition="first"
-                  iconclass="iconClass"
+                  
+                  
                   orientation="horizontal"
                   sendeventonclick="Floor[{{idx}}].FloorSelect"
                   sendeventontouch="btn_id_touched"
-                  receivestateselected="Floor[{{idx}}].FloorIsSelected"
-                  receivestatelabel="Floor[{{idx}}].NameOfFloor[{{idx}}]"
+                
+                  receivestatelabel="Floor[{{idx}}].NameOfFloor"
+                  receivestateselected="Floor[{{idx}}].FloorIsSelected"                
+
                 >
-                </ch5-button>         
-              </template>
+                </ch5-button>   
+                
+               
+              </template> 
+
+
+              
             </ch5-list>
+          </div> 
+
+          <div class="col-9">
+
+            <ch5-list  
+            class="ch5-custom-list"
+            orientation="vertical"                 
+            orientation="vertical"
+            indexId="idx"
+           
+            receivestatesize="Floor[0].Room[0].NumberOfRooms"
+            >
+
+            <template>
+              <ch5-button
+              id="btn_id"
+              type="default"
+              shape="rectangle"
+              
+              orientation="horizontal"
+                sendeventonclick="Floor[0].Room[{{idx}}].RoomSelect"
+                sendeventontouch="btn_id_touched"
+                receivestateselected="Floor[0].Room[{{idx}}].RoomSelected"
+                receivestatelabel="Floor[0].Room[{{idx}}].RoomName"
+              >
+              </ch5-button>
+            </template>
+
+            </ch5-list>
+
+
+            
+          <div class="col-15">
+
+            <ch5-list  
+            class="ch5-custom-list"
+            orientation="vertical"                 
+            orientation="vertical"
+            indexId="idx"
+            receivestatesize="Floor[1].Room[0].NumberOfRooms"
+            >
+
+            <template>
+              <ch5-button
+              id="btn_id"
+              type="default"
+              shape="rectangle"
+              
+              orientation="horizontal"
+                sendeventonclick="Floor[1].Room[{{idx}}].RoomSelect"
+                sendeventontouch="btn_id_touched"
+                receivestateselected="Floor[1].Room[{{idx}}].RoomSelected"
+                receivestatelabel="Floor[1].Room[{{idx}}].RoomName"
+              >
+              </ch5-button>
+            </template>
+
+            </ch5-list>
+        
+
+
           </div>
+        
+            
+
+          </div>
+
+         
+          
+            
           
         </div>
       </div>
