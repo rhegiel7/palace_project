@@ -135,5 +135,8 @@
         }
       ]
     }
+  ],
+  "onStart": [
+    { "state": "show_shades", "value": true, "type": "b", "logic": "set" }
   ]
 }

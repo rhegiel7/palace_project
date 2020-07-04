@@ -304,6 +304,11 @@ $ch5-light-gradient-buttons: map-merge(
   .blinds-page {
     .ch5-button {
       background-color: $ch5-lighting-btn-light;
+      box-shadow: 3px 3px 7px rgb(70, 70, 70);
+    }
+    .ch5-button--pressed {
+      box-shadow: 1px 1px 3px rgb(58, 57, 57);
+      transform: translateY(3px);
     }
     .blackout-shades-btn {
       .ch5-button {
@@ -322,14 +327,8 @@ $ch5-light-gradient-buttons: map-merge(
         opacity: 1;
       }
     }
-  }
-  .shades {
     .open-close-btn {
       .ch5-button {
-        // box-shadow: inset 0px 0px 14px 10px rgba(59, 59, 59, 0.726);
-        border: none;
-        // box-sizing: border-box !important;
-        // border: 2px solid rgb(56, 53, 53);
       }
     }
   }
