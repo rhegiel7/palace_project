@@ -36,16 +36,18 @@
       >
         <div class="row">
           <div class="col-3">
+
             <ch5-list
               class="ch5-custom-list"
               orientation="vertical"
               indexId="idx"
               size="2"
+             
             >
               <template>
-                <ch5-button
+
+               <ch5-button
                   id="btn_id"
-                  label="Floor {{idx}}"
                   type="default"
                   shape="rectangle"
                   size="regular"
@@ -56,60 +58,13 @@
                   sendeventonclick="Floor[{{idx}}].FloorSelect"
                   sendeventontouch="btn_id_touched"
                   receivestateselected="Floor[{{idx}}].FloorIsSelected"
+                  receivestatelabel="Floor[{{idx}}].NameOfFloor[{{idx}}]"
                 >
-                </ch5-button>
-                <!-- <ch5-button
-                  id="btn_id"
-                  label="First Floor"
-                  type="default"
-                  shape="rectangle"
-                  size="regular"
-                  stretch="both"
-                  iconposition="first"
-                  iconclass="iconClass"
-                  orientation="horizontal"
-                  sendeventonclick="Floor[{{idx}}].FloorSelect"
-                  sendeventontouch="btn_id_touched"
-                  receivestateselected="Floor[{{idx}}].FloorIsSelected"
-                  receivestatelabel=""
-                  receivestatescriptlabelhtml=""
-                > -->
-                </ch5-button>
-                <!-- <template>
-                <div id="btn_{{idx}}" >
-                  <span>Floor {{idx}}</span>
-                </div>
-              </template> -->
+                </ch5-button>         
               </template>
             </ch5-list>
           </div>
-          <div class="col-9">
-            <ch5-list receivestatesize="" orientation="vertical">
-              <template>
-                <ch5-button
-                  id="btn_id"
-                  label=""
-                  type="default"
-                  customClass="customClass"
-                  shape="rounded-rectangle"
-                  size="regular"
-                  stretch="both"
-                  iconposition="first"
-                  iconclass="iconClass"
-                  orientation="horizontal"
-                  sendeventonclick="Floor[{{idx}}].Room[{{idx}}].RoomSelect"
-                  sendeventontouch="btn_id_touched"
-                  receivestateselected="Floor[{{idx}}].Room[{{idx}}].RoomSelected"
-                  receivestatelabel="Floor[{{idx}}].Room[{{idx}}].RoomName"
-                >
-                </ch5-button>
-              </template>
-            </ch5-list>
-            <!-- <a class="dropdown-item" href="#">Room 1</a>
-            <a class="dropdown-item" href="#">Room 2</a>
-            <a class="dropdown-item" href="#">Room 3</a>
-            <a class="dropdown-item" href="#">Room 4</a> -->
-          </div>
+          
         </div>
       </div>
     </div>
