@@ -255,6 +255,14 @@ var appModule = (function () {
     ) {
       serviceModule.initEmulator(JSON.parse(response));
     });
+
+    // Room List Emulator
+    serviceModule.loadJSON("./assets/data/room-list-templ-emulator.json", function (
+      response
+    ) {
+      serviceModule.initEmulator(JSON.parse(response));
+    });
+
   }
 
   /**
