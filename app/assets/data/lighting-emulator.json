@@ -657,6 +657,9 @@
       ]
     }
   ],
+
+
+
   "onStart": [
     {
       "state": "Floor[0].NumberOfFloors",
@@ -741,6 +744,20 @@
       "type": "s",
       "value": "Tv Room 2"
   },
+
+
+  {
+    "state": "Floor[0].NumberOfRooms",
+    "type": "n",
+    "value": 12
+},
+
+{
+  "state": "Floor[1].NumberOfRooms",
+  "type": "n",
+  "value": 12
+},
+
 
   {
       "state": "Floor[0].Room[0].NumberOfRooms",

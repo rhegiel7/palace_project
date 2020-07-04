@@ -1,6 +1,6 @@
 {
 	"name": "TomVilla",
-	"timestamp": "2020-06-29 12:51:20.377",
+	"timestamp": "2020-07-04 14:12:43.543",
 	"version": "1.0.0.0",
 	"schema_version": 1,
 	"extra_value": "  ",
@@ -3796,52 +3796,8 @@
 			},
 			"numeric": {
 				"1": {
-					"1": "Floor[0].NumberOfFloors"
-				},
-				"2": {
-					"1": "Floor[0].Room[0].NumberOfRooms"
-				},
-				"3": {
-					"1": "Floor[0].Room[1].NumberOfRooms"
-				},
-				"4": {
-					"1": "Floor[0].Room[2].NumberOfRooms"
-				},
-				"5": {
-					"1": "Floor[0].Room[3].NumberOfRooms"
-				},
-				"6": {
-					"1": "Floor[0].Room[4].NumberOfRooms"
-				},
-				"7": {
-					"1": "Floor[0].Room[5].NumberOfRooms"
-				},
-				"8": {
-					"1": "Floor[0].Room[6].NumberOfRooms"
-				},
-				"9": {
-					"1": "Floor[0].Room[7].NumberOfRooms"
-				},
-				"10": {
-					"1": "Floor[0].Room[8].NumberOfRooms"
-				},
-				"11": {
-					"1": "Floor[0].Room[9].NumberOfRooms"
-				},
-				"12": {
-					"1": "Floor[0].Room[10].NumberOfRooms"
-				},
-				"13": {
-					"1": "Floor[0].Room[11].NumberOfRooms"
-				},
-				"14": {
-					"1": "Floor[0].Room[12].NumberOfRooms"
-				},
-				"15": {
-					"1": "Floor[0].Room[13].NumberOfRooms"
-				},
-				"16": {
-					"1": "Floor[0].Room[14].NumberOfRooms"
+					"1": "Floor[0].NumberOfFloors",
+					"2": "Floor[0].NumberOfRooms"
 				},
 				"17": {
 					"1": "Floor[0].Room[0].Lighting.NumberOfLights",
@@ -4624,52 +4580,8 @@
 					"2": "Floor[0].Room[14].Volume.NumberOfInputs"
 				},
 				"617": {
-					"1": "Floor[1].NumberOfFloors"
-				},
-				"618": {
-					"1": "Floor[1].Room[0].NumberOfRooms"
-				},
-				"619": {
-					"1": "Floor[1].Room[1].NumberOfRooms"
-				},
-				"620": {
-					"1": "Floor[1].Room[2].NumberOfRooms"
-				},
-				"621": {
-					"1": "Floor[1].Room[3].NumberOfRooms"
-				},
-				"622": {
-					"1": "Floor[1].Room[4].NumberOfRooms"
-				},
-				"623": {
-					"1": "Floor[1].Room[5].NumberOfRooms"
-				},
-				"624": {
-					"1": "Floor[1].Room[6].NumberOfRooms"
-				},
-				"625": {
-					"1": "Floor[1].Room[7].NumberOfRooms"
-				},
-				"626": {
-					"1": "Floor[1].Room[8].NumberOfRooms"
-				},
-				"627": {
-					"1": "Floor[1].Room[9].NumberOfRooms"
-				},
-				"628": {
-					"1": "Floor[1].Room[10].NumberOfRooms"
-				},
-				"629": {
-					"1": "Floor[1].Room[11].NumberOfRooms"
-				},
-				"630": {
-					"1": "Floor[1].Room[12].NumberOfRooms"
-				},
-				"631": {
-					"1": "Floor[1].Room[13].NumberOfRooms"
-				},
-				"632": {
-					"1": "Floor[1].Room[14].NumberOfRooms"
+					"1": "Floor[1].NumberOfFloors",
+					"2": "Floor[1].NumberOfRooms"
 				},
 				"633": {
 					"1": "Floor[1].Room[0].Lighting.NumberOfLights",
@@ -21380,126 +21292,6 @@
 				"Floor[1].SetNumberOfFloors": {
 					"joinId": 1,
 					"smartObjectId": 617
-				},
-				"Floor[0].Room[0].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 2
-				},
-				"Floor[0].Room[1].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 3
-				},
-				"Floor[0].Room[2].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 4
-				},
-				"Floor[0].Room[3].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 5
-				},
-				"Floor[0].Room[4].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 6
-				},
-				"Floor[0].Room[5].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 7
-				},
-				"Floor[0].Room[6].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 8
-				},
-				"Floor[0].Room[7].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 9
-				},
-				"Floor[0].Room[8].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 10
-				},
-				"Floor[0].Room[9].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 11
-				},
-				"Floor[0].Room[10].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 12
-				},
-				"Floor[0].Room[11].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 13
-				},
-				"Floor[0].Room[12].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 14
-				},
-				"Floor[0].Room[13].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 15
-				},
-				"Floor[0].Room[14].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 16
-				},
-				"Floor[1].Room[0].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 618
-				},
-				"Floor[1].Room[1].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 619
-				},
-				"Floor[1].Room[2].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 620
-				},
-				"Floor[1].Room[3].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 621
-				},
-				"Floor[1].Room[4].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 622
-				},
-				"Floor[1].Room[5].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 623
-				},
-				"Floor[1].Room[6].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 624
-				},
-				"Floor[1].Room[7].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 625
-				},
-				"Floor[1].Room[8].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 626
-				},
-				"Floor[1].Room[9].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 627
-				},
-				"Floor[1].Room[10].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 628
-				},
-				"Floor[1].Room[11].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 629
-				},
-				"Floor[1].Room[12].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 630
-				},
-				"Floor[1].Room[13].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 631
-				},
-				"Floor[1].Room[14].SetNumberOfRooms": {
-					"joinId": 1,
-					"smartObjectId": 632
 				},
 				"Floor[0].Room[0].Lighting.SetNumberOfLights": {
 					"joinId": 1,
