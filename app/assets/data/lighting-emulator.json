@@ -689,6 +689,30 @@
       "state": "Floor[0].Room[0].Lighting.NumberOfScenes",
       "type": "n",
       "value": 5
-    }
+    },
+
+    {
+      "state": "Floor[0].NumberOfFloors",
+      "type": "n",
+      "value": 2
+  },
+
+  {
+      "state": "Floor[1].NumberOfFloors",
+      "type": "n",
+      "value": 2
+  },
+
+  {
+      "state": "Floor[0].NameOfFloor",
+      "type": "s",
+      "value": "Ground Floor"
+  },
+
+  {
+      "state": "Floor[1].NameOfFloor",
+      "type": "s",
+      "value": "First Floor"
+  }
   ]
 }
