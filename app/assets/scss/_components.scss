@@ -811,16 +811,20 @@
       margin-top: 5vh !important;
     }
     @include media-breakpoint-up(sm) {
-      margin-top: 0.5vh !important;
-      padding: 0 1.2rem 1rem;
+      margin-top: 0.7vh !important;
+      padding: 0 1.6rem 0.5rem;
     }
     @include media-breakpoint-up(md) {
       margin-top: 5vh !important;
-      padding: 0 1.5rem 1rem;
+      padding: 0 1.7rem 1rem;
+    }
+    @include media-breakpoint-up(lg) {
+      margin-top: 0.3vh !important;
+      padding: 0 1.9rem 0.5rem;
     }
     @include media-breakpoint-up(xl) {
       margin-top: 7vh !important;
-      padding: 0.5rem 1.8rem 1.5rem;
+      padding: 0.5rem 2rem 1.5rem;
     }
   }
 
@@ -829,34 +833,55 @@
     grid-template-columns: minmax(auto, 25vmin);
     grid-auto-rows: 7vh;
     grid-gap: 0.8rem;
+    &.horizontal {
+      @include media-breakpoint-only(xs) {
+        grid-template-columns: repeat(3, minmax(auto, 25vmin));
+        grid-auto-rows: 7vh;
+      }
+      // grid-template-columns: repeat(3, minmax(auto, 25vmin));
+      // grid-auto-rows: 7vh;
+    }
+
     @include media-breakpoint-up(sm) {
-      grid-template-columns: repeat(2, minmax(auto, 22vmin));
+      grid-template-columns: repeat(1, minmax(auto, 22vmin));
       grid-auto-rows: 11vmin;
       & span {
         font-size: 1.2rem;
       }
+      &.horizontal {
+        grid-template-columns: repeat(3, minmax(auto, 22vmin));
+      }
     }
     @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(2, minmax(auto, 20vmin));
+      grid-template-columns: repeat(1, minmax(auto, 20vmin));
       grid-auto-rows: 11vmin;
       & span {
         font-size: 1.4rem;
       }
+      &.horizontal {
+        grid-template-columns: repeat(3, minmax(auto, 20vmin));
+      }
     }
     @include media-breakpoint-up(lg) {
-      grid-template-columns: repeat(2, minmax(auto, 20vmin));
+      grid-template-columns: repeat(1, minmax(auto, 20vmin));
       grid-auto-rows: 10vmin;
       grid-gap: 1rem;
 
       & span {
         font-size: 1.6rem;
       }
+
+      &.horizontal {
+        grid-template-columns: repeat(3, minmax(auto, 20vmin));
+      }
     }
   }
-  .mode-buttons.horizontal {
-    grid-template-columns: repeat(2, minmax(auto, 20vmin));
-    grid-auto-rows: 7vh;
-  }
+  // .mode-buttons.horizontal {
+  //   @include media-breakpoint-only(xs) {
+  //     grid-template-columns: repeat(3, minmax(auto, 25vmin));
+  //     grid-auto-rows: 7vh;
+  //   }
+  // }
 
   .on-off-btn {
     display: grid;
@@ -959,14 +984,33 @@
       }
     }
     @include media-breakpoint-up(xl) {
-      height: 22rem;
-      width: 22rem;
+      height: 20rem;
+      width: 20rem;
       margin: 3rem 0 0 10rem;
 
-      border-width: 3.5rem;
+      border-width: 3.3rem;
       & h1 {
         font-size: 3rem;
       }
+    }
+  }
+  .temp-column {
+    @include media-breakpoint-up(sm) {
+      position: absolute;
+      bottom: 0.3rem;
+    }
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      bottom: 1rem;
+    }
+    @include media-breakpoint-up(lg) {
+      position: absolute;
+      right: -2.8rem;
+      bottom: 1rem;
+    }
+    @include media-breakpoint-up(xl) {
+      position: absolute;
+      bottom: 3rem;
     }
   }
 }

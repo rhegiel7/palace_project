@@ -3,7 +3,7 @@
   <div class="navbar-text pl-3">
     <div class="room-info mb-1 pt-3 text-uppercase text-white">
       <span class="d-sm-block">Climate</span>
-      <h2 class="mb-0" data-ch5-textcontent="Room.NameOfRoom">Great Room</h2>
+      <h2 class="mb-0" data-ch5-textcontent="">Great Room</h2>
     </div>
     <div class="room-temp d-flex align-items-center">
       <h5>Room Temp: 30ºC</h5>
@@ -14,7 +14,7 @@
   <!-- </nav> -->
   <div class="row">
     <div
-      class="col-6 col-sm-5 pr-0 d-flex justify-content-center align-items-center"
+      class="col-12 col-sm-7 order-sm-2 h-sm-4 align-self-start pr-0 d-flex justify-content-center align-items-center"
     >
       <div class="mode-buttons-container d-flex flex-column align-items-center">
         <div class="align-self-start"><h3 class="">Mode</h3></div>
@@ -30,7 +30,15 @@
           </ch5-button>
           <ch5-button
             id="auto-btn"
-            label="Auto"
+            label="Cool"
+            stretch="both"
+            shape="rectangle"
+            sendeventonclick=""
+          >
+          </ch5-button>
+          <ch5-button
+            id="auto-btn"
+            label="Off"
             stretch="both"
             shape="rectangle"
             sendeventonclick=""
@@ -38,9 +46,9 @@
           </ch5-button>
         </div>
       </div>
-    </div>
-    <!-- ON OFF Buttons -->
-    <div
+
+      <!-- ON OFF Buttons -->
+      <!-- <div
       class="col-6 col-sm-7 on-off-container pl-0 pr-0 d-flex justify-content-center align-items-center"
     >
       <div class="on-off-btn">
@@ -62,10 +70,12 @@
         >
         </ch5-button>
       </div>
+    </div> -->
     </div>
-  </div>
-  <div class="row">
-    <div class="col-5 pr-0 d-flex justify-content-center align-items-center">
+
+    <div
+      class="col-5 col-sm-5 order-sm-1 pr-0 d-flex justify-content-center align-items-center"
+    >
       <div
         class="fan-buttons-container mt-3 d-flex flex-column align-items-center"
       >
@@ -98,7 +108,7 @@
           </ch5-button>
           <ch5-button
             id="fan-off-btn"
-            label="Off"
+            label="Auto"
             shape="rectangle"
             stretch="both"
             sendeventonclick=""
@@ -107,7 +117,9 @@
         </div>
       </div>
     </div>
-    <div class="col-7">
+    <div
+      class="temp-column col-7 col-sm-7 order-sm-3 offset-sm-6 offset-lg-5 align-self-start"
+    >
       <div class="row">
         <div class="col-12 col-sm p-0">
           <div
