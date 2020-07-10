@@ -1,5 +1,3 @@
-
-
 var roomListTemplModule = (function () {
   "use strict";
 
@@ -39,6 +37,31 @@ var roomListTemplModule = (function () {
 
 function dropDown() {
   event.stopPropagation();
+}
+function addAnimation() {
+  let dropdown = document.getElementById("rooms-dropdown");
+  dropdown.classList.add("animate__slideOutLeft");
+}
+function removeAnimation() {
+  let dropdown = document.getElementById("rooms-dropdown");
+  dropdown.classList.remove("animate__slideOutLeft");
+}
+
+function closeDropdown() {
+  let dropdown = document.getElementById("rooms-dropdown");
+  setTimeout(addAnimation, 300);
+  setTimeout(removeAnimation, 900);
+  setTimeout(function () {
+    dropdown.classList.remove("show");
+  }, 600);
+}
+
+function resetTransform() {
+  let firstFloor = document.getElementById("floor-btn-0");
+  let list = document.getElementById("cr-id-18");
+  if (firstFloor) {
+    list.style.transform = "translate3d(0px, 0px, 0px)";
+  }
 }
 
 // document.getElementById("rooms-dropdown").addEventListener(

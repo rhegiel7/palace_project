@@ -23,7 +23,6 @@
         { "state": "show_blackout", "value": true, "type": "b", "logic": "set" }
       ]
     },
-
     {
       "type": "b",
       "event": "stop_shades",
@@ -42,7 +41,6 @@
         }
       ]
     },
-
     {
       "type": "b",
       "event": "open_shades",

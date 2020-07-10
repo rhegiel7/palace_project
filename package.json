@@ -16,9 +16,9 @@
     "export:project": "node shell-utilities/export/export.js"
   },
   "devDependencies": {
+    "@crestron/ch5-utilities-cli": "^0.1.47",
     "browser-sync": "^2.26.7",
     "browser-sync-webpack-plugin": "^2.2.2",
-    "@crestron/ch5-utilities-cli": "^0.1.47",
     "config": "^3.3.1",
     "copy-webpack-plugin": "^5.0.4",
     "css-loader": "^3.0.0",
@@ -47,6 +47,7 @@
   "dependencies": {
     "@crestron/ch5-crcomlib": "^1.0.0",
     "@crestron/ch5-theme": "^1.0.0",
-    "@fortawesome/fontawesome-free": "^5.9.0"
+    "@fortawesome/fontawesome-free": "^5.9.0",
+    "animate.css": "^4.1.0"
   }
 }

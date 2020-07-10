@@ -64,7 +64,7 @@ $sidebar-dark-action-selected-color: darken(#495057, 5%) !default;
 $sidebar-dark-action-selected-bg: rgba(#fff, 0.7) !default;
 
 // lighting page
-$ch5-lighting-btn-dark: darken(#57606a, 5%) !default;
+$ch5-lighting-btn-dark: darken(#57606b, 5%) !default;
 
 // container background
 $ch5-container-dark-bg: #404040;
@@ -322,6 +322,60 @@ $ch5-dark-gradient-buttons: map-merge(
       background-color: rgba(#343a40, 0.9);
     }
   }
+
+  // room list (drop down menu)
+  .room-list-templ {
+    .dropdown-menu {
+      background-color: rgba(43, 43, 43, 0.9);
+    }
+    .dropdown-btn {
+      background-color: rgba(94, 94, 94, 0.863);
+      color: white;
+    }
+
+    .floors-container {
+      background-color: $ch5-lighting-btn-dark;
+    }
+
+    ch5-list {
+      .list-item {
+        background-color: transparent;
+      }
+    }
+    .ch5-button {
+      color: rgb(29, 29, 29);
+    }
+    .floors-btn {
+      .ch5-button {
+        background: linear-gradient(-45deg, #32373d, #94a3b8);
+
+        // background-color: $ch5-lighting-btn-light;
+
+        &.ch5-button--selected {
+          background: linear-gradient(-45deg, #94a3b8, #32373d);
+
+          box-shadow: 0px 0px 4px 2px rgb(255, 255, 255);
+
+          // box-shadow: 0px 0px 4px 2px rgb(228, 206, 84);
+          // background-color: #5e5d5d;
+          background-color: $ch5-lighting-btn-light;
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+    .rooms-btn {
+      .ch5-button {
+        background-color: $ch5-lighting-btn-dark;
+        box-shadow: 0px -7px 11px 1px rgb(172, 172, 172);
+        &.ch5-button--selected {
+          color: rgb(255, 255, 255);
+
+          // margin-top: 0.5rem !important;
+        }
+      }
+    }
+  }
+
   // blinds page
   .blinds-page {
     span.window-label {

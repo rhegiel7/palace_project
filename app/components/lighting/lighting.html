@@ -5,7 +5,9 @@
         <span class="d-sm-block" data-ch5-i18n="-+lighting.title+-"
           >Lighting</span
         >
-        <h2 class="mb-0" data-ch5-textcontent="Room.NameOfRoom">Great Room</h2>
+        <h2 class="mb-0" data-ch5-textcontent="Rooms.SelectedRoomName">
+          Room Name
+        </h2>
       </div>
     </div>
     <ch5-list class="ch5-custom-list dim">
@@ -52,7 +54,7 @@
         orientation="vertical"
         indexId="idx"
         scrollbar="true"
-        receiveStateSize="Floor[0].Room[0].Lighting.NumberOfLights"
+        receiveStateSize="Room.NumberOfLights"
       >
         <template>
           <div class="vertical-list-item">
@@ -65,8 +67,7 @@
               <ch5-button
                 class="lighting-button"
                 shape="circle"
-               
-                sendeventonclick="Floor[0].Room[0].DimmableLights[0].TurnLightOff"
+                sendeventonclick="Room.DimmableLights[{{idx}}].TurnLightOff"
                 iconurl="./assets/img/lighting/fa-icon-lightbulb.svg"
               ></ch5-button>
               <ch5-slider
@@ -74,14 +75,14 @@
                 stretch="width"
                 handleShape="circle"
                 toolTipShowType="auto"
-                sendEventOnChange="Floor[0].Room[0].DimmableLights[0].SetLightLevel"
-                receiveStateValue="Floor[0].Room[0].DimmableLights[0].LightIsAtLevel"
+                sendEventOnChange="Room.DimmableLights[{{idx}}].SetLightLevel"
+                receiveStateValue="Room.DimmableLights[{{idx}}].LightIsAtLevel"
                 orientation="horizontal"
               ></ch5-slider>
               <ch5-button
                 class="lighting-button"
                 shape="circle"
-                sendEventOnClick="Floor[0].Room[0].DimmableLights[0].TurnLightOn"
+                sendEventOnClick="Room.DimmableLights[{{idx}}].TurnLightOn"
                 iconClass="fas fa-lightbulb"
               >
               </ch5-button>
@@ -97,7 +98,7 @@
         mode="panel"
         maxWidth="none"
         indexId="idx"
-        receiveStateSize="Floor[0].Room[0].Lighting.NumberOfScenes"
+        receiveStateSize="Room.NumberOfScenes"
         noneSelectedPrompt="-+lighting.sceneTitle+-"
         receiveStateValue="NotDefinedOnPurpose"
         signalValueSyncTimeout="2500"
@@ -105,10 +106,10 @@
       >
         <template>
           <ch5-select-option
-            sendEventOnClick="Floor[0].Room[0].Scene[0].TriggerSceneStart"
+            sendEventOnClick="Room.Scenes[{{idx}}].TriggerSceneStart"
           >
             <span
-              data-ch5-textContent="Floor[0].Room[0].Scene[0].NameOfScene"
+              data-ch5-textContent="Room.Scenes[{{idx}}].NameOfScene"
             ></span>
           </ch5-select-option>
         </template>

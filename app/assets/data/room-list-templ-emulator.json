@@ -1,149 +1,3209 @@
 {
-
   "cues": [
-    
-      {
+    {
+      "type": "boolean",
+      "event": "Floors.Floor[0].SetFloorSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Floors.Floor[0].FloorIsSelected",
+          "value": true,
           "type": "b",
-          "event": "Floor[0].Room[0].RoomSelect",
-          "trigger": true
-      },
-
-      {
+          "logic": "set"
+        },
+        {
+          "state": "Floors.Floor[1].FloorIsSelected",
+          "value": false,
           "type": "b",
-          "event": "Floor[0].Room[0].RoomSelected",
-          "trigger": true
-      },
-
-
-      {
+          "logic": "set"
+        },
+        {
           "type": "b",
-          "event": "Floor[0].Room[1].RoomSelect",
-          "trigger": true
-      },
-
-      {
+          "state": "Rooms.Room[0].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
           "type": "b",
-          "event": "Floor[0].Room[1].RoomSelected",
-          "trigger": true
-      }
+          "state": "Rooms.Room[1].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[2].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[3].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[4].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[5].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[6].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[7].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[8].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[9].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[10].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[11].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[12].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[13].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[14].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[15].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[16].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[17].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[18].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[19].RoomSelect",
+          "value": true,
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Floors.Floor[1].SetFloorSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Floors.Floor[0].FloorIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Floors.Floor[1].FloorIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Floors.SelectedFloorNumberOfRooms",
+          "type": "n",
+          "value": 12
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[0].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[1].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[2].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[3].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[4].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[5].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[6].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[7].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[8].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[9].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[10].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[11].RoomSelect",
+          "value": true,
+          "logic": "set"
+        },
 
-
+        {
+          "type": "b",
+          "state": "Rooms.Room[12].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[13].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[14].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[15].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[16].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[17].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[18].RoomSelect",
+          "value": false,
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Room[19].RoomSelect",
+          "value": false,
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[0].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Cinema",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[1].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Entrance",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[2].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Game Room",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[3].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Guest Bedroom",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[4].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Kitchen",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[5].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Lounge Area",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[6].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Office",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[7].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Parking",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[8].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Pool Lounge",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[9].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Swimming Pool",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[10].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "TV Room 1",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[11].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "TV Room 2",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[12].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Bedroom 1",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[13].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Bedroom 2",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[14].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Bedroom 3",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[15].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Bedroom 4",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[16].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Master Bedroom",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[17].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "GYM",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[18].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Hangout Room",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Room[19].SetRoomSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.SelectedRoomName",
+          "type": "s",
+          "value": "Lounge Area",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[0].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[1].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[2].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[3].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[4].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[5].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[6].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[7].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[8].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[9].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[10].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[11].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[12].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[13].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[14].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[15].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[16].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[17].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[18].RoomIsSelected",
+          "value": false,
+          "type": "b",
+          "logic": "set"
+        },
+        {
+          "state": "Rooms.Room[19].RoomIsSelected",
+          "value": true,
+          "type": "b",
+          "logic": "set"
+        }
+      ]
+    }
   ],
-
-  
-
-
-
-"onStart": [
-
-
-  {
-      "state": "Floor[0].NumberOfFloors",
+  "onStart": [
+    {
+      "type": "b",
+      "state": "Floors.Floor[1].FloorIsSelected",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "state": "Floors.Floor[0].FloorIsSelected",
+      "value": false,
+      "type": "b",
+      "logic": "set"
+    },
+    {
+      "state": "Floors.NumberOfFloors",
       "type": "n",
       "value": 2
-  },
-
-  {
-      "state": "Floor[1].NumberOfFloors",
+    },
+    {
+      "state": "Rooms.NumberOfRooms",
       "type": "n",
-      "value": 2
-  },
-
-  {
-      "state": "Floor[0].NameOfFloor",
+      "value": 20
+    },
+    {
+      "state": "Floors.Floor[0].NameOfFloor",
       "type": "s",
-      "value": "Ground Floor"
-  },
-
-  {
-      "state": "Floor[1].NameOfFloor",
+      "value": "1"
+    },
+    {
+      "state": "Floors.Floor[1].NameOfFloor",
       "type": "s",
-      "value": "First Floor"
-  },
-
-  {
-    "state": "Floor[0].Room[0].RoomName",
-    "type": "s",
-    "value": "Cinema"
-  },
-
-  {
-      "state": "Floor[0].Room[1].RoomName",
+      "value": "G"
+    },
+    {
+      "state": "Rooms.SelectedRoomName",
       "type": "s",
       "value": "Entrance"
-  },
- 
-  {
-      "state": "Floor[0].Room[2].RoomName",
+    },
+    {
+      "state": "Rooms.Room[0].RoomName",
+      "type": "s",
+      "value": "Cinema"
+    },
+
+    {
+      "state": "Rooms.Room[1].RoomName",
+      "type": "s",
+      "value": "Entrance"
+    },
+    {
+      "state": "Rooms.Room[2].RoomName",
       "type": "s",
       "value": "Game Room"
-  },
- 
-  {
-      "state": "Floor[0].Room[3].RoomName",
+    },
+    {
+      "state": "Rooms.Room[3].RoomName",
       "type": "s",
       "value": "Guest Bedroom"
-  },
- 
-  {
-      "state": "Floor[0].Room[4].RoomName",
+    },
+    {
+      "state": "Rooms.Room[4].RoomName",
       "type": "s",
       "value": "Kitchen"
-  },
- 
-  {
-      "state": "Floor[0].Room[5].RoomName",
+    },
+    {
+      "state": "Rooms.Room[5].RoomName",
       "type": "s",
       "value": "Lounge Area"
-  },
- 
-  {
-      "state": "Floor[0].Room[6].RoomName",
+    },
+    {
+      "state": "Rooms.Room[6].RoomName",
       "type": "s",
       "value": "Office"
-  },
- 
-  {
-      "state": "Floor[0].Room[7].RoomName",
+    },
+    {
+      "state": "Rooms.Room[7].RoomName",
       "type": "s",
       "value": "Parking"
-  },
- 
-  {
-      "state": "Floor[0].Room[8].RoomName",
+    },
+    {
+      "state": "Rooms.Room[8].RoomName",
       "type": "s",
       "value": "Pool Lounge"
-  },
- 
-  {
-      "state": "Floor[0].Room[9].RoomName",
+    },
+    {
+      "state": "Rooms.Room[9].RoomName",
       "type": "s",
       "value": "Swimming Pool"
-  },
- 
-  {
-      "state": "Floor[0].Room[10].RoomName",
+    },
+    {
+      "state": "Rooms.Room[10].RoomName",
       "type": "s",
-      "value": "Tv Room 1"
-  },
- 
-  {
-      "state": "Floor[0].Room[11].RoomName",
+      "value": "TV Room 1"
+    },
+    {
+      "state": "Rooms.Room[11].RoomName",
       "type": "s",
-      "value": "Tv Room 2"
-  },
+      "value": "TV Room 2"
+    },
+    {
+      "state": "Rooms.Room[12].RoomName",
+      "type": "s",
+      "value": "Bedroom 1"
+    },
+    {
+      "state": "Rooms.Room[13].RoomName",
+      "type": "s",
+      "value": "Bedroom 2"
+    },
+    {
+      "state": "Rooms.Room[14].RoomName",
+      "type": "s",
+      "value": "Bedroom 3"
+    },
+    {
+      "state": "Rooms.Room[15].RoomName",
+      "type": "s",
+      "value": "Bedroom 4"
+    },
+    {
+      "state": "Rooms.Room[16].RoomName",
+      "type": "s",
+      "value": "Master Bedroom"
+    },
+    {
+      "state": "Rooms.Room[17].RoomName",
+      "type": "s",
+      "value": "GYM"
+    },
+    {
+      "state": "Rooms.Room[18].RoomName",
+      "type": "s",
+      "value": "Hangout Room"
+    },
+    {
+      "state": "Rooms.Room[19].RoomName",
+      "type": "s",
+      "value": "Lounge Area"
+    },
 
-  {
-      "state": "Floor[0].Room[0].NumberOfRooms",
-      "type": "n",
-      "value": 15
-  },
-
-  {
-    "state": "Floor[0].Room[1].NumberOfRooms",
-    "type": "n",
-    "value": 15
-}
-
-]
+    {
+      "type": "b",
+      "state": "Rooms.Room[0].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[1].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[2].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[3].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[4].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[5].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[6].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[7].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[8].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[9].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[10].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[11].RoomSelect",
+      "value": true,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[12].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[13].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[14].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[15].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[16].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[17].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[18].RoomSelect",
+      "value": false,
+      "logic": "set"
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Room[19].RoomSelect",
+      "value": false,
+      "logic": "set"
+    }
+  ]
 }

@@ -299,6 +299,63 @@ $ch5-light-gradient-buttons: map-merge(
       background-color: rgba(#808080, 0.9);
     }
   }
+  // room list (drop down menu)
+  .room-list-templ {
+    .dropdown-menu {
+      background-color: rgba(160, 160, 160, 0.932);
+    }
+    .dropdown-btn {
+      background-color: rgba(116, 116, 116, 0.9);
+      color: white;
+      :focus {
+        outline-color: transparent;
+      }
+    }
+    .floors-container {
+      background-color: rgb(95, 95, 95);
+    }
+
+    ch5-list {
+      .list-item {
+        background-color: transparent;
+      }
+    }
+    .ch5-button {
+      color: rgb(29, 29, 29);
+    }
+    .floors-btn {
+      .ch5-button {
+        background: linear-gradient(
+          -45deg,
+          rgba(0, 0, 0, 0.22),
+          rgba(255, 255, 255, 0.25)
+        );
+
+        &.ch5-button--selected {
+          box-shadow: 0px 0px 4px 2px rgb(255, 255, 255);
+
+          background: linear-gradient(
+            -45deg,
+            rgba(255, 255, 255, 0.25),
+            rgba(0, 0, 0, 0.22)
+          );
+          color: rgb(255, 255, 255);
+        }
+      }
+    }
+    .rooms-btn {
+      .ch5-button {
+        background-color: $ch5-lighting-btn-light;
+        box-shadow: 0px -7px 11px 1px rgb(145, 145, 145);
+        &.ch5-button--selected {
+          color: rgb(255, 255, 255);
+          font-size: 1.5rem;
+
+          // margin-top: 0.5rem !important;
+        }
+      }
+    }
+  }
 
   // blinds page / shades/ blackout
   .blinds-page {

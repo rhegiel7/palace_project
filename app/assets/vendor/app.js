@@ -257,12 +257,12 @@ var appModule = (function () {
     });
 
     // Room List Emulator
-    serviceModule.loadJSON("./assets/data/room-list-templ-emulator.json", function (
-      response
-    ) {
-      serviceModule.initEmulator(JSON.parse(response));
-    });
-
+    serviceModule.loadJSON(
+      "./assets/data/room-list-templ-emulator.json",
+      function (response) {
+        serviceModule.initEmulator(JSON.parse(response));
+      }
+    );
   }
 
   /**
