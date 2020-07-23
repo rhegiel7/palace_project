@@ -122,7 +122,6 @@
           "value": "AirBoard",
           "logic": "set"
         },
-
         {
           "type": "b",
           "state": "Rooms.Music.Source[0].SourseIsSelected",

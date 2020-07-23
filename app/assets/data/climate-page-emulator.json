@@ -1,0 +1,30 @@
+{
+  "cues": [
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.IncrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Climate.TempIncremented",
+          "type": "number",
+          "logic": "increment",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.DecrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Climate.TempDecremented",
+          "type": "number",
+          "logic": "decrement",
+          "offset": 1
+        }
+      ]
+    }
+  ]
+}

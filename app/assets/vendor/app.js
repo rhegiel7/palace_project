@@ -269,6 +269,13 @@ var appModule = (function () {
     ) {
       serviceModule.initEmulator(JSON.parse(response));
     });
+    // Climate Emulator
+    serviceModule.loadJSON(
+      "./assets/data/climate-page-emulator.json",
+      function (response) {
+        serviceModule.initEmulator(JSON.parse(response));
+      }
+    );
   }
 
   /**
