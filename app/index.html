@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title data-ch5-i18n="-+app.title+-"></title>
+    <title data-ch5-i18n="">Villa</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -91,7 +91,7 @@
         <!-- Climate start -->
         <ch5-triggerview-child>
           <ch5-import-htmlsnippet
-            class="lists-page"
+            class="climate-page"
             url="./components/climate-page/climate-page.html"
           ></ch5-import-htmlsnippet>
         </ch5-triggerview-child>
@@ -100,30 +100,26 @@
         <ch5-triggerview-child>
           <ch5-import-htmlsnippet
             class="source-page"
-            url="./components/source/source.html"
+            url="./components/music-page/music-page.html"
           >
           </ch5-import-htmlsnippet>
         </ch5-triggerview-child>
         <!-- Music end -->
         <!-- TV start -->
         <ch5-triggerview-child>
-          <br />
-          <br />
-          <div class="">
-            <h1 class="text-center">TV</h1>
-          </div>
+          <ch5-import-htmlsnippet
+            class="source-page"
+            url="./components/source/source.html"
+          >
+          </ch5-import-htmlsnippet>
         </ch5-triggerview-child>
         <!-- TV end -->
         <!-- Intercom start -->
         <ch5-triggerview-child>
+          <br />
           <div class="">
             <h1 class="text-center">Intercom</h1>
           </div>
-          <ch5-import-htmlsnippet
-            class="source-page"
-            url="./components/exp-component/exp-component.html"
-          >
-          </ch5-import-htmlsnippet>
         </ch5-triggerview-child>
         <!-- Intercom end -->
 

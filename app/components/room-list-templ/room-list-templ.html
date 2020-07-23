@@ -4,7 +4,7 @@
       <button
         class="btn btn-lg dropdown-btn"
         type="button"
-        id="dropdownMenuButton"
+        id="roomListDropDown"
         data-toggle="dropdown"
         aria-haspopup="true"
         aria-expanded="false"
@@ -12,10 +12,10 @@
         <i class="fas fa-home"></i>
       </button>
       <div
-        onclick="dropDown()"
+        onclick="dropDownStopPropagation()"
         class="dropdown-menu animate__animated"
         id="rooms-dropdown"
-        aria-labelledby="dropdownMenuButton"
+        aria-labelledby="roomListDropDown"
       >
         <div class="row list-container">
           <div class="col-5 p-0 d-flex justify-content-center">
@@ -62,7 +62,7 @@
                     id=""
                     class="room-btn"
                     customClass="room-btn-{{idx}}"
-                    onclick="closeDropdown()"
+                    onclick="closeRoomsDropdown()"
                     type="default"
                     shape="rectangle"
                     orientation="horizontal"

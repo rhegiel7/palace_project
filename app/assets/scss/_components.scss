@@ -143,6 +143,66 @@
   }
 }
 
+// Text ticker (scrolling text) for navbar
+@include media-breakpoint-only(xs) {
+  .navbar-text {
+    margin-left: 1rem;
+    overflow: hidden;
+    position: relative;
+    height: 5.3rem;
+    width: 9rem;
+    line-height: 1;
+    margin-top: 0.4rem;
+    white-space: nowrap;
+    h2 {
+      @include text-truncate;
+      position: absolute;
+      // width: auto;
+      height: auto;
+      margin-top: 0.3rem;
+      // line-height: 50px;
+      // text-align: center;
+      /* Starting position */
+      -moz-transform: translateX(100%);
+      -webkit-transform: translateX(100%);
+      transform: translateX(100%);
+      /* Apply animation to this element */
+      -moz-animation: navbar-text 6s linear infinite;
+      -webkit-animation: navbar-text 6s linear infinite;
+      animation: navbar-text 6s linear infinite;
+    }
+    /* Move it (define the animation) */
+    @-moz-keyframes navbar-text {
+      0% {
+        -moz-transform: translateX(100%);
+      }
+      100% {
+        -moz-transform: translateX(-100%);
+      }
+    }
+    @-webkit-keyframes navbar-text {
+      0% {
+        -webkit-transform: translateX(100%);
+      }
+      100% {
+        -webkit-transform: translateX(-100%);
+      }
+    }
+    @keyframes navbar-text {
+      0% {
+        -moz-transform: translateX(100%); /* Firefox bug fix */
+        -webkit-transform: translateX(100%); /* Firefox bug fix */
+        transform: translateX(100%);
+      }
+      100% {
+        -moz-transform: translateX(-100%); /* Firefox bug fix */
+        -webkit-transform: translateX(-100%); /* Firefox bug fix */
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+
 // Rooms list
 
 .room-list-templ {
@@ -601,6 +661,9 @@
 // blinds page (includes styles for blackout and shades)
 
 .blinds-page {
+  hr {
+    margin-top: 0.5vh;
+  }
   span.window-label {
     display: block;
     margin-bottom: 1rem;
@@ -609,7 +672,7 @@
   .blackout-shades-btn {
     position: absolute;
     left: 35%;
-    top: 1.5rem;
+    top: 1rem;
     display: inline-block;
     .ch5-button {
       margin-right: 0.5rem;
@@ -801,20 +864,22 @@
 
   .navbar {
     color: $white;
+    padding-left: 0;
     padding-top: 0;
     padding-bottom: 0;
     flex-wrap: nowrap;
 
     .navbar-text {
-      line-height: 1;
-      white-space: nowrap;
-      overflow: hidden;
-      padding-right: 10px;
+      margin-top: 0;
 
-      h2 {
-        // color: $white;
-        @include text-truncate;
-      }
+      // white-space: nowrap;
+      // overflow: hidden;
+      // padding-right: 10px;
+
+      // h2 {
+      //   // color: $white;
+      //   @include text-truncate;
+      // }
     }
 
     @include media-breakpoint-down(sm) {
@@ -883,28 +948,23 @@
   .ch5-button {
     border: 0;
   }
-  .navbar-text {
-    width: 100%;
-    .room-info {
-      display: inline-block;
-    }
-    .room-temp {
-      position: absolute;
-      right: 5px;
-      top: 35px;
-      padding: 5px 20px 5px 20px;
-      // background-color: rgb(105, 98, 121);
-    }
+
+  .room-temp {
+    position: absolute;
+    right: 5px;
+    top: 35px;
+    padding: 5px 20px 5px 20px;
+    // background-color: rgb(105, 98, 121);
   }
 
   .mode-buttons-container {
     width: auto;
-    padding: 0 0.6rem 1rem;
+    padding: 0.5rem 1rem 1rem;
     height: auto;
-    border: solid 1px $white;
+    // border: solid 1px $white;
     @include media-breakpoint-up(sm) {
       margin-top: 1vh !important;
-      padding: 0 1.2rem 1rem;
+      padding: 0.5rem 1.2rem 1rem;
     }
     @include media-breakpoint-up(md) {
       margin-top: 3vh !important;
@@ -918,31 +978,37 @@
     }
   }
   hr {
-    margin-top: 1vh;
+    margin-top: 0.5vh;
   }
   .fan-buttons-container {
     width: auto;
-    padding: 0 1rem 1rem;
+    padding: 0.5rem 1rem 1rem;
     height: auto;
-    border: solid 1px $white;
+    // border: solid 1px $white;
     @include media-breakpoint-only(xs) {
       margin-top: 5vh !important;
     }
     @include media-breakpoint-up(sm) {
       margin-top: 0.7vh !important;
-      padding: 0 1.6rem 0.5rem;
+      padding: 0.5rem 1.6rem 0.5rem;
     }
     @include media-breakpoint-up(md) {
       margin-top: 5vh !important;
-      padding: 0 1.7rem 1rem;
+      padding: 0.5rem 1.7rem 1rem;
     }
     @include media-breakpoint-up(lg) {
       margin-top: 0.3vh !important;
-      padding: 0 1.9rem 0.5rem;
+      padding: 0.5rem 2.3rem 1rem;
     }
     @include media-breakpoint-up(xl) {
       margin-top: 7vh !important;
-      padding: 0.5rem 2rem 1.5rem;
+      padding: 1rem 4.5rem 3rem;
+    }
+  }
+
+  .fan-buttons {
+    @include media-breakpoint-up(xl) {
+      grid-gap: 1.3rem;
     }
   }
 
@@ -1077,7 +1143,7 @@
   }
 
   .temp-container {
-    border: 2rem solid #35505c;
+    border: 1.8rem solid #35505c;
     background-color: #76a4b8;
     border-radius: 50%;
     height: 11rem;
@@ -1129,6 +1195,341 @@
     @include media-breakpoint-up(xl) {
       position: absolute;
       bottom: 3rem;
+    }
+  }
+}
+
+// music page
+
+.music-page {
+  .dropdown-btn-container {
+    position: absolute;
+    left: 40%;
+    top: 2.1rem;
+    display: inline-block;
+    .btn:not(:disabled):not(.disabled):active:focus {
+      box-shadow: none;
+    }
+    .btn {
+      border-radius: 0;
+    }
+    @include media-breakpoint-up(sm) {
+      left: 47%;
+    }
+  }
+  .dropdown-menu {
+    &.source-list-container {
+      // transform: translate3d(-216px, 45px, 0px) !important;
+      transform: translate3d(-35%, 45px, 0px) !important;
+
+      min-width: 25rem;
+      @include media-breakpoint-up(sm) {
+        transform: translate3d(-41%, 45px, 0px) !important;
+      }
+      @include media-breakpoint-up(md) {
+        min-width: 40rem;
+      }
+      .list-item {
+        padding: 1rem;
+        height: 6rem;
+        width: 100%;
+      }
+      .ch5-button {
+        border: none;
+        box-shadow: 3px 3px 7px rgb(70, 70, 70);
+        &.ch5-button--pressed {
+          box-shadow: none;
+        }
+      }
+    }
+  }
+  .source-name {
+    position: absolute;
+    right: 13px;
+    top: 30px;
+  }
+
+  .main-player-container {
+    height: 67vh;
+    width: 93vw;
+    @include media-breakpoint-only(sm) {
+      margin-top: 0;
+      height: 62vh;
+      width: 95vw;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 57vh;
+      width: 95vw;
+    }
+    @include media-breakpoint-up(xl) {
+      margin-top: 1.8rem !important;
+      height: 65vh;
+    }
+
+    .album-img {
+      margin-top: 1rem;
+      border-radius: 5px;
+      height: 150px;
+      width: 150px;
+      @include media-breakpoint-up(sm) {
+        height: 90px;
+        width: 90px;
+      }
+      @include media-breakpoint-up(lg) {
+        height: 158px;
+        width: 158px;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-top: 2rem;
+        height: 210px;
+        width: 210px;
+      }
+    }
+    .artist-album-name {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: space-between;
+      align-items: center;
+
+      .features-btn {
+        margin-top: 0.3rem;
+      }
+      i {
+        margin: 0 0.5rem;
+      }
+      @include media-breakpoint-up(sm) {
+        align-items: flex-start;
+        i {
+          margin: 0 1rem 0 0;
+        }
+        .features-btn {
+          margin-top: 1.2rem;
+        }
+      }
+      @include media-breakpoint-up(xl) {
+        .album-name {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    .track-slider-container {
+      margin-top: 2.1rem;
+      padding: 0 1rem;
+      @include media-breakpoint-up(sm) {
+        margin-top: 0;
+      }
+      @include media-breakpoint-up(md) {
+        margin-top: 0.5rem;
+      }
+      @include media-breakpoint-up(lg) {
+        margin-top: 0.5rem;
+        padding: 0 2.4rem;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-top: 4.5rem;
+      }
+      .song-name {
+        margin-left: 1rem;
+        display: flex;
+        align-items: center;
+        h2 {
+          padding-top: 0.8rem;
+        }
+        button {
+          margin-left: 15rem;
+        }
+        @include media-breakpoint-only(sm) {
+          h2 {
+            font-size: 1.1rem;
+          }
+        }
+        @include media-breakpoint-up(xl) {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+    .track-slider {
+      height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 0.6rem;
+      }
+
+      .ch5-slider {
+        .noUi-target {
+          transform: none;
+          height: 6px;
+          margin-bottom: 0.8rem;
+        }
+
+        .noUi-handle {
+          height: 10px;
+          width: 10px;
+          top: -3px;
+          right: -9px;
+          border: none;
+        }
+        &.ch5-slider--pressed {
+          .noUi-handle {
+            height: 16px;
+            width: 16px;
+            top: -6px;
+          }
+        }
+      }
+      span {
+        font-size: 0.8rem;
+      }
+    }
+    .controllers-btn-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.4rem;
+      @include media-breakpoint-only(sm) {
+        margin-top: 0;
+      }
+      @include media-breakpoint-up(xl) {
+        margin-top: 1.5rem;
+      }
+      .controllers-btn {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(auto, 25vmin));
+        grid-auto-rows: 5vh;
+        @include media-breakpoint-only(sm) {
+          grid-template-columns: repeat(3, minmax(auto, 20vmin));
+          grid-auto-rows: 6vh;
+          i {
+            font-size: 1.3rem;
+          }
+        }
+        @include media-breakpoint-up(md) {
+          grid-template-columns: repeat(3, minmax(auto, 20vmin));
+        }
+
+        .ch5-button {
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+        }
+        .triggerview-container {
+          .ch5-viewchild {
+            overflow-y: hidden !important;
+          }
+        }
+      }
+    }
+    .volume-slider-container {
+      // height: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0.8rem 2.3rem 0;
+      font-size: 1rem;
+      @include media-breakpoint-only(sm) {
+        margin: 0.2rem 5rem 0;
+      }
+      @include media-breakpoint-up(md) {
+        margin: 0.8rem 5rem 0;
+      }
+      @include media-breakpoint-up(xl) {
+        margin: 2rem 8rem 0;
+      }
+
+      .ch5-slider {
+        .noUi-target {
+          transform: none;
+          height: 5px;
+          margin-bottom: 1.3rem;
+        }
+        .noUi-handle {
+          height: 9px;
+          width: 9px;
+          top: -3px;
+          right: -9px;
+          border: none;
+        }
+      }
+    }
+  }
+  .song-list-sidebar {
+    width: 100%;
+    height: 60vh;
+    padding: 0;
+    overflow: auto;
+    // padding-right: 0;
+    ::-webkit-scrollbar {
+      width: 4px;
+    }
+    .song-select-features {
+      display: flex;
+      align-items: center;
+      padding: 1rem 0 0.5rem 1rem;
+      position: sticky;
+
+      top: 0;
+      z-index: 100;
+      .features-btn-container {
+        display: inline-flex;
+        justify-content: center;
+        // align-items: flex-end;
+        margin: 0 0 0 1.4rem;
+
+        .features-btn {
+          display: flex;
+          // display: grid;
+          // grid-template-columns: repeat(2, minmax(auto, 12vmin));
+          // grid-auto-rows: 3.1vh;
+        }
+        .ch5-button {
+          background-color: transparent;
+          border: none;
+          box-shadow: none;
+          // font-size: 20px;
+        }
+      }
+    }
+    .ch5-select__main {
+      display: none;
+    }
+    .song-select {
+      .ch5-select__panel__item {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        border-left: none;
+        border-top: 0.1rem solid;
+      }
+    }
+
+    @include media-breakpoint-down(xs) {
+      width: 93vw;
+      height: 43vh;
+      padding-left: 0;
+      transform: none;
+      position: absolute !important;
+      z-index: 99;
+      border-bottom: 0.2rem solid;
+      &.openSongList {
+        display: block !important;
+        margin-right: 20px;
+        animation: fadeIn;
+        animation-duration: 1s;
+      }
+    }
+    @include media-breakpoint-up(sm) {
+      height: 60vh;
+    }
+    @include media-breakpoint-up(lg) {
+      height: 57vh;
+    }
+    @include media-breakpoint-up(xl) {
+      height: 65vh;
     }
   }
 }

@@ -1,0 +1,255 @@
+{
+  "cues": [
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.Source[0].SetSourseSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Music.SelectedSourceName",
+          "type": "s",
+          "value": "AirPlay",
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[0].SourseIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[1].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[2].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[3].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.Source[1].SetSourseSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Music.SelectedSourceName",
+          "type": "s",
+          "value": "Laptop",
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[0].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[1].SourseIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[2].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[3].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.Source[2].SetSourseSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Music.SelectedSourceName",
+          "type": "s",
+          "value": "AirMedia",
+          "logic": "set"
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[0].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[1].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[2].SourseIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[3].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.Source[3].SetSourseSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Music.SelectedSourceName",
+          "type": "s",
+          "value": "AirBoard",
+          "logic": "set"
+        },
+
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[0].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[1].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[2].SourseIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.Source[3].SourseIsSelected",
+          "logic": "set",
+          "value": true
+        }
+      ]
+    },
+
+    {
+      "type": "boolean",
+      "event": "play",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "numeric",
+          "state": "play-pause",
+          "logic": "set",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "pause",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "numeric",
+          "state": "play-pause",
+          "logic": "set",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.ShuffleSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Music.ShuffleIsSelected",
+          "logic": "toggle",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.RepeatIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Music.RepeatSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Music.RepeatIsSelected",
+          "logic": "toggle",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Music.ShuffleIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "onStart": [
+    {
+      "state": "Rooms.Music.NumberOfSources",
+      "type": "n",
+      "value": 4
+    },
+    {
+      "state": "Rooms.Music.Source[0].SourceName",
+      "type": "s",
+      "value": "AirPlay"
+    },
+    {
+      "state": "Rooms.Music.Source[1].SourceName",
+      "type": "s",
+      "value": "Laptop"
+    },
+    {
+      "state": "Rooms.Music.Source[2].SourceName",
+      "type": "s",
+      "value": "AirMedia"
+    },
+    {
+      "state": "Rooms.Music.Source[3].SourceName",
+      "type": "s",
+      "value": "AirBoard"
+    },
+    {
+      "state": "play-pause",
+      "type": "numeric",
+      "value": 0
+    },
+    {
+      "state": "play-pause",
+      "type": "numeric",
+      "value": 0
+    }
+  ]
+}

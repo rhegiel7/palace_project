@@ -1,5 +1,6 @@
 // variables
-$ch5-light-primary: #4f8faa !default;
+// $ch5-light-primary: #4f8faa !default;
+$ch5-light-primary: rgb(102, 145, 153) !default;
 $ch5-light-default: #333 !default;
 $ch5-light-secondary: #1c5099 !default;
 $ch5-light-success: #01c851 !default;
@@ -54,6 +55,9 @@ $sidebar-light-action-selected-bg: rgba(#fff, 0.7) !default;
 
 // lighting page
 $ch5-lighting-btn-light: #696969 !default;
+
+// music page
+$music-icon-bg-light: rgba(53, 53, 53, 0.925);
 
 // container background
 $ch5-container-light-bg: $ch5-white;
@@ -118,6 +122,18 @@ $ch5-light-gradient-buttons: map-merge(
     "aqua": $ch5-light-gradient-btn-aqua,
   ),
   $ch5-light-gradient-buttons
+);
+
+// my buttons
+$gradient-btn-light: linear-gradient(
+  -45deg,
+  rgba(34, 34, 34, 1),
+  rgba(170, 170, 170, 1)
+);
+$gradient-btn-pressed-light: linear-gradient(
+  -45deg,
+  rgb(153, 153, 153),
+  rgba(34, 34, 34, 0.8)
 );
 
 .light-theme {
@@ -305,6 +321,7 @@ $ch5-light-gradient-buttons: map-merge(
       background-color: rgba(160, 160, 160, 0.932);
     }
     .dropdown-btn {
+      border: none;
       background-color: rgba(116, 116, 116, 0.9);
       color: white;
       :focus {
@@ -359,14 +376,21 @@ $ch5-light-gradient-buttons: map-merge(
 
   // blinds page / shades/ blackout
   .blinds-page {
-    .ch5-button {
-      background-color: $ch5-lighting-btn-light;
-      box-shadow: 3px 3px 7px rgb(70, 70, 70);
+    .open-close-btn {
+      .ch5-button {
+        background: $gradient-btn-light;
+
+        // background-color: $ch5-lighting-btn-light;
+        box-shadow: 3px 3px 7px rgb(70, 70, 70);
+      }
+      .ch5-button--pressed {
+        background: $gradient-btn-pressed-light;
+
+        box-shadow: 1px 1px 3px rgb(58, 57, 57);
+        transform: translateY(1px);
+      }
     }
-    .ch5-button--pressed {
-      box-shadow: 1px 1px 3px rgb(58, 57, 57);
-      transform: translateY(3px);
-    }
+
     .blackout-shades-btn {
       .ch5-button {
         background-color: transparent;
@@ -375,13 +399,12 @@ $ch5-light-gradient-buttons: map-merge(
         box-shadow: 3px 3px 7px rgb(48, 48, 48);
       }
       .ch5-button.ch5-button--selected {
-        background-color: $ch5-lighting-btn-light;
-
+        background: $gradient-btn-light;
+        // background-color: $ch5-lighting-btn-light;
         border: none;
         color: rgb(255, 255, 255);
         box-shadow: 1px 1px 3px rgb(58, 57, 57);
-        transform: translateY(3px);
-        opacity: 1;
+        transform: translateY(2px);
       }
     }
   }
@@ -440,41 +463,173 @@ $ch5-light-gradient-buttons: map-merge(
   .climate-page {
     .mode-buttons-container,
     .fan-buttons-container {
-      box-shadow: inset 3px -4px 10px rgba(68, 68, 68, 0.6);
+      // box-shadow: inset 3px -4px 10px rgba(68, 68, 68, 0.6);
+      background-color: $ch5-light-navbar-bg;
+      box-shadow: 0px 3px 9px 2px rgb(70, 70, 70);
     }
-    .ch5-button {
-      background-color: $ch5-lighting-btn-light;
-      box-shadow: 3px 3px 7px rgb(70, 70, 70);
+    .room-temp {
+      h5 {
+        color: $music-icon-bg-light;
+      }
     }
-    .ch5-button--pressed {
-      box-shadow: 1px 1px 3px rgb(58, 57, 57);
-      transform: translateY(3px);
-    }
-    #on-btn {
-      .ch5-button--default {
-        background-color: rgb(74, 124, 76);
-        opacity: 0.9;
+    .plus-minus-btn {
+      .ch5-button {
+        background: $gradient-btn-light;
+        // background-color: $ch5-lighting-btn-light;
+        box-shadow: 3px 3px 7px rgb(70, 70, 70);
       }
       .ch5-button--pressed {
-        background-color: rgb(48, 105, 50);
+        background: $gradient-btn-pressed-light;
+        box-shadow: none;
+        // box-shadow: 1px 1px 3px rgb(58, 57, 57);
+        transform: translateY(3px);
       }
-      // .ch5-button--selected {
-      //   background-color: rgb(73, 100, 73);
-      // }
     }
-    #off-btn {
-      .ch5-button--default {
-        background-color: rgb(124, 74, 74);
+
+    .mode-buttons {
+      .ch5-button {
+        background: linear-gradient(-25deg, #383737, #808080);
+        box-shadow: 3px 3px 7px rgb(70, 70, 70);
         opacity: 0.9;
+        color: rgba(0, 0, 0, 0.856);
       }
       .ch5-button--pressed {
-        background-color: rgb(105, 50, 50);
+        opacity: 1;
+        color: rgb(255, 255, 255);
+        transform: translateY(2px);
+        box-shadow: none;
       }
     }
     .temp-container {
       border-color: #2d444e;
       background-color: #6092a8;
-      box-shadow: inset 10px -7px 20px rgba(41, 41, 41, 0.6);
+      box-shadow: inset -13px -8px 20px 3px rgba(63, 63, 63, 0.637);
+    }
+
+    // ON-OFF buttons (not used currently)
+
+    // #on-btn {
+    //   .ch5-button--default {
+    //     background-color: rgb(74, 124, 76);
+    //     opacity: 0.9;
+    //   }
+    //   .ch5-button--pressed {
+    //     background-color: rgb(48, 105, 50);
+    //   }
+    //   .ch5-button--selected {
+    //     background-color: rgb(73, 100, 73);
+    //   }
+    // }
+    // #off-btn {
+    //   .ch5-button--default {
+    //     background-color: rgb(124, 74, 74);
+    //     opacity: 0.9;
+    //   }
+    //   .ch5-button--pressed {
+    //     background-color: rgb(105, 50, 50);
+    //   }
+    // }
+  }
+
+  // music page
+
+  .music-page {
+    .dropdown-btn-container {
+      button {
+        background-color: $ch5-lighting-btn-light;
+        box-shadow: 2px 2px 6px rgb(70, 70, 70);
+        color: rgb(212, 212, 212);
+      }
+    }
+    .source-name {
+      color: $music-icon-bg-light;
+    }
+    .main-player-container {
+      background-color: $ch5-light-navbar-bg;
+      box-shadow: 0px 3px 9px 2px rgb(70, 70, 70);
+    }
+    .artist-album-name {
+      i {
+        color: $music-icon-bg-light;
+      }
+    }
+    .song-name {
+      button {
+        background-color: transparent;
+        color: $music-icon-bg-light;
+      }
+    }
+    .track-slider {
+      span {
+        color: $music-icon-bg-light;
+      }
+      .ch5-slider {
+        // .noUi-connect {
+        //   background-color: rgb(102, 145, 153);
+        // }
+        .noUi-handle {
+          background-color: rgb(207, 207, 207);
+        }
+        &.ch5-slider--pressed {
+          .noUi-connect {
+            background-color: rgb(87, 120, 126);
+          }
+          .noUi-handle {
+            background-color: rgb(252, 252, 252);
+          }
+        }
+      }
+    }
+    .volume-slider-container {
+      i {
+        color: $music-icon-bg-light;
+      }
+      .ch5-slider {
+        .noUi-connect {
+          background-color: $ch5-lighting-btn-light;
+          // background-color: rgb(99, 99, 99);
+        }
+        .noUi-handle {
+          background-color: rgb(207, 207, 207);
+          border: none;
+        }
+        &.ch5-slider--pressed {
+          .noUi-connect {
+            background-color: rgb(82, 82, 82);
+          }
+        }
+      }
+    }
+
+    .song-list-sidebar {
+      @include media-breakpoint-down(xs) {
+        border-bottom-color: rgba(39, 39, 39, 0.842);
+      }
+      .song-select-features {
+        background-color: rgba(32, 32, 32, 0.904);
+        .ch5-button {
+          color: rgba(255, 255, 255, 0.644);
+          &.ch5-button--selected {
+            color: $ch5-light-primary;
+          }
+        }
+      }
+      .ch5-select__panel__items {
+        .ch5-select__panel__item--selected {
+          background-color: $ch5-light-navbar-bg;
+        }
+      }
+
+      .song-select {
+        .ch5-select__panel__item {
+          border-top-color: rgb(170, 170, 170);
+        }
+        h3,
+        h4,
+        h5 {
+          color: rgb(63, 63, 63);
+        }
+      }
     }
   }
 

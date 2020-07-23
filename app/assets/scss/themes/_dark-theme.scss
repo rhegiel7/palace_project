@@ -1,5 +1,5 @@
 // variables
-$ch5-dark-primary: darken(#6eaec9, 10%) !default;
+$ch5-dark-primary: darken(#6798ad, 10%) !default;
 $ch5-dark-default: darken(rgb(151, 151, 151), 10%) !default;
 $ch5-dark-secondary: darken(#497cc4, 10%) !default;
 $ch5-dark-success: darken(#01c851, 10%) !default;
@@ -66,6 +66,9 @@ $sidebar-dark-action-selected-bg: rgba(#fff, 0.7) !default;
 // lighting page
 $ch5-lighting-btn-dark: darken(#57606b, 5%) !default;
 
+// music page
+$music-icon-bg-dark: rgba(133, 133, 133, 0.856);
+
 // container background
 $ch5-container-dark-bg: #404040;
 
@@ -131,6 +134,12 @@ $ch5-dark-gradient-buttons: map-merge(
   ),
   $ch5-dark-gradient-buttons
 );
+
+// my buttons
+
+$gradient-btn-dark: linear-gradient(-45deg, #2c3136, #8693a7);
+
+$gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
 
 .dark-theme {
   // hr color
@@ -329,6 +338,7 @@ $ch5-dark-gradient-buttons: map-merge(
       background-color: rgba(43, 43, 43, 0.9);
     }
     .dropdown-btn {
+      border: none;
       background-color: rgba(94, 94, 94, 0.863);
       color: white;
     }
@@ -356,9 +366,6 @@ $ch5-dark-gradient-buttons: map-merge(
 
           box-shadow: 0px 0px 4px 2px rgb(255, 255, 255);
 
-          // box-shadow: 0px 0px 4px 2px rgb(228, 206, 84);
-          // background-color: #5e5d5d;
-          background-color: $ch5-lighting-btn-light;
           color: rgb(255, 255, 255);
         }
       }
@@ -381,17 +388,23 @@ $ch5-dark-gradient-buttons: map-merge(
     span.window-label {
       color: rgba(255, 255, 255, 0.699);
     }
-    .ch5-button {
-      background-color: $ch5-lighting-btn-dark;
-      box-shadow: 0px 0px 4px 2px rgb(156, 156, 156);
-      // border: none;
+    .open-close-btn {
+      .ch5-button {
+        background: $gradient-btn-dark;
+        // background: linear-gradient(-45deg, #2c3136, #8693a7);
+        box-shadow: 0 0 5px rgb(102, 102, 102);
+        // background-color: $ch5-lighting-btn-dark;
+        // border: none;
+      }
+      .ch5-button--pressed {
+        background: $gradient-btn-pressed-dark;
+        // background: linear-gradient(-45deg, #8492a5, #2a2e33);
+        box-shadow: 0px 0px 15px rgb(156, 156, 156);
+        // border: none;
+        transform: translateY(1px);
+      }
     }
-    .ch5-button--pressed {
-      box-shadow: 0 1px 1px rgb(102, 102, 102);
-      // border: none;
 
-      transform: translateY(1.5px);
-    }
     .blackout-shades-btn {
       .ch5-button {
         background-color: transparent;
@@ -400,9 +413,11 @@ $ch5-dark-gradient-buttons: map-merge(
         color: rgba(255, 255, 255, 0.74);
       }
       .ch5-button.ch5-button--selected {
-        background-color: $ch5-lighting-btn-dark;
-        box-shadow: 0 1px 1px rgb(102, 102, 102);
-        transform: translateY(1.5px);
+        background: $gradient-btn-dark;
+        // background-color: $ch5-lighting-btn-dark;
+        box-shadow: none;
+        // box-shadow: 0 1px 1px rgb(102, 102, 102);
+        transform: translateY(2px);
 
         border: none;
         color: rgb(255, 255, 255);
@@ -435,42 +450,185 @@ $ch5-dark-gradient-buttons: map-merge(
 
   // climate page
   .climate-page {
-    .ch5-button {
-      background-color: $ch5-lighting-btn-dark;
-      box-shadow: 0px 0px 4px 2px rgb(156, 156, 156);
-      // border: none;
+    .room-temp {
+      h5 {
+        color: $music-icon-bg-dark;
+      }
     }
-    .ch5-button--pressed {
-      box-shadow: 0 1px 1px rgb(102, 102, 102);
-      // border: none;
-
-      transform: translateY(1.5px);
+    .mode-buttons-container,
+    .fan-buttons-container {
+      background-color: $ch5-dark-navbar-bg;
+      box-shadow: 0px 2px 7px rgb(124, 124, 124);
     }
-    #on-btn {
-      .ch5-button--default {
-        background-color: rgb(108, 172, 111);
-        opacity: 1;
+    .plus-minus-btn {
+      .ch5-button {
+        background: $gradient-btn-dark;
+        // background-color: $ch5-lighting-btn-light;
+        box-shadow: 0 0 5px rgb(102, 102, 102);
       }
       .ch5-button--pressed {
-        background-color: rgb(48, 104, 49);
+        background: $gradient-btn-pressed-dark;
+        box-shadow: 0px 0px 15px rgb(156, 156, 156);
+        // box-shadow: 1px 1px 3px rgb(58, 57, 57);
+        transform: translateY(1px);
       }
-      // .ch5-button--selected {
-      //   background-color: rgb(73, 100, 73);
-      // }
     }
-    #off-btn {
-      .ch5-button--default {
-        background-color: rgb(168, 105, 105);
-        opacity: 1;
+    .mode-buttons {
+      .ch5-button {
+        background: $gradient-btn-dark;
+        // box-shadow: 0px 0px 4px rgb(156, 156, 156);
+        // opacity: 0.9;
+        color: rgba(0, 0, 0, 0.842);
       }
       .ch5-button--pressed {
-        background-color: rgb(105, 51, 51);
+        // background: $gradient-btn-pressed-dark;
+        background: linear-gradient(-45deg, #454c57, #3d4249);
+        opacity: 1;
+        color: rgb(255, 255, 255);
+        transform: translateY(2px);
+        // box-shadow: 0px 0px 10px rgb(156, 156, 156);
       }
     }
     .temp-container {
       border-color: #4f798b;
       background-color: #203138;
       box-shadow: inset 10px -7px 20px rgba(110, 110, 110, 0.6);
+    }
+
+    // ON-OFF buttons (not used currently)
+
+    // #on-btn {
+    //   .ch5-button--default {
+    //     background-color: rgb(108, 172, 111);
+    //     opacity: 1;
+    //   }
+    //   .ch5-button--pressed {
+    //     background-color: rgb(48, 104, 49);
+    //   }
+    // .ch5-button--selected {
+    //   background-color: rgb(73, 100, 73);
+    // }
+    //   }
+    //   #off-btn {
+    //     .ch5-button--default {
+    //       background-color: rgb(168, 105, 105);
+    //       opacity: 1;
+    //     }
+    //     .ch5-button--pressed {
+    //       background-color: rgb(105, 51, 51);
+    //     }
+    //   }
+  }
+
+  // music page
+
+  .music-page {
+    .dropdown-btn-container {
+      button {
+        background-color: $ch5-lighting-btn-dark;
+        box-shadow: 0px 0px 3px 1px rgb(156, 156, 156);
+        color: rgb(212, 212, 212);
+      }
+    }
+    .source-name {
+      color: $music-icon-bg-dark;
+    }
+    .main-player-container {
+      background-color: $ch5-dark-navbar-bg;
+      box-shadow: 0px 3px 9px 2px rgb(124, 124, 124);
+    }
+    .artist-album-name {
+      h2,
+      h3 {
+        color: rgb(173, 173, 173);
+      }
+
+      i {
+        color: $music-icon-bg-dark;
+      }
+    }
+    .song-name {
+      button {
+        background-color: transparent;
+        color: $music-icon-bg-dark;
+      }
+    }
+    .track-slider {
+      span {
+        color: $music-icon-bg-dark;
+      }
+      .ch5-slider {
+        // .noUi-connect {
+        //   background-color: rgb(102, 145, 153);
+        // }
+        .noUi-handle {
+          background-color: rgb(207, 207, 207);
+        }
+        &.ch5-slider--pressed {
+          .noUi-connect {
+            background-color: rgb(87, 120, 126);
+          }
+          .noUi-handle {
+            background-color: rgb(252, 252, 252);
+          }
+        }
+      }
+    }
+    .volume-slider-container {
+      i {
+        color: $music-icon-bg-dark;
+      }
+      .ch5-slider {
+        .noUi-connect {
+          background-color: $ch5-lighting-btn-light;
+          // background-color: rgb(99, 99, 99);
+        }
+        .noUi-handle {
+          background-color: rgb(207, 207, 207);
+          border: none;
+        }
+        &.ch5-slider--pressed {
+          .noUi-connect {
+            background-color: rgb(82, 82, 82);
+          }
+        }
+      }
+    }
+    .song-list-sidebar {
+      background-color: $ch5-lighting-btn-dark;
+
+      // background-color: $sidebar-dark-bg;
+      // background-color: rgba(61, 67, 73, 0.8);
+
+      @include media-breakpoint-down(xs) {
+        border-bottom-color: rgba(2, 2, 2, 0.89);
+      }
+      .song-select-features {
+        background-color: rgba(2, 2, 2, 0.877);
+        .ch5-button {
+          color: rgba(190, 190, 190, 0.849);
+
+          &.ch5-button--selected {
+            color: $ch5-dark-primary;
+          }
+        }
+      }
+      .ch5-select__panel__items {
+        .ch5-select__panel__item--selected {
+          // background-color: $sidebar-dark-bg;
+          background-color: $ch5-dark-navbar-bg;
+        }
+      }
+
+      .song-select {
+        .ch5-select__panel__item {
+          border-top-color: rgb(134, 134, 134);
+        }
+        h3,
+        h4 {
+          color: rgb(148, 148, 148);
+        }
+      }
     }
   }
 

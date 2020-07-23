@@ -263,6 +263,12 @@ var appModule = (function () {
         serviceModule.initEmulator(JSON.parse(response));
       }
     );
+    // Music Emulator
+    serviceModule.loadJSON("./assets/data/music-page-emulator.json", function (
+      response
+    ) {
+      serviceModule.initEmulator(JSON.parse(response));
+    });
   }
 
   /**
@@ -294,6 +300,7 @@ var appModule = (function () {
     setTimeout(function () {
       for (let idx = 0; idx < NAV_PAGE_COUNT; idx++) {
         addNavItemClickListener(idx);
+        console.log("Nav click listener added");
       }
     }, 1000);
     triggerview.addEventListener("select", function (event) {

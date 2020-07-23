@@ -35,7 +35,7 @@ var roomListTemplModule = (function () {
   };
 })();
 
-function dropDown() {
+function dropDownStopPropagation() {
   event.stopPropagation();
 }
 function addAnimation() {
@@ -47,7 +47,7 @@ function removeAnimation() {
   dropdown.classList.remove("animate__slideOutLeft");
 }
 
-function closeDropdown() {
+function closeRoomsDropdown() {
   let dropdown = document.getElementById("rooms-dropdown");
   setTimeout(addAnimation, 300);
   setTimeout(removeAnimation, 900);
