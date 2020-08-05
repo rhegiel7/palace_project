@@ -468,8 +468,12 @@ $gradient-btn-pressed-light: linear-gradient(
       box-shadow: 0px 3px 9px 2px rgb(70, 70, 70);
     }
     .room-temp {
-      h5 {
+      h4 {
         color: $music-icon-bg-light;
+      }
+      h2,
+      h3 {
+        color: rgb(53, 53, 53);
       }
     }
     .plus-minus-btn {
@@ -493,7 +497,7 @@ $gradient-btn-pressed-light: linear-gradient(
         opacity: 0.9;
         color: rgba(0, 0, 0, 0.856);
       }
-      .ch5-button--pressed {
+      .ch5-button--selected {
         opacity: 1;
         color: rgb(255, 255, 255);
         transform: translateY(2px);
@@ -552,8 +556,15 @@ $gradient-btn-pressed-light: linear-gradient(
       i {
         color: $music-icon-bg-light;
       }
+      h2,
+      h3 {
+        color: rgb(53, 52, 52);
+      }
+      // h3 {
+      //   color: $music-icon-bg-light;
+      // }
     }
-    .song-name {
+    .song-name-container {
       button {
         background-color: transparent;
         color: $music-icon-bg-light;
@@ -628,6 +639,67 @@ $gradient-btn-pressed-light: linear-gradient(
         h4,
         h5 {
           color: rgb(63, 63, 63);
+        }
+      }
+    }
+  }
+
+  // intercom page
+  .intercom-page {
+    .main-intercom-container {
+      // background: transparent;
+      background-color: $ch5-light-navbar-bg;
+      box-shadow: 0px 3px 9px 2px rgb(70, 70, 70);
+    }
+    .dnd-btn-container {
+      .dnd-btn {
+        .ch5-button {
+          background: $gradient-btn-light;
+          box-shadow: 3px 3px 7px rgb(70, 70, 70);
+          opacity: 1;
+        }
+        .ch5-button--default {
+          box-shadow: none;
+        }
+
+        .ch5-button--pressed {
+          background: $gradient-btn-pressed-light;
+          box-shadow: none;
+          opacity: 1 !important;
+        }
+      }
+      img {
+        filter: invert(20%) opacity(1);
+        -webkit-filter: invert(20%) opacity(1);
+      }
+    }
+    .phone-btn-container {
+      .green-phone {
+        .ch5-button {
+          svg {
+            fill: #006f65;
+          }
+        }
+      }
+      .red-phone {
+        .ch5-button {
+          svg {
+            fill: #850000;
+          }
+        }
+      }
+      .lock-btn {
+        .ch5-button {
+          svg {
+            fill: #3f3f3f;
+          }
+        }
+      }
+    }
+    .volume-btn-container {
+      .ch5-button {
+        i {
+          color: $music-icon-bg-light;
         }
       }
     }

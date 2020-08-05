@@ -6,8 +6,8 @@
       "trigger": true,
       "actions": [
         {
-          "state": "Rooms.Climate.TempIncremented",
-          "type": "number",
+          "state": "Rooms.Climate.TempIsSet",
+          "type": "n",
           "logic": "increment",
           "offset": 1
         }
@@ -19,12 +19,236 @@
       "trigger": true,
       "actions": [
         {
-          "state": "Rooms.Climate.TempDecremented",
-          "type": "number",
+          "state": "Rooms.Climate.TempIsSet",
+          "type": "n",
           "logic": "decrement",
           "offset": 1
         }
       ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Mode.FanSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.FanIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.CoolIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.OffIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Mode.CoolSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.CoolIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.FanIsSelected",
+          "logic": "set",
+          "value": false
+        },
+
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.OffIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Mode.OffSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.OffIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.FanIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Mode.CoolIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Fan.HighSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.HighIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.MediumIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.LowIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.AutoIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Fan.MediumSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.MediumIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.HighIsSelected",
+          "logic": "set",
+          "value": false
+        },
+
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.LowIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.AutoIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Fan.LowSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.LowIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.HighIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.MediumIsSelected",
+          "logic": "set",
+          "value": false
+        },
+
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.AutoIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Rooms.Climate.Fan.AutoSetSelected",
+      "trigger": true,
+      "actions": [
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.AutoIsSelected",
+          "logic": "set",
+          "value": true
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.HighIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.MediumIsSelected",
+          "logic": "set",
+          "value": false
+        },
+        {
+          "type": "b",
+          "state": "Rooms.Climate.Fan.LowIsSelected",
+          "logic": "set",
+          "value": false
+        }
+      ]
+    }
+  ],
+  "onStart": [
+    {
+      "state": "Rooms.Climate.TempIsSet",
+      "type": "n",
+      "value": 29
+    },
+    {
+      "state": "Rooms.Climate.RoomTemp",
+      "type": "n",
+      "value": 25
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Climate.Mode.OffIsSelected",
+      "value": true
+    },
+    {
+      "type": "b",
+      "state": "Rooms.Climate.Fan.AutoIsSelected",
+      "value": true
     }
   ]
 }

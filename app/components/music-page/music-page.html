@@ -29,7 +29,6 @@
         aria-labelledby="musicSourceDropdown"
       >
         <ch5-list
-          size="5"
           orientation="vertical"
           class="ch5-custom-list"
           indexid="idx"
@@ -42,7 +41,8 @@
               stretch="both"
               shape="rectangle"
               receivestatelabel="Rooms.Music.Source[{{idx}}].SourceName"
-              sendeventonclick="Rooms.Music.Source[{{idx}}].SetSourseSelected"
+              sendeventonclick="Rooms.Music.Source[{{idx}}].SetSourceSelected"
+              receivestateselected="Rooms.Music.Source[{{idx}}].SourceIsSelected"
             >
             </ch5-button>
           </template>
@@ -74,8 +74,18 @@
           </div>
 
           <div class="col-12 col-sm-8 col-md-7 mt-2 artist-album-name">
-            <h2 data-ch5-textcontent="" class="">Artist Name</h2>
-            <h3 data-ch5-textcontent="" class="album-name">Album Name</h3>
+            <h2
+              data-ch5-textcontent="Rooms.Music.AirPlay.SelectedArtistName"
+              class=""
+            >
+              Artist Name
+            </h2>
+            <h3
+              data-ch5-textcontent="Rooms.Music.AirPlay.SelectedAlbumName"
+              class="album-name"
+            >
+              Album Name
+            </h3>
             <div class="features-btn">
               <i class="fas fa-plus"></i>
               <i class="far fa-heart"></i>
@@ -84,9 +94,14 @@
           </div>
 
           <div class="col-12 track-slider-container">
-            <div class="song-name">
-              <div>
-                <h2 data-ch5-textcontent="" class="">Song Name</h2>
+            <div class="song-name-container">
+              <div class="song-name">
+                <h3
+                  data-ch5-textcontent="Rooms.Music.AirPlay.SelectedSongName"
+                  class=""
+                >
+                  Song Name
+                </h3>
               </div>
               <button
                 class="navbar-toggler d-sm-none"
@@ -127,7 +142,7 @@
                   gestureable="false"
                   noshowtype="display"
                   disableanimation="true"
-                  receivestateshowchildindex="play-pause"
+                  receivestateshowchildindex="Rooms.Music.PlayPauseBtnTriggerview"
                 >
                   <ch5-triggerview-child noshowtype="display">
                     <ch5-button
@@ -135,7 +150,7 @@
                       type="success"
                       shape="rectangle"
                       iconclass="fa fa-play fa-2x"
-                      sendeventonclick="play"
+                      sendeventonclick="Rooms.Music.SetPauseBtnActive"
                     ></ch5-button>
                   </ch5-triggerview-child>
 
@@ -145,7 +160,7 @@
                       type="success"
                       shape="rectangle"
                       iconclass="fa fa-pause fa-2x"
-                      sendeventonclick="pause"
+                      sendeventonclick="Rooms.Music.SetPlayBtnActive"
                     ></ch5-button>
                   </ch5-triggerview-child>
                 </ch5-triggerview>
@@ -185,9 +200,8 @@
           mode="panel"
           maxWidth="none"
           indexId="idx"
-          size="10"
           selectedvalue=""
-          receiveStateSize=""
+          receiveStateSize="Rooms.Music.SongList.ListSize"
           receiveStateValue="NotDefinedOnPurpose"
         >
           <div class="song-select-features">
@@ -216,11 +230,24 @@
           </div>
 
           <template>
-            <ch5-select-option sendEventOnClick="">
+            <ch5-select-option
+              sendEventOnClick="Rooms.Music.AirPlay.Track[{{idx}}].SetTrackSelected"
+              receivestateselected="Rooms.Music.AirPlay.Track[{{idx}}].TrackIsSelected"
+            >
               <!-- <h3 class="" data-ch5-textContent="">Song Name #{{idx}}</h3>
               <h4 class="" data-ch5-textContent="">Artist Name #{{idx}}</h4> -->
-              <h4 class="" data-ch5-textContent="">Song Name #{{idx}}</h4>
-              <h5 class="" data-ch5-textContent="">Artist Name #{{idx}}</h5>
+              <h4
+                class=""
+                data-ch5-textContent="Rooms.Music.SongList.SongName[{{idx}}]"
+              >
+                Song Name
+              </h4>
+              <h5
+                class=""
+                data-ch5-textContent="Rooms.Music.SongList.ArtistName[{{idx}}]"
+              >
+                Artist Name
+              </h5>
             </ch5-select-option>
           </template>
         </ch5-select>

@@ -9,7 +9,13 @@
     </div>
   </div>
   <div class="room-temp d-flex align-items-center">
-    <h5>Room Temp: 30ºC</h5>
+    <h4>
+      Room Temp: &nbsp;
+    </h4>
+    <h2 id="room-temp-index">30</h2>
+    <h3>
+      ºC
+    </h3>
   </div>
 
   <hr />
@@ -27,7 +33,8 @@
             label="Fan"
             stretch="both"
             shape="rectangle"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Mode.FanSetSelected"
+            receivestateselected="Rooms.Climate.Mode.FanIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -35,7 +42,8 @@
             label="Cool"
             stretch="both"
             shape="rectangle"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Mode.CoolSetSelected"
+            receivestateselected="Rooms.Climate.Mode.CoolIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -43,7 +51,8 @@
             label="Off"
             stretch="both"
             shape="rectangle"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Mode.OffSetSelected"
+            receivestateselected="Rooms.Climate.Mode.OffIsSelected"
           >
           </ch5-button>
         </div>
@@ -88,7 +97,8 @@
             label="High"
             shape="rectangle"
             stretch="both"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Fan.HighSetSelected"
+            receivestateselected="Rooms.Climate.Fan.HighIsSelected"
           >
           </ch5-button>
 
@@ -97,7 +107,8 @@
             label="Medium"
             shape="rectangle"
             stretch="both"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Fan.MediumSetSelected"
+            receivestateselected="Rooms.Climate.Fan.MediumIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -105,7 +116,8 @@
             label="Low"
             shape="rectangle"
             stretch="both"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Fan.LowSetSelected"
+            receivestateselected="Rooms.Climate.Fan.LowIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -113,7 +125,8 @@
             label="Auto"
             shape="rectangle"
             stretch="both"
-            sendeventonclick=""
+            sendeventonclick="Rooms.Climate.Fan.AutoSetSelected"
+            receivestateselected="Rooms.Climate.Fan.AutoIsSelected"
           >
           </ch5-button>
         </div>
@@ -127,7 +140,19 @@
           <div
             class="temp-container d-flex align-items-center justify-content-center"
           >
-            <h1 data-ch5-textcontent="">23ºC</h1>
+            <!-- <div class="textinput">
+              <ch5-textinput
+                stretch="content"
+                disabled
+                type="number"
+                receivestatevalue="Rooms.Climate.TempIsSet"
+              >
+              </ch5-textinput>
+            </div> -->
+            <h1 data-ch5-textcontent="" id="temp-index">
+              29
+            </h1>
+            <h3>ºC</h3>
           </div>
         </div>
         <div class="col-12 col-sm p-0">
@@ -139,17 +164,19 @@
               shape="circle"
               stretch="both"
               iconclass="fas fa-plus"
+              onclick=""
               sendeventonclick="Rooms.Climate.IncrementTemp"
             >
             </ch5-button>
 
             <ch5-button
-              id="plus-btn"
+              id="minus-btn"
               label=""
               shape="circle"
               stretch="both"
               iconclass="fas fa-minus"
-              sendeventonclick="btn_clicked"
+              onclick=""
+              sendeventonclick="Rooms.Climate.DecrementTemp"
             >
             </ch5-button>
             <div></div>

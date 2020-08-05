@@ -1,16 +1,34 @@
 <section class="details-container">
-  <h1 class="text-uppercase" data-ch5-i18n="-+source.title+-">Present a Source</h1>
-  <p class="lead desc-title" data-ch5-i18n="-+source.description+-"></p>
+  <div class="navbar-text">
+    <div class="room-info mb-1 pt-2 text-uppercase text-white">
+      <span class="d-sm-block">TV</span>
+      <h2 class="mb-0" data-ch5-textcontent="Rooms.SelectedRoomName">
+        Room Name
+      </h2>
+    </div>
+  </div>
   <hr />
-  <ch5-list class="source-list" indexId="idx" size="4" maxWidth="1000px" receiveStateSize="SourceList.NumberOfSources"
-    orientation="horizontal">
+  <ch5-list
+    class="source-list"
+    indexId="idx"
+    size="4"
+    maxWidth="1000px"
+    receiveStateSize="SourceList.NumberOfSources"
+    orientation="horizontal"
+  >
     <template>
       <div class="horizontal-list-item">
-        <ch5-button customClass="source-btn-{{idx}}" class="d-block" type="text" shape="rectangle"
+        <ch5-button
+          customClass="source-btn-{{idx}}"
+          class="d-block"
+          type="text"
+          shape="rectangle"
           receivestatelabel="SourceList.Sources[{{idx}}].NameOfSource"
-          receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource" iconPosition="top"
+          receivestateiconclass="SourceList.Sources[{{idx}}].IconClassOfSource"
+          iconPosition="top"
           receiveStateSelected="SourceList.Sources[{{idx}}].SourceIsSelected"
-          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"></ch5-button>
+          sendEventOnClick="SourceList.Sources[{{idx}}].SetSourceSelected"
+        ></ch5-button>
       </div>
     </template>
   </ch5-list>

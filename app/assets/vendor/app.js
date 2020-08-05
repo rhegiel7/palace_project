@@ -276,6 +276,13 @@ var appModule = (function () {
         serviceModule.initEmulator(JSON.parse(response));
       }
     );
+    // Intercom Emulator
+    serviceModule.loadJSON(
+      "./assets/data/intercom-page-emulator.json",
+      function (response) {
+        serviceModule.initEmulator(JSON.parse(response));
+      }
+    );
   }
 
   /**
