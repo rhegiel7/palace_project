@@ -80,15 +80,16 @@ var appModule = (function () {
       });
     }
     // adding click listener to schedule button
-    let scheduleTrig = document.querySelector(".schedule-trigger");
-    if (scheduleTrig) {
-      scheduleTrig.addEventListener("click", function () {
-        if (triggerview !== null && idx !== activeIndex) {
-          triggerview.setActiveView(7);
-          return;
-        }
-      });
-    }
+
+    // let scheduleTrig = document.querySelector(".schedule-trigger");
+    // if (scheduleTrig) {
+    //   scheduleTrig.addEventListener("click", function () {
+    //     if (triggerview !== null && idx !== activeIndex) {
+    //       triggerview.setActiveView(7);
+    //       return;
+    //     }
+    //   });
+    // }
   }
 
   /**
@@ -361,10 +362,10 @@ var appModule = (function () {
    * This method will invoke on body click
    */
 
-  // document.body.addEventListener("click", function (event) {
-  //   translateModule.currentLng.classList.remove("open");
-  //   navbarThumb.classList.remove("open");
-  // });
+  document.body.addEventListener("click", function (event) {
+    // translateModule.currentLng.classList.remove("open");
+    navbarThumb.classList.remove("open");
+  });
 
   /**
    * Load the emulator, theme, default language and listeners

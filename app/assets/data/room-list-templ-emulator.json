@@ -2981,7 +2981,7 @@
     {
       "state": "Rooms.SelectedRoomName",
       "type": "s",
-      "value": "Entrance"
+      "value": "Guest Room"
     },
     {
       "state": "Rooms.Room[0].RoomName",

@@ -16,6 +16,9 @@
 
   .ch5-select__panel__items .ch5-select__panel__item {
     padding: 0.8rem 1rem;
+    @include media-breakpoint-down(sm) {
+      padding: 0.6rem 1rem;
+    }
   }
 }
 

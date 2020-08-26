@@ -375,8 +375,8 @@
     }
   }
   .dropdown-menu {
-    left: -113px;
-    width: auto;
+    left: -110px;
+    min-width: 150px;
 
     .dropdown-item {
       font-size: 1.3rem;
@@ -801,11 +801,18 @@
 .blinds-page {
   hr {
     margin-top: 0.5vh;
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
   }
   span.window-label {
     display: block;
     margin-bottom: 1rem;
     padding-left: 30px;
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
   }
   .blackout-shades-btn {
     position: absolute;
@@ -814,6 +821,9 @@
     display: inline-block;
     .ch5-button {
       margin-right: 0.5rem;
+      @include media-breakpoint-up(sm) {
+        // height: 40px !important;
+      }
     }
     @include media-breakpoint-up(lg) {
       left: 42%;
@@ -933,16 +943,20 @@
       &.right-slider {
         transform: rotate(180deg);
         // transform-origin: center center;
-
+        .noUi-connects {
+          border-radius: 3px;
+        }
         .noUi-target {
           margin-top: 0.2rem;
+
+          @include media-breakpoint-up(sm) {
+            margin-top: -0.1rem;
+          }
         }
-        // .noUi-connect {
-        //   transform: rotate(180deg) !important;
-        // }
       }
       @include media-breakpoint-up(sm) {
-        height: 14.2rem;
+        height: 15rem;
+        width: 10.3rem !important;
       }
       @include media-breakpoint-up(md) {
         height: 19.2rem;
@@ -951,12 +965,13 @@
         position: static;
       }
       .noUi-target {
+        background: transparent;
         height: 17rem;
         width: 12rem;
         border: 0;
         @include media-breakpoint-up(sm) {
           height: 15rem;
-          width: 21rem;
+          width: 10rem;
         }
         @include media-breakpoint-up(md) {
           height: 20rem;
