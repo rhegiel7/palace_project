@@ -47,7 +47,18 @@
       "trigger": true,
       "actions": [
         {
-          "state": "receive_shades_value",
+          "state": "receive_left_shades_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 5000
+            }
+          }
+        },
+        {
+          "state": "receive_right_shades_value",
           "type": "object",
           "logic": "set",
           "value": {
@@ -65,12 +76,23 @@
       "trigger": true,
       "actions": [
         {
-          "state": "receive_shades_value",
+          "state": "receive_left_shades_value",
           "type": "object",
           "logic": "set",
           "value": {
             "rcb": {
-              "value": 100,
+              "value": 50,
+              "time": 5000
+            }
+          }
+        },
+        {
+          "state": "receive_right_shades_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 50,
               "time": 5000
             }
           }
@@ -102,7 +124,18 @@
       "trigger": true,
       "actions": [
         {
-          "state": "receive_blackout_value",
+          "state": "receive_left_blackout_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 0,
+              "time": 5000
+            }
+          }
+        },
+        {
+          "state": "receive_right_blackout_value",
           "type": "object",
           "logic": "set",
           "value": {
@@ -121,12 +154,23 @@
       "trigger": true,
       "actions": [
         {
-          "state": "receive_blackout_value",
+          "state": "receive_left_blackout_value",
           "type": "object",
           "logic": "set",
           "value": {
             "rcb": {
-              "value": 100,
+              "value": 50,
+              "time": 5000
+            }
+          }
+        },
+        {
+          "state": "receive_right_blackout_value",
+          "type": "object",
+          "logic": "set",
+          "value": {
+            "rcb": {
+              "value": 50,
               "time": 5000
             }
           }
@@ -135,6 +179,30 @@
     }
   ],
   "onStart": [
-    { "state": "show_shades", "value": true, "type": "b", "logic": "set" }
+    { "state": "show_shades", "value": true, "type": "b", "logic": "set" },
+    {
+      "state": "receive_left_shades_value",
+      "value": 0,
+      "type": "n",
+      "logic": "set"
+    },
+    {
+      "state": "receive_right_shades_value",
+      "value": 0,
+      "type": "n",
+      "logic": "set"
+    },
+    {
+      "state": "receive_left_blackout_value",
+      "value": 0,
+      "type": "n",
+      "logic": "set"
+    },
+    {
+      "state": "receive_right_blackout_value",
+      "value": 0,
+      "type": "n",
+      "logic": "set"
+    }
   ]
 }

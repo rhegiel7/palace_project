@@ -186,6 +186,13 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
     }
   }
 
+  // Date and time
+  .time {
+    span {
+      color: #aaaaaa;
+    }
+  }
+
   // buttons theme
   .ch5-button {
     @each $color, $value in $ch5-dark-theme-colors {
@@ -339,8 +346,10 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
     }
     .dropdown-btn {
       border: none;
-      background-color: rgba(94, 94, 94, 0.863);
-      color: white;
+      // background-color: rgba(94, 94, 94, 0.863);
+      background-color: transparent;
+
+      color: #aaaaaa;
     }
 
     .floors-container {
@@ -379,6 +388,34 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
 
           // margin-top: 0.5rem !important;
         }
+      }
+    }
+  }
+
+  // menu (dropdown)
+  .menu {
+    .dropdown-menu {
+      background: rgba(43, 43, 43, 0.993);
+      .dropdown-item {
+        color: #aaaaaa;
+        &:active {
+          // background-color: $ch5-light-navbar-bg;
+          background-color: transparent;
+        }
+        &:focus {
+          background-color: rgba(63, 63, 63, 0.993);
+        }
+      }
+    }
+    .menu-dropdown-btn {
+      color: #aaaaaa;
+    }
+    .btn-link {
+      color: $ch5-dark-navbar-default-color;
+    }
+    .version-info {
+      .ch5-button {
+        background-color: rgba(61, 61, 61, 0.993);
       }
     }
   }

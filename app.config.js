@@ -1,7 +1,7 @@
 const path = require("path");
 const glob = require("glob");
 
-const appName = `tom_villa`;
+const appName = `sheikh_palace`;
 const basePath = path.resolve(__dirname);
 const distPath = `dist/${appName}`;
 const nodeModules = `./node_modules/`;

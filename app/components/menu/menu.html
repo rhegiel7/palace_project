@@ -1,0 +1,71 @@
+<section id="menu" class="menu">
+  <div class="dropdown">
+    <button
+      class="btn btn-large menu-dropdown-btn"
+      type="button"
+      id="menuDropDown"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+    <div
+      class="dropdown-menu"
+      onclick="dropDownStopPropagation()"
+      id="menu-dropdown"
+      aria-labelledby="menuDropDown"
+    >
+      <form class="form-inline" id="changeTheme">
+        <a class="btn-link" onclick="appModule.changeTheme('LIGHT')"
+          ><i class="fas fa-sun"></i
+        ></a>
+        <a class="btn-link" onclick="appModule.changeTheme('DARK')"
+          ><i class="far fa-moon"></i
+        ></a>
+      </form>
+
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item schedule-trigger" href="#">
+        <!-- <ch5-button
+          class="schedule-trigger"
+          stretch="both"
+          label="Schedule"
+        ></ch5-button> -->
+        Scheduling</a
+      >
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+      <div class="dropdown-divider"></div>
+      <div class="navbar-action-right">
+        <div class="version-info">
+          <ch5-button
+            type="primary"
+            shape="circle"
+            class="shadow-pulse-button"
+            iconClass="fas fa-info"
+            sendEventOnClick="infoBtn.clicked"
+          ></ch5-button>
+          <ch5-modal-dialog
+            receiveStateShowPulse="infoBtn.clicked"
+            closable
+            closeIcon="fa fa-window-close"
+            hideOkButton="true"
+            hideCancelButton="true"
+          >
+            <h4 data-ch5-i18n="-+app.ch5modal.name+-">CH5 Version</h4>
+            <p id="versionDescription"></p>
+            <p id="appVersion"></p>
+          </ch5-modal-dialog>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <ch5-button
+          class="schedule-trigger"
+          type="primary"
+          size="large"
+          label="Schedule"
+        ></ch5-button> -->

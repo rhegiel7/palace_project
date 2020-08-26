@@ -14,7 +14,7 @@ var appModule = (function () {
   let errorClass = "version-error";
   let previousActiveIndex = -1;
   let themeTimer;
-  const NAV_PAGE_COUNT = 7; // Number of buttons in the navigation menu
+  const NAV_PAGE_COUNT = 4; // Number of buttons in the navigation menu
 
   /**
    * This is public method to change the theme
@@ -70,10 +70,21 @@ var appModule = (function () {
    */
   function addNavItemClickListener(idx) {
     let itemElem = document.querySelector(".thumb-btn-" + idx);
+
     if (itemElem) {
       itemElem.addEventListener("click", function () {
         if (triggerview !== null && idx !== activeIndex) {
           triggerview.setActiveView(idx);
+          return;
+        }
+      });
+    }
+    // adding click listener to schedule button
+    let scheduleTrig = document.querySelector(".schedule-trigger");
+    if (scheduleTrig) {
+      scheduleTrig.addEventListener("click", function () {
+        if (triggerview !== null && idx !== activeIndex) {
+          triggerview.setActiveView(7);
           return;
         }
       });
@@ -105,6 +116,59 @@ var appModule = (function () {
       }
     });
   }
+
+  // Display Clock in the navbar
+  function newClock() {
+    var clock = new Date();
+    var days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
+    var months = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+
+    let hour = clock.getHours();
+    if (hour < 10) {
+      hour = "0" + hour;
+    }
+    let minutes = clock.getMinutes();
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    let seconds = clock.getSeconds();
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+    let day = clock.getDay();
+    let date = clock.getDate();
+    let month = clock.getMonth();
+
+    let print_clock =
+      hour +
+      " : " +
+      minutes +
+      " " +
+      " " +
+      days[day] +
+      " " +
+      date +
+      " " +
+      months[month];
+
+    document.getElementById("time").innerHTML = print_clock;
+    setTimeout(newClock, 1000);
+  }
+
+  // setTimeout(new_clock, 1000);
 
   /**
    * Display Crestron Component Library version information using
@@ -307,6 +371,7 @@ var appModule = (function () {
    */
   function onLoadInit() {
     loadEmulator();
+    newClock();
     changeTheme("LIGHT");
     translateModule.getLanguage(translateModule.defaultLng);
     getAppVersionInfo();
@@ -314,9 +379,8 @@ var appModule = (function () {
     setTimeout(function () {
       for (let idx = 0; idx < NAV_PAGE_COUNT; idx++) {
         addNavItemClickListener(idx);
-        console.log("Nav click listener added");
       }
-    }, 1000);
+    }, 500);
     triggerview.addEventListener("select", function (event) {
       setTimeout(() => {
         activeIndex = event.detail;

@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title data-ch5-i18n="">Villa</title>
+    <title data-ch5-i18n="">Palace</title>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -25,22 +25,28 @@
     <div id="loader" class="loader"></div>
     <section class="main-section">
       <!-- Header start -->
-      <nav class="navbar navbar-dark navbar-default fixed-top">
+      <nav class="navbar navbar-dark navbar-default fixed-top" onclick="">
         <ch5-import-htmlsnippet
           id="room-list-templ"
           url="./components/room-list-templ/room-list-templ.html"
         ></ch5-import-htmlsnippet>
-
-        <form class="form-inline" id="changeTheme">
+        <div class="time">
+          <span id="time" class="data"></span>
+        </div>
+        <!-- <form class="form-inline" id="changeTheme">
           <a class="btn-link" onclick="appModule.changeTheme('LIGHT')"
             ><i class="fas fa-sun"></i
           ></a>
           <a class="btn-link" onclick="appModule.changeTheme('DARK')"
             ><i class="far fa-moon"></i
           ></a>
-        </form>
+        </form> -->
+        <ch5-import-htmlsnippet
+          id="menu"
+          url="./components/menu/menu.html"
+        ></ch5-import-htmlsnippet>
 
-        <div class="navbar-action-right">
+        <!-- <div class="navbar-action-right">
           <div class="version-info">
             <ch5-button
               type="primary"
@@ -62,7 +68,7 @@
               <p id="appVersion"></p>
             </ch5-modal-dialog>
           </div>
-        </div>
+        </div> -->
       </nav>
       <!-- Header end -->
       <ch5-background
@@ -105,33 +111,15 @@
           </ch5-import-htmlsnippet>
         </ch5-triggerview-child>
         <!-- Music end -->
-        <!-- TV start -->
-        <ch5-triggerview-child>
-          <ch5-import-htmlsnippet
-            class="source-page"
-            url="./components/source/source.html"
-          >
-          </ch5-import-htmlsnippet>
-        </ch5-triggerview-child>
-        <!-- TV end -->
-        <!-- Intercom start -->
-        <ch5-triggerview-child>
-          <ch5-import-htmlsnippet
-            class="source-page"
-            url="./components/intercom-page/intercom-page.html"
-          >
-          </ch5-import-htmlsnippet>
-        </ch5-triggerview-child>
-        <!-- Intercom end -->
 
-        <!-- Video start -->
+        <!-- Schedule start -->
         <ch5-triggerview-child>
           <ch5-import-htmlsnippet
-            class="video-page"
-            url="./components/video/video.html"
+            class="schedule-page"
+            url="./components/schedule-page/schedule-page.html"
           ></ch5-import-htmlsnippet>
         </ch5-triggerview-child>
-        <!-- Video end -->
+        <!-- Schedule end -->
       </ch5-triggerview>
       <ch5-list
         class="swiper-thumb"

@@ -315,18 +315,15 @@ $gradient-btn-pressed-light: linear-gradient(
       background-color: rgba(#808080, 0.9);
     }
   }
-  // room list (drop down menu)
+  // room list (dropdown menu)
   .room-list-templ {
     .dropdown-menu {
       background-color: rgba(160, 160, 160, 0.932);
     }
     .dropdown-btn {
       border: none;
-      background-color: rgba(116, 116, 116, 0.9);
-      color: white;
-      :focus {
-        outline-color: transparent;
-      }
+      background-color: transparent;
+      color: #222222e5;
     }
     .floors-container {
       background-color: rgb(95, 95, 95);
@@ -370,6 +367,34 @@ $gradient-btn-pressed-light: linear-gradient(
 
           // margin-top: 0.5rem !important;
         }
+      }
+    }
+  }
+
+  // menu (dropdown)
+  .menu {
+    .dropdown-menu {
+      background: rgba(160, 160, 160, 0.993);
+      .dropdown-item {
+        color: #222222e5;
+        &:active {
+          // background-color: $ch5-light-navbar-bg;
+          background-color: transparent;
+        }
+        &:focus {
+          background-color: rgba(126, 126, 126, 0.993);
+        }
+      }
+    }
+    .menu-dropdown-btn {
+      color: #222222;
+    }
+    .btn-link {
+      color: $ch5-light-navbar-default-color;
+    }
+    .version-info {
+      .ch5-button {
+        background-color: #808080;
       }
     }
   }

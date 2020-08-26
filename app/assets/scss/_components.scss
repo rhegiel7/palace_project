@@ -1,3 +1,7 @@
+.ch5-button {
+  border: none;
+}
+
 // custom header
 .navbar-default.navbar {
   @include box-shadow(0 0 15px rgba(0, 0, 0, 0.85));
@@ -5,62 +9,62 @@
   flex-wrap: nowrap;
   height: $header-height;
 
-  .version-info {
-    margin-left: 1rem;
+  // .version-info {
+  //   margin-left: 1rem;
 
-    .ch5-button {
-      display: flex;
-      vertical-align: top;
-      min-width: auto;
+  //   .ch5-button {
+  //     display: flex;
+  //     vertical-align: top;
+  //     min-width: auto;
 
-      .cb-btn {
-        @include size(100%);
-      }
+  //     .cb-btn {
+  //       @include size(100%);
+  //     }
 
-      i.fa-info {
-        font-size: 12px;
-        padding: 0;
-        @include size(12px);
-      }
-    }
+  //     i.fa-info {
+  //       font-size: 12px;
+  //       padding: 0;
+  //       @include size(12px);
+  //     }
+  //   }
 
-    div.ch5-modal-dialog {
-      border: $version-modal-dialog-border-width $border-type $black;
+  //   div.ch5-modal-dialog {
+  //     border: $version-modal-dialog-border-width $border-type $black;
 
-      .ch5-modal-dialog-contents {
-        padding: 0;
+  //     .ch5-modal-dialog-contents {
+  //       padding: 0;
 
-        & > p:last-child {
-          margin-bottom: 0;
-        }
-      }
+  //       & > p:last-child {
+  //         margin-bottom: 0;
+  //       }
+  //     }
 
-      .ch5-modal-dialog-close-icon-btn {
-        padding: 0;
-        margin: 0;
-        @include size(auto);
+  //     .ch5-modal-dialog-close-icon-btn {
+  //       padding: 0;
+  //       margin: 0;
+  //       @include size(auto);
 
-        span.ch5-modal-dialog-close-icon {
-          display: block;
-          font-size: rem-calc(24px);
-        }
-      }
+  //       span.ch5-modal-dialog-close-icon {
+  //         display: block;
+  //         font-size: rem-calc(24px);
+  //       }
+  //     }
 
-      p {
-        color: $version-modal-dialog-content-color;
-        font-size: rem-calc(20px);
-      }
+  //     p {
+  //       color: $version-modal-dialog-content-color;
+  //       font-size: rem-calc(20px);
+  //     }
 
-      p.version-error {
-        color: $red;
-      }
+  //     p.version-error {
+  //       color: $red;
+  //     }
 
-      h4 {
-        color: $black;
-        font-size: rem-calc(32px);
-      }
-    }
-  }
+  //     h4 {
+  //       color: $black;
+  //       font-size: rem-calc(32px);
+  //     }
+  //   }
+  // }
 
   .dropdown {
     position: relative;
@@ -79,26 +83,26 @@
     }
   }
 
-  .form-inline {
-    width: auto;
+  // .form-inline {
+  //   width: auto;
 
-    .btn-link {
-      padding: 0.5rem;
-      @include transition(color 0.5s linear);
+  //   .btn-link {
+  //     padding: 0.5rem;
+  //     @include transition(color 0.5s linear);
 
-      & + .btn-link {
-        margin-left: 1rem;
-      }
+  //     & + .btn-link {
+  //       margin-left: 1rem;
+  //     }
 
-      &:hover {
-        opacity: 0.5;
-      }
+  //     &:hover {
+  //       opacity: 0.5;
+  //     }
 
-      &.active {
-        opacity: 1;
-      }
-    }
-  }
+  //     &.active {
+  //       opacity: 1;
+  //     }
+  //   }
+  // }
 
   .navbar-action-right {
     display: flex;
@@ -206,10 +210,21 @@
 // Rooms list
 
 .room-list-templ {
+  button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+  button {
+    &.dropdown-btn {
+      background: transparent;
+      font-size: 1.5rem;
+    }
+  }
+
   .dropdown-menu {
     min-width: 100vw;
     height: 91vh;
-
+    left: -5px;
     @include media-breakpoint-up(sm) {
       min-width: 60vw;
       height: 89vh;
@@ -346,7 +361,117 @@
   }
 }
 
-//
+// menu
+.menu {
+  button:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  button {
+    &.menu-dropdown-btn {
+      background: transparent;
+      font-size: 1.5rem;
+    }
+  }
+  .dropdown-menu {
+    left: -113px;
+    width: auto;
+
+    .dropdown-item {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      // &:active {
+      //   background-color: #a7b0b5;
+      // }
+    }
+  }
+  .form-inline {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn-link {
+      padding: 0.5rem;
+      @include transition(color 0.5s linear);
+
+      & + .btn-link {
+        margin-left: 1rem;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+
+      &.active {
+        opacity: 1;
+      }
+    }
+  }
+  .navbar-action-right {
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .version-info {
+    margin-right: 0.7rem;
+
+    .ch5-button {
+      display: flex;
+      vertical-align: top;
+      min-width: auto;
+
+      .cb-btn {
+        @include size(100%);
+      }
+
+      i.fa-info {
+        font-size: 12px;
+        padding: 0;
+        @include size(12px);
+      }
+    }
+    div.ch5-modal-dialog {
+      border: $version-modal-dialog-border-width $border-type $black;
+
+      .ch5-modal-dialog-contents {
+        padding: 0;
+
+        & > p:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .ch5-modal-dialog-close-icon-btn {
+        padding: 0;
+        margin: 0;
+        @include size(auto);
+
+        span.ch5-modal-dialog-close-icon {
+          display: block;
+          font-size: rem-calc(24px);
+        }
+      }
+
+      p {
+        color: $version-modal-dialog-content-color;
+        font-size: rem-calc(20px);
+      }
+
+      p.version-error {
+        color: $red;
+      }
+
+      h4 {
+        color: $black;
+        font-size: rem-calc(32px);
+      }
+    }
+  }
+}
 
 // buttons page
 .buttons-page {
@@ -741,19 +866,42 @@
         background-size: 100% 100%;
       }
       .noUi-connect::after {
-        transform: rotate(180deg);
+        transform: rotate(-90deg);
         background-image: url("/assets/img/blinds/blinds_transp_white.png");
-        // background-size: 37rem 18rem;
         background-repeat: no-repeat;
         content: "";
         opacity: 0.75;
         top: 0;
-        left: 0;
-        bottom: -15rem;
-        right: -15rem;
+        left: -11.6rem;
+        bottom: -7rem;
+        right: 0;
         position: absolute;
         z-index: -1;
       }
+    }
+  }
+  // background img for blackout slider
+  .blackout-container {
+    .ch5-slider {
+      .noUi-connect {
+        background-image: url("/assets/img/blinds/curtain_grey_left.png");
+
+        background-size: 150% 100%;
+        background-repeat: no-repeat;
+        background-color: transparent;
+      }
+      // &.left-slider {
+      //   .noUi-connect {
+      //   }
+      // }
+      // &.right-slider {
+      //   .noUi-connect {
+      //     background-image: url("/assets/img/blinds/curtain_grey_right.png");
+      //   }
+      // }
+      // .noUi-connects {
+      //   background: transparent;
+      // }
     }
   }
 
@@ -775,12 +923,24 @@
       height: 20rem;
       width: 30rem;
     }
-
     .ch5-slider {
-      transform: rotate(180deg);
-      transform-origin: center center;
+      display: inline-block !important;
+      // transform-origin: center center;
       padding: 0 !important;
       height: 17.2rem;
+      width: 12.3rem !important;
+
+      &.right-slider {
+        transform: rotate(180deg);
+        // transform-origin: center center;
+
+        .noUi-target {
+          margin-top: 0.2rem;
+        }
+        // .noUi-connect {
+        //   transform: rotate(180deg) !important;
+        // }
+      }
       @include media-breakpoint-up(sm) {
         height: 14.2rem;
       }
@@ -792,7 +952,7 @@
       }
       .noUi-target {
         height: 17rem;
-        width: 25rem;
+        width: 12rem;
         border: 0;
         @include media-breakpoint-up(sm) {
           height: 15rem;
@@ -806,16 +966,43 @@
       .noUi-base {
         border-radius: 5px;
       }
-      // background img for blackout slider
-
-      .noUi-connect {
-        background-image: url("/assets/img/blinds/wood-blinds.jpg");
-        background-size: 150% 100%;
-        background-repeat: no-repeat;
-      }
-
-      //
     }
+
+    // slider settings for 1 blinds slider
+
+    // .ch5-slider {
+    //   // transform: rotate(180deg);
+    //   // transform-origin: center center;
+    //   padding: 0 !important;
+    //   height: 17.2rem;
+    //   @include media-breakpoint-up(sm) {
+    //     height: 14.2rem;
+    //   }
+    //   @include media-breakpoint-up(md) {
+    //     height: 19.2rem;
+    //   }
+    //   .noUi-connects {
+    //     position: static;
+    //   }
+    //   .noUi-target {
+    //     height: 17rem;
+    //     width: 25rem;
+    //     border: 0;
+    //     @include media-breakpoint-up(sm) {
+    //       height: 15rem;
+    //       width: 21rem;
+    //     }
+    //     @include media-breakpoint-up(md) {
+    //       height: 20rem;
+    //       width: 30rem;
+    //     }
+    //   }
+    //   .noUi-base {
+    //     border-radius: 5px;
+    //   }
+
+    //
+    // }
   }
   ch5-list {
     .list-item {
@@ -966,7 +1153,7 @@
     position: absolute;
     right: 5px;
     top: 35px;
-    padding: 5px 20px 5px 20px;
+    padding: 5px 10px 5px 20px;
     // background-color: rgb(105, 98, 121);
   }
 

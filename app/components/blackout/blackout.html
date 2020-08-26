@@ -7,13 +7,30 @@
       <template>
         <span class="window-label">Window #{{idx}} </span>
 
-        <div class="slider-container container">
-          <ch5-slider
+        <div class="slider-container blackout-container container">
+          <!-- <ch5-slider
             nohandle="true"
-            orientation="vertical"
+            range="true"
             min="0"
             max="100"
-            receivestatevalue="receive_blackout_value"
+            receivestatevalue="receive_left_blackout_value"
+            receivestatevaluehigh="receive_right_blackout_value"
+          >
+          </ch5-slider> -->
+          <ch5-slider
+            class="left-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="receive_left_blackout_value"
+          >
+          </ch5-slider>
+          <ch5-slider
+            class="right-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="receive_right_blackout_value"
           >
           </ch5-slider>
         </div>

@@ -44,10 +44,12 @@ var climatePageModule = (function () {
 
   var tempMax = 31;
   var tempMin = 18;
-  // subscribing state to <h> element (AC tempreture as 'temp' and room tempreture as 'roomTempIndex'
+  // subscribing state to <h> element (AC tempreture as 'temp',,room tempreture as 'roomTempIndex',, room humidity as 'humidityIndex')
   (function (CrComLib) {
     var temp = document.getElementById("temp-index");
     var roomTempIndex = document.getElementById("room-temp-index");
+    var humidityIndex = document.getElementById("humidity-index");
+
     var tempIsSet = CrComLib.subscribeState(
       "n",
       "Rooms.Climate.TempIsSet",
@@ -57,6 +59,11 @@ var climatePageModule = (function () {
       "n",
       "Rooms.Climate.RoomTemp",
       roomTempSub
+    );
+    var roomHumidity = CrComLib.subscribeState(
+      "n",
+      "Rooms.Climate.RoomHumidity",
+      roomHumiditySub
     );
 
     function tempSub(v) {
@@ -70,6 +77,9 @@ var climatePageModule = (function () {
     }
     function roomTempSub(v) {
       roomTempIndex.textContent = v;
+    }
+    function roomHumiditySub(v) {
+      humidityIndex.textContent = v;
     }
   })(CrComLib);
   //   enabling/disabling plus and minus buttons when they reach Max or Min value
