@@ -487,14 +487,29 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
 
   // climate page
   .climate-page {
+    .weather-info {
+      .ch5-button {
+        background-color: $ch5-lighting-btn-dark;
+      }
+    }
+    .ch5-modal-dialog {
+      background-color: #383838fa;
+      .ch5-modal-dialog-close-icon-btn {
+        background-color: #383838fa;
+      }
+    }
+
     .room-temp {
       h4 {
         color: rgba(139, 139, 139, 0.938);
       }
       h2,
       h3 {
-        color: rgb(139, 139, 139);
+        color: #adadad;
       }
+    }
+    span.room-label {
+      color: rgba(247, 247, 247, 0.699);
     }
     .mode-buttons-container,
     .fan-buttons-container {

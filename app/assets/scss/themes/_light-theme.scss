@@ -486,6 +486,19 @@ $gradient-btn-pressed-light: linear-gradient(
 
   // climate page
   .climate-page {
+    .weather-info {
+      .ch5-button {
+        background-color: $ch5-lighting-btn-light;
+        // background-color: #6a6b6b;
+      }
+    }
+    .ch5-modal-dialog {
+      background-color: #dcdbdbf0;
+      .ch5-modal-dialog-close-icon-btn {
+        background-color: #dcdbdbf0;
+      }
+    }
+
     .mode-buttons-container,
     .fan-buttons-container {
       // box-shadow: inset 3px -4px 10px rgba(68, 68, 68, 0.6);

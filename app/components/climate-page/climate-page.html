@@ -8,82 +8,110 @@
       </h2>
     </div>
   </div>
-  <div class="room-temp d-flex align-items-center">
+  <div class="weather-info">
+    <ch5-button
+      type="primary"
+      shape="circle"
+      class="shadow-pulse-button"
+      iconClass="fas fa-cloud-sun"
+      sendEventOnClick="Rooms.Climate.WeatherInfoBtnClicked"
+    ></ch5-button>
+    <ch5-modal-dialog
+      receiveStateShowPulse="Rooms.Climate.WeatherInfoBtnClicked"
+      closable
+      closeIcon="fa fa-window-close"
+      hideOkButton="true"
+      hideCancelButton="true"
+    >
+      <h4><strong>INSIDE:</strong></h4>
+
+      <div class="room-temp d-flex align-items-center">
+        <h4>Room Temp: &nbsp;</h4>
+        <h2 id="room-temp-index">30</h2>
+        <h3 class="mr-4">ºC</h3>
+        <h4>Humidity: &nbsp;</h4>
+        <h2 id="humidity-index">30</h2>
+        <h3>%</h3>
+      </div>
+
+      <h4 class="mt-5"><strong>OUTSIDE:</strong></h4>
+
+      <div class="outside-temp room-temp d-flex align-items-center">
+        <h4>Temp: &nbsp;</h4>
+        <h2 id="">30</h2>
+        <h3 class="mr-4">ºC</h3>
+        <h4>Humidity: &nbsp;</h4>
+        <h2 id="">60</h2>
+        <h3>%</h3>
+      </div>
+      <div class="wind-info room-temp mt-1 d-flex align-items-center">
+        <h4>Wind: &nbsp;</h4>
+        <h2 id="">15</h2>
+        <h3 class="mr-4">km/h &nbsp;</h3>
+        <h2 id="">N/E</h2>
+      </div>
+    </ch5-modal-dialog>
+  </div>
+  <!-- <div class="room-temp d-flex align-items-center">
     <h4>Room Temp: &nbsp;</h4>
     <h2 id="room-temp-index">30</h2>
     <h3 class="mr-4">ºC</h3>
     <h4>Humidity: &nbsp;</h4>
     <h2 id="humidity-index">30</h2>
     <h3>%</h3>
-  </div>
+  </div> -->
 
   <hr />
   <!-- </nav> -->
-  <div class="row">
-    <div
-      class="col-12 h-sm-4 align-self-start pr-0 d-flex justify-content-center align-items-center"
-    >
-      <div class="mode-buttons-container d-flex flex-column align-items-center">
-        <div class="align-self-start"><h3 class="">Mode</h3></div>
-        <div class="mode-buttons horizontal">
-          <ch5-button
-            class="shadow-pulse-button"
-            id="fan-btn"
-            label="Fan"
-            stretch="both"
-            shape="rectangle"
-            sendeventonclick="Rooms.Climate.Mode.FanSetSelected"
-            receivestateselected="Rooms.Climate.Mode.FanIsSelected"
-          >
-          </ch5-button>
-          <ch5-button
-            id="auto-btn"
-            label="Cool"
-            stretch="both"
-            shape="rectangle"
-            sendeventonclick="Rooms.Climate.Mode.CoolSetSelected"
-            receivestateselected="Rooms.Climate.Mode.CoolIsSelected"
-          >
-          </ch5-button>
-          <ch5-button
-            id="auto-btn"
-            label="Off"
-            stretch="both"
-            shape="rectangle"
-            sendeventonclick="Rooms.Climate.Mode.OffSetSelected"
-            receivestateselected="Rooms.Climate.Mode.OffIsSelected"
-          >
-          </ch5-button>
-        </div>
-      </div>
+  <div
+    class="climate-list-container d-sm-flex d-none justify-content-center align-items-center"
+  >
+    <ch5-list size="6" orientation="horizontal" indexId="idx">
+      <template>
+        <span class="room-label">Room #{{idx}} </span>
 
-      <!-- ON OFF Buttons -->
-      <!-- <div
-      class="col-6 col-sm-7 on-off-container pl-0 pr-0 d-flex justify-content-center align-items-center"
-    >
-      <div class="on-off-btn">
-        <ch5-button
-          id="on-btn"
-          label="ON"
-          shape="circle"
-          stretch="both"
-          sendeventonclick="_clicked"
-        >
-        </ch5-button>
+        <div class="row">
+          <div
+            class="col-12 h-sm-4 align-self-start pr-0 d-flex justify-content-center align-items-center"
+          >
+            <div
+              class="mode-buttons-container d-flex flex-column align-items-center"
+            >
+              <div class="align-self-start"><h3 class="">Mode</h3></div>
+              <div class="mode-buttons horizontal">
+                <ch5-button
+                  class="shadow-pulse-button"
+                  id="fan-btn"
+                  label="Fan"
+                  stretch="both"
+                  shape="rectangle"
+                  sendeventonclick="Rooms.Climate.Mode.FanSetSelected"
+                  receivestateselected="Rooms.Climate.Mode.FanIsSelected"
+                >
+                </ch5-button>
+                <ch5-button
+                  id="auto-btn"
+                  label="Cool"
+                  stretch="both"
+                  shape="rectangle"
+                  sendeventonclick="Rooms.Climate.Mode.CoolSetSelected"
+                  receivestateselected="Rooms.Climate.Mode.CoolIsSelected"
+                >
+                </ch5-button>
+                <ch5-button
+                  id="auto-btn"
+                  label="Off"
+                  stretch="both"
+                  shape="rectangle"
+                  sendeventonclick="Rooms.Climate.Mode.OffSetSelected"
+                  receivestateselected="Rooms.Climate.Mode.OffIsSelected"
+                >
+                </ch5-button>
+              </div>
+            </div>
+          </div>
 
-        <ch5-button
-          id="off-btn"
-          label="OFF"
-          shape="circle"
-          stretch="both"
-          sendeventonclick="_clicked"
-        >
-        </ch5-button>
-      </div>
-    </div> -->
-    </div>
-
-    <!-- <div
+          <!-- <div
       class="col-5 col-sm-5 order-sm-1 pr-0 d-flex justify-content-center align-items-center"
     >
       <div
@@ -131,53 +159,47 @@
         </div>
       </div>
     </div> -->
-    <div class="temp-column col-12">
-      <div class="row">
-        <div class="col-12 col-sm p-0">
-          <div
-            class="temp-container d-flex align-items-center justify-content-center"
-          >
-            <!-- <div class="textinput">
-              <ch5-textinput
-                stretch="content"
-                disabled
-                type="number"
-                receivestatevalue="Rooms.Climate.TempIsSet"
-              >
-              </ch5-textinput>
-            </div> -->
-            <h1 data-ch5-textcontent="" id="temp-index">28</h1>
-            <h3>ºC</h3>
-          </div>
-        </div>
-        <div class="col-12 col-sm p-0">
-          <div class="on-off-btn plus-minus-btn">
-            <div></div>
-            <ch5-button
-              id="plus-btn"
-              label=""
-              shape="circle"
-              stretch="both"
-              iconclass="fas fa-plus"
-              onclick=""
-              sendeventonclick="Rooms.Climate.IncrementTemp"
-            >
-            </ch5-button>
+          <div class="temp-column col-12">
+            <div class="row">
+              <div class="col-12 col-sm p-0">
+                <div
+                  class="temp-container d-flex align-items-center justify-content-center"
+                >
+                  <h1 data-ch5-textcontent="" id="temp-index">28</h1>
+                  <h3>ºC</h3>
+                </div>
+              </div>
+              <div class="col-12 col-sm p-0">
+                <div class="on-off-btn plus-minus-btn">
+                  <div></div>
+                  <ch5-button
+                    id="plus-btn"
+                    label=""
+                    shape="circle"
+                    stretch="both"
+                    iconclass="fas fa-plus"
+                    onclick=""
+                    sendeventonclick="Rooms.Climate.IncrementTemp"
+                  >
+                  </ch5-button>
 
-            <ch5-button
-              id="minus-btn"
-              label=""
-              shape="circle"
-              stretch="both"
-              iconclass="fas fa-minus"
-              onclick=""
-              sendeventonclick="Rooms.Climate.DecrementTemp"
-            >
-            </ch5-button>
-            <div></div>
+                  <ch5-button
+                    id="minus-btn"
+                    label=""
+                    shape="circle"
+                    stretch="both"
+                    iconclass="fas fa-minus"
+                    onclick=""
+                    sendeventonclick="Rooms.Climate.DecrementTemp"
+                  >
+                  </ch5-button>
+                  <div></div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
+      </template>
+    </ch5-list>
   </div>
 </section>

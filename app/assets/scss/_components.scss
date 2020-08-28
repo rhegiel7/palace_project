@@ -809,11 +809,13 @@
     display: block;
     margin-bottom: 1rem;
     padding-left: 30px;
+    font-weight: bold;
     @include media-breakpoint-up(sm) {
       font-size: 1rem;
       margin-bottom: 0.5rem;
     }
   }
+
   .blackout-shades-btn {
     position: absolute;
     left: 35%;
@@ -1160,16 +1162,109 @@
 
 // climate page
 .climate-page {
-  .ch5-button {
-    border: 0;
+  .weather-info {
+    // margin-right: 0.7rem;
+    // display: inline-flex;
+    position: absolute;
+    right: 2rem;
+    top: 1.8rem;
+
+    .ch5-button {
+      display: flex;
+      align-items: center;
+      min-width: 40px;
+
+      .cb-btn {
+        @include size(100%);
+      }
+
+      i.fa-cloud-sun {
+        font-size: 17px;
+        padding: 0;
+        // @include size(15px);
+      }
+    }
+
+    .ch5-modal-dialog {
+      border: $version-modal-dialog-border-width $border-type $black;
+      min-width: 400px;
+      min-height: 200px;
+      padding: 1.25rem;
+
+      .ch5-modal-dialog-contents {
+        padding: 0;
+
+        // & > p:last-child {
+        //   margin-bottom: 0;
+        // }
+      }
+
+      .ch5-modal-dialog-close-icon-btn {
+        padding: 0;
+        margin: 0;
+        @include size(auto);
+
+        span.ch5-modal-dialog-close-icon {
+          display: block;
+          font-size: rem-calc(24px);
+        }
+      }
+
+      p {
+        color: $version-modal-dialog-content-color;
+        font-size: rem-calc(20px);
+      }
+
+      p.version-error {
+        color: $red;
+      }
+
+      h4 {
+        color: $black;
+        font-size: rem-calc(22px);
+      }
+    }
   }
 
-  .room-temp {
-    position: absolute;
-    right: 5px;
-    top: 35px;
-    padding: 5px 10px 5px 20px;
-    // background-color: rgb(105, 98, 121);
+  span.room-label {
+    display: block;
+    margin-bottom: 1rem;
+    padding-left: 30px;
+    font-weight: bold;
+    @include media-breakpoint-up(sm) {
+      font-size: 1rem;
+      margin-bottom: 0.1rem;
+    }
+  }
+  hr {
+    margin-bottom: 0;
+    margin-top: 0.5vh;
+  }
+  .climate-list-container {
+    height: 100%;
+  }
+
+  ch5-list {
+    // height: 80vh;
+    // padding-top: 0;
+    .list-item {
+      background-color: transparent !important;
+      border: none;
+    }
+    .ch5-list-horizontal {
+      .list-item {
+        width: 50vw;
+        border-right: 1px solid rgb(78, 78, 78);
+        padding: 0 2rem 0 1rem;
+
+        // @include media-breakpoint-up(xl) {
+        //   padding-top: 2rem;
+        // }
+      }
+    }
+  }
+  .ch5-button {
+    border: 0;
   }
 
   .mode-buttons-container {
@@ -1179,7 +1274,7 @@
     // border: solid 1px $white;
     @include media-breakpoint-up(sm) {
       margin-top: 1vh !important;
-      padding: 0.5rem 1.2rem 1rem;
+      padding: 0.4rem 1.2rem 0.8rem;
     }
     @include media-breakpoint-up(md) {
       margin-top: 3vh !important;
@@ -1192,9 +1287,7 @@
       padding: 0.5rem 1.5rem 1.5rem;
     }
   }
-  hr {
-    margin-top: 0.5vh;
-  }
+
   .fan-buttons-container {
     width: auto;
     padding: 0.5rem 1rem 1rem;
@@ -1330,7 +1423,7 @@
     grid-gap: 0;
     margin: 1rem 0 0 7rem;
     @include media-breakpoint-up(sm) {
-      margin: 1.7rem 0 0 1rem;
+      margin: 1.5rem 0 0 1rem;
     }
     @include media-breakpoint-up(md) {
       margin: 1.9rem 0 0 1rem;
@@ -1409,10 +1502,10 @@
     }
   }
   .temp-column {
-    @include media-breakpoint-up(sm) {
-      position: absolute;
-      bottom: 0.3rem;
-    }
+    // @include media-breakpoint-up(sm) {
+    //   position: absolute;
+    //   bottom: 0.3rem;
+    // }
     @include media-breakpoint-up(md) {
       position: absolute;
       bottom: 1rem;

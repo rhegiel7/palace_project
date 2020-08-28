@@ -28,6 +28,19 @@
     },
     {
       "type": "boolean",
+      "event": "Rooms.Climate.WeatherInfoBtnClicked",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Rooms.Climate.WeatherInfoBtnClicked",
+          "type": "b",
+          "logic": "set",
+          "value": true
+        }
+      ]
+    },
+    {
+      "type": "boolean",
       "event": "Rooms.Climate.Mode.FanSetSelected",
       "trigger": true,
       "actions": [
