@@ -663,7 +663,7 @@
     {
       "state": "Room.NumberOfLights",
       "type": "n",
-      "value": 6
+      "value": 5
     },
     {
       "state": "Room.Scenes[0].NameOfScene",
@@ -693,7 +693,7 @@
     {
       "state": "Room.DimmableLights[0].NameOfLight",
       "type": "s",
-      "value": "Lamp"
+      "value": "Cove Light"
     },
     {
       "state": "Room.DimmableLights[0].LightIsAtLevel",
@@ -703,7 +703,7 @@
     {
       "state": "Room.DimmableLights[1].NameOfLight",
       "type": "s",
-      "value": "Sconces"
+      "value": "Chandelier"
     },
     {
       "state": "Room.DimmableLights[1].LightIsAtLevel",
@@ -713,7 +713,7 @@
     {
       "state": "Room.DimmableLights[2].NameOfLight",
       "type": "s",
-      "value": "Downlights"
+      "value": "Spotlights"
     },
     {
       "state": "Room.DimmableLights[2].LightIsAtLevel",
@@ -723,7 +723,7 @@
     {
       "state": "Room.DimmableLights[3].NameOfLight",
       "type": "s",
-      "value": "Media Wall"
+      "value": "Wall Lights"
     },
     {
       "state": "Room.DimmableLights[3].LightIsAtLevel",
@@ -733,7 +733,7 @@
     {
       "state": "Room.DimmableLights[4].NameOfLight",
       "type": "s",
-      "value": "Tracks"
+      "value": "Strip Lights"
     },
     {
       "state": "Room.DimmableLights[4].LightIsAtLevel",

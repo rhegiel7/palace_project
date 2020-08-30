@@ -8,7 +8,7 @@
       </h2>
     </div>
   </div>
-  <div class="weather-info">
+  <!-- <div class="weather-info">
     <ch5-button
       type="primary"
       shape="circle"
@@ -51,14 +51,6 @@
         <h2 id="">N/E</h2>
       </div>
     </ch5-modal-dialog>
-  </div>
-  <!-- <div class="room-temp d-flex align-items-center">
-    <h4>Room Temp: &nbsp;</h4>
-    <h2 id="room-temp-index">30</h2>
-    <h3 class="mr-4">ºC</h3>
-    <h4>Humidity: &nbsp;</h4>
-    <h2 id="humidity-index">30</h2>
-    <h3>%</h3>
   </div> -->
 
   <hr />
@@ -66,9 +58,32 @@
   <div
     class="climate-list-container d-sm-flex d-none justify-content-center align-items-center"
   >
-    <ch5-list size="6" orientation="horizontal" indexId="idx">
+    <ch5-list
+      size="6"
+      orientation="horizontal"
+      indexId="idx"
+      receivestatesize="Climate.GuestRoom.NumberOfRooms"
+    >
       <template>
-        <span class="room-label">Room #{{idx}} </span>
+        <div class="room-temp d-flex align-items-center">
+          <span
+            class="room-label"
+            data-ch5-textcontent="Climate.GuestRoom.Room[{{idx}}].RoomName"
+            >Room Name</span
+          >
+          <div class="temp-humidity ml-auto">
+            <div class="temp d-flex justify-content-end">
+              <h4 class="mt-1">Room Temp: &nbsp;</h4>
+              <h2 id="room-temp-index">30</h2>
+              <h3 class="">ºC</h3>
+            </div>
+            <div class="humidity d-flex justify-content-end">
+              <h4 class="mt-1">Humidity: &nbsp;</h4>
+              <h2 id="humidity-index">30</h2>
+              <h3>%</h3>
+            </div>
+          </div>
+        </div>
 
         <div class="row">
           <div
@@ -85,8 +100,8 @@
                   label="Fan"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Rooms.Climate.Mode.FanSetSelected"
-                  receivestateselected="Rooms.Climate.Mode.FanIsSelected"
+                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.FanSetSelected"
+                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.FanIsSelected"
                 >
                 </ch5-button>
                 <ch5-button
@@ -94,8 +109,8 @@
                   label="Cool"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Rooms.Climate.Mode.CoolSetSelected"
-                  receivestateselected="Rooms.Climate.Mode.CoolIsSelected"
+                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.CoolSetSelected"
+                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.CoolIsSelected"
                 >
                 </ch5-button>
                 <ch5-button
@@ -103,8 +118,8 @@
                   label="Off"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Rooms.Climate.Mode.OffSetSelected"
-                  receivestateselected="Rooms.Climate.Mode.OffIsSelected"
+                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.OffSetSelected"
+                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.OffIsSelected"
                 >
                 </ch5-button>
               </div>

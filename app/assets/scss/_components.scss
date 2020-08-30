@@ -360,6 +360,49 @@
     }
   }
 }
+// time-weather-info (the toggle info line in the navbar)
+
+.time-weather-info {
+  .hide {
+    display: none !important;
+  }
+  .time {
+    span {
+      font-weight: bold;
+    }
+  }
+  .outside-temp {
+    h4 {
+      font-size: 0.8rem;
+    }
+    h3 {
+      font-size: 0.9rem;
+      margin-top: 0.1rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+    h4,
+    h3,
+    h2 {
+      margin-bottom: 0;
+    }
+  }
+  .toggle-container {
+    // display: inline-block;
+    position: absolute;
+    right: 50px;
+    top: 5px;
+    button {
+      background: transparent;
+      font-size: 1.5rem;
+    }
+    button:focus {
+      box-shadow: none !important;
+      outline: none !important;
+    }
+  }
+}
 
 // menu
 .menu {
@@ -1048,6 +1091,16 @@
 // lighting page
 .lighting-page {
   .examples-container {
+    // .list-item {
+    //   padding: 1rem 1.5rem 1.5rem !important;
+    // }
+    .vertical-list-item {
+      span {
+        font-weight: bold !important;
+        font-size: 13px !important;
+      }
+    }
+
     & > .row {
       height: calc(100% - 70.4px);
     }
@@ -1162,80 +1215,38 @@
 
 // climate page
 .climate-page {
-  .weather-info {
-    // margin-right: 0.7rem;
-    // display: inline-flex;
-    position: absolute;
-    right: 2rem;
-    top: 1.8rem;
-
-    .ch5-button {
-      display: flex;
-      align-items: center;
-      min-width: 40px;
-
-      .cb-btn {
-        @include size(100%);
-      }
-
-      i.fa-cloud-sun {
-        font-size: 17px;
-        padding: 0;
-        // @include size(15px);
+  .room-temp {
+    span.room-label {
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding-left: 10px;
+      font-weight: bold;
+      @include media-breakpoint-up(sm) {
+        font-size: 1rem;
+        margin-bottom: 0.1rem;
       }
     }
-
-    .ch5-modal-dialog {
-      border: $version-modal-dialog-border-width $border-type $black;
-      min-width: 400px;
-      min-height: 200px;
-      padding: 1.25rem;
-
-      .ch5-modal-dialog-contents {
-        padding: 0;
-
-        // & > p:last-child {
-        //   margin-bottom: 0;
-        // }
-      }
-
-      .ch5-modal-dialog-close-icon-btn {
-        padding: 0;
-        margin: 0;
-        @include size(auto);
-
-        span.ch5-modal-dialog-close-icon {
-          display: block;
-          font-size: rem-calc(24px);
-        }
-      }
-
-      p {
-        color: $version-modal-dialog-content-color;
-        font-size: rem-calc(20px);
-      }
-
-      p.version-error {
-        color: $red;
-      }
-
-      h4 {
-        color: $black;
-        font-size: rem-calc(22px);
-      }
+    h4 {
+      font-size: 0.8rem;
+    }
+    h3 {
+      font-size: 0.9rem;
+    }
+    h2 {
+      font-size: 1.1rem;
+    }
+    h4,
+    h3,
+    h2 {
+      margin-bottom: 0.2rem;
     }
   }
-
-  span.room-label {
-    display: block;
-    margin-bottom: 1rem;
-    padding-left: 30px;
-    font-weight: bold;
-    @include media-breakpoint-up(sm) {
-      font-size: 1rem;
-      margin-bottom: 0.1rem;
-    }
+  .navbar-text {
+    margin-top: 0.3rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2 rem;
   }
+
   hr {
     margin-bottom: 0;
     margin-top: 0.5vh;
@@ -1274,7 +1285,7 @@
     // border: solid 1px $white;
     @include media-breakpoint-up(sm) {
       margin-top: 1vh !important;
-      padding: 0.4rem 1.2rem 0.8rem;
+      padding: 0.3rem 1.2rem 0.8rem;
     }
     @include media-breakpoint-up(md) {
       margin-top: 3vh !important;
@@ -1423,7 +1434,8 @@
     grid-gap: 0;
     margin: 1rem 0 0 7rem;
     @include media-breakpoint-up(sm) {
-      margin: 1.5rem 0 0 1rem;
+      margin: 0.8rem 0 0 1rem;
+      padding-bottom: 0.5rem;
     }
     @include media-breakpoint-up(md) {
       margin: 1.9rem 0 0 1rem;
@@ -1474,6 +1486,9 @@
     }
     @include media-breakpoint-up(sm) {
       margin: 0.5rem 0 0 4rem;
+      height: 10.5rem;
+      width: 10.5rem;
+      border-width: 1.6rem;
     }
     @include media-breakpoint-up(md) {
       height: 15rem;
@@ -1520,6 +1535,75 @@
       bottom: 3rem;
     }
   }
+  // styles for button with modal dialog with weather onfo
+
+  // .weather-info {
+  //   // margin-right: 0.7rem;
+  //   // display: inline-flex;
+  //   // position: absolute;
+  //   // right: 2rem;
+  //   // top: 1.8rem;
+  //   display: inline-flex;
+  //   .ch5-button {
+  //     display: flex;
+  //     align-items: center;
+  //     min-width: 40px;
+
+  //     background-color: transparent !important;
+  //     border: none;
+  //     box-shadow: none;
+
+  //     .cb-btn {
+  //       @include size(100%);
+  //     }
+
+  //     i.fa-cloud-sun {
+  //       font-size: 17px;
+  //       padding: 0;
+  //       // @include size(15px);
+  //     }
+  //   }
+
+  //   .ch5-modal-dialog {
+  //     border: $version-modal-dialog-border-width $border-type $black;
+  //     min-width: 400px;
+  //     min-height: 200px;
+  //     padding: 1.25rem;
+
+  //     .ch5-modal-dialog-contents {
+  //       padding: 0;
+
+  //       // & > p:last-child {
+  //       //   margin-bottom: 0;
+  //       // }
+  //     }
+
+  //     .ch5-modal-dialog-close-icon-btn {
+  //       padding: 0;
+  //       margin: 0;
+  //       @include size(auto);
+
+  //       span.ch5-modal-dialog-close-icon {
+  //         display: block;
+  //         font-size: rem-calc(24px);
+  //       }
+  //     }
+
+  //     p {
+  //       color: $version-modal-dialog-content-color;
+  //       font-size: rem-calc(20px);
+  //     }
+
+  //     p.version-error {
+  //       color: $red;
+  //     }
+
+  //     h4 {
+  //       color: $black;
+  //       font-size: rem-calc(22px);
+  //     }
+  //   }
+  // }
 }
 
 // music page

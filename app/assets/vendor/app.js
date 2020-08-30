@@ -118,57 +118,6 @@ var appModule = (function () {
     });
   }
 
-  // Display Clock in the navbar
-  function newClock() {
-    var clock = new Date();
-    var days = ["SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"];
-    var months = [
-      "Jan",
-      "Feb",
-      "Mar",
-      "Apr",
-      "May",
-      "Jun",
-      "Jul",
-      "Aug",
-      "Sep",
-      "Oct",
-      "Nov",
-      "Dec",
-    ];
-
-    let hour = clock.getHours();
-    if (hour < 10) {
-      hour = "0" + hour;
-    }
-    let minutes = clock.getMinutes();
-    if (minutes < 10) {
-      minutes = "0" + minutes;
-    }
-    let seconds = clock.getSeconds();
-    if (seconds < 10) {
-      seconds = "0" + seconds;
-    }
-    let day = clock.getDay();
-    let date = clock.getDate();
-    let month = clock.getMonth();
-
-    let print_clock =
-      hour +
-      " : " +
-      minutes +
-      " " +
-      " " +
-      days[day] +
-      " " +
-      date +
-      " " +
-      months[month];
-
-    document.getElementById("time").innerHTML = print_clock;
-    setTimeout(newClock, 1000);
-  }
-
   // setTimeout(new_clock, 1000);
 
   /**
@@ -372,7 +321,7 @@ var appModule = (function () {
    */
   function onLoadInit() {
     loadEmulator();
-    newClock();
+    // newClock();
     changeTheme("LIGHT");
     translateModule.getLanguage(translateModule.defaultLng);
     getAppVersionInfo();

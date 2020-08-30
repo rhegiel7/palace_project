@@ -45,51 +45,52 @@ var climatePageModule = (function () {
   var tempMax = 31;
   var tempMin = 18;
   // subscribing state to <h> element (AC tempreture as 'temp',,room tempreture as 'roomTempIndex',, room humidity as 'humidityIndex')
-  (function (CrComLib) {
-    var temp = document.getElementById("temp-index");
-    var roomTempIndex = document.getElementById("room-temp-index");
-    var humidityIndex = document.getElementById("humidity-index");
+  // (function (CrComLib) {
+  //   var temp = document.getElementById("temp-index");
+  //   var roomTempIndex = document.getElementById("room-temp-index");
+  //   var humidityIndex = document.getElementById("humidity-index");
 
-    var tempIsSet = CrComLib.subscribeState(
-      "n",
-      "Rooms.Climate.TempIsSet",
-      tempSub
-    );
-    var roomTemp = CrComLib.subscribeState(
-      "n",
-      "Rooms.Climate.RoomTemp",
-      roomTempSub
-    );
-    var roomHumidity = CrComLib.subscribeState(
-      "n",
-      "Rooms.Climate.RoomHumidity",
-      roomHumiditySub
-    );
+  //   var tempIsSet = CrComLib.subscribeState(
+  //     "n",
+  //     "Rooms.Climate.TempIsSet",
+  //     tempSub
+  //   );
+  //   var roomTemp = CrComLib.subscribeState(
+  //     "n",
+  //     "Rooms.Climate.RoomTemp",
+  //     roomTempSub
+  //   );
+  //   var roomHumidity = CrComLib.subscribeState(
+  //     "n",
+  //     "Rooms.Climate.RoomHumidity",
+  //     roomHumiditySub
+  //   );
 
-    function tempSub(v) {
-      if (v < tempMax && v > tempMin) {
-        temp.textContent = v;
-      } else if (v === tempMax) {
-        temp.textContent = tempMax;
-      } else if (v === tempMin) {
-        temp.textContent = tempMin;
-      }
-    }
-    function roomTempSub(v) {
-      roomTempIndex.textContent = v;
-    }
-    function roomHumiditySub(v) {
-      humidityIndex.textContent = v;
-    }
-  })(CrComLib);
+  //   function tempSub(v) {
+  //     if (v < tempMax && v > tempMin) {
+  //       temp.textContent = v;
+  //     } else if (v === tempMax) {
+  //       temp.textContent = tempMax;
+  //     } else if (v === tempMin) {
+  //       temp.textContent = tempMin;
+  //     }
+  //   }
+  //   function roomTempSub(v) {
+  //     roomTempIndex.textContent = v;
+  //   }
+  //   function roomHumiditySub(v) {
+  //     humidityIndex.textContent = v;
+  //   }
+  // })(CrComLib);
+
   //   enabling/disabling plus and minus buttons when they reach Max or Min value
   var temp = document.getElementById("temp-index");
 
   let plusbtn = document.getElementById("plus-btn");
   let minusbtn = document.getElementById("minus-btn");
 
-  plusbtn.addEventListener("click", plusDisabled);
-  minusbtn.addEventListener("click", minusDisabled);
+  // plusbtn.addEventListener("click", plusDisabled);
+  // minusbtn.addEventListener("click", minusDisabled);
 
   function plusDisabled() {
     minusbtn.removeAttribute("disabled");

@@ -371,6 +371,33 @@ $gradient-btn-pressed-light: linear-gradient(
     }
   }
 
+  // time-weather-info (the toggle info line in the navbar)
+
+  .time-weather-info {
+    .time {
+      span {
+        color: $music-icon-bg-light;
+      }
+    }
+    .outside-temp {
+      h4 {
+        color: $music-icon-bg-light;
+      }
+      h2,
+      h3 {
+        color: rgb(53, 53, 53);
+      }
+    }
+    button {
+      &.toggle-btn {
+        color: #222222f0;
+      }
+      .fa-cloud-sun {
+        color: #252525f0;
+      }
+    }
+  }
+
   // menu (dropdown)
   .menu {
     .dropdown-menu {
@@ -436,6 +463,16 @@ $gradient-btn-pressed-light: linear-gradient(
 
   // lighting page
   // ch5 list
+  .lighting-page {
+    .examples-container {
+      span {
+        &.label {
+          // color: rgb(53, 53, 53);
+          color: $music-icon-bg-light;
+        }
+      }
+    }
+  }
   ch5-list.ch5-custom-list.dim {
     background-color: rgb(228, 226, 226);
   }

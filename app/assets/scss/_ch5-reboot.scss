@@ -92,7 +92,7 @@ ch5-list.ch5-custom-list {
 
     @include media-breakpoint-down(sm) {
       & > .list-item {
-        padding: 1.5rem;
+        padding: 1rem 1.5rem 1.5rem;
       }
 
       .vertical-list-item

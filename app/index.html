@@ -30,45 +30,15 @@
           id="room-list-templ"
           url="./components/room-list-templ/room-list-templ.html"
         ></ch5-import-htmlsnippet>
-        <div class="time">
-          <span id="time" class="data"></span>
-        </div>
-        <!-- <form class="form-inline" id="changeTheme">
-          <a class="btn-link" onclick="appModule.changeTheme('LIGHT')"
-            ><i class="fas fa-sun"></i
-          ></a>
-          <a class="btn-link" onclick="appModule.changeTheme('DARK')"
-            ><i class="far fa-moon"></i
-          ></a>
-        </form> -->
+        <ch5-import-htmlsnippet
+          id="time-weather-info"
+          url="./components/time-weather-info/time-weather-info.html"
+        ></ch5-import-htmlsnippet>
+
         <ch5-import-htmlsnippet
           id="menu"
           url="./components/menu/menu.html"
         ></ch5-import-htmlsnippet>
-
-        <!-- <div class="navbar-action-right">
-          <div class="version-info">
-            <ch5-button
-              type="primary"
-              shape="circle"
-              customStyle="border:1px solid #808080;background-color:#808080;"
-              class="shadow-pulse-button"
-              iconClass="fas fa-info"
-              sendEventOnClick="infoBtn.clicked"
-            ></ch5-button>
-            <ch5-modal-dialog
-              receiveStateShowPulse="infoBtn.clicked"
-              closable
-              closeIcon="fa fa-window-close"
-              hideOkButton="true"
-              hideCancelButton="true"
-            >
-              <h4 data-ch5-i18n="-+app.ch5modal.name+-">CH5 Version</h4>
-              <p id="versionDescription"></p>
-              <p id="appVersion"></p>
-            </ch5-modal-dialog>
-          </div>
-        </div> -->
       </nav>
       <!-- Header end -->
       <ch5-background

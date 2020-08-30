@@ -186,13 +186,6 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
     }
   }
 
-  // Date and time
-  .time {
-    span {
-      color: #aaaaaa;
-    }
-  }
-
   // buttons theme
   .ch5-button {
     @each $color, $value in $ch5-dark-theme-colors {
@@ -392,6 +385,31 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
     }
   }
 
+  // time-weather-info (the toggle info line in the navbar)
+
+  .time-weather-info {
+    .time {
+      span {
+        // color: #aaaaaa;
+        color: rgba(139, 139, 139, 0.938);
+      }
+    }
+    .outside-temp {
+      h4 {
+        color: rgba(139, 139, 139, 0.938);
+      }
+      h2,
+      h3 {
+        color: #adadad;
+      }
+    }
+    button {
+      &.toggle-btn {
+        color: #aaaaaa;
+      }
+    }
+  }
+
   // menu (dropdown)
   .menu {
     .dropdown-menu {
@@ -464,6 +482,17 @@ $gradient-btn-pressed-dark: linear-gradient(-45deg, #8492a5, #2a2e33);
 
   // lighting page
   // ch5 list
+
+  .lighting-page {
+    .examples-container {
+      span {
+        &.label {
+          color: rgba(139, 139, 139, 0.938);
+        }
+      }
+    }
+  }
+
   ch5-list.ch5-custom-list {
     .ch5-button--default.ch5-button--pressed {
       background-color: $sidebar-dark-action-hover;
