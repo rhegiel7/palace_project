@@ -862,7 +862,7 @@
     @include media-breakpoint-up(sm) {
       margin-top: 0.3rem;
       padding-top: 0.2rem;
-      padding-bottom: 0.2 rem;
+      padding-bottom: 0.2rem;
     }
   }
 
@@ -1628,6 +1628,13 @@
 // music page
 
 .music-page {
+  .navbar-text {
+    @include media-breakpoint-up(sm) {
+      margin-top: 0.3rem;
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+    }
+  }
   .dropdown-btn-container {
     position: absolute;
     left: 40%;
@@ -1641,6 +1648,7 @@
     }
     @include media-breakpoint-up(sm) {
       left: 47%;
+      top: 1.5rem;
     }
   }
   .dropdown-menu {
@@ -1679,8 +1687,8 @@
     height: 67vh;
     width: 93vw;
     @include media-breakpoint-only(sm) {
-      margin-top: 0;
-      height: 62vh;
+      margin-top: 0 !important;
+      height: 67vh;
       width: 95vw;
     }
     @include media-breakpoint-up(lg) {
@@ -1774,6 +1782,7 @@
           margin-left: 14rem;
         }
         @include media-breakpoint-only(sm) {
+          margin-top: 0.4rem;
           h2 {
             font-size: 1.1rem;
           }
@@ -1825,7 +1834,7 @@
       align-items: center;
       margin-top: 0.4rem;
       @include media-breakpoint-only(sm) {
-        margin-top: 0;
+        // margin-top: 0;
       }
       @include media-breakpoint-up(xl) {
         margin-top: 1.5rem;
@@ -1835,10 +1844,10 @@
         grid-template-columns: repeat(3, minmax(auto, 25vmin));
         grid-auto-rows: 5vh;
         @include media-breakpoint-only(sm) {
-          grid-template-columns: repeat(3, minmax(auto, 20vmin));
-          grid-auto-rows: 6vh;
+          grid-template-columns: repeat(3, minmax(auto, 26vmin));
+          grid-auto-rows: 7vh;
           i {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
           }
         }
         @include media-breakpoint-up(md) {
@@ -1865,7 +1874,7 @@
       margin: 0.8rem 2.3rem 0;
       font-size: 1rem;
       @include media-breakpoint-only(sm) {
-        margin: 0.2rem 5rem 0;
+        margin: 0.5rem 5rem 0;
       }
       @include media-breakpoint-up(md) {
         margin: 0.8rem 5rem 0;
@@ -1895,7 +1904,6 @@
     height: 60vh;
     padding: 0;
     overflow: auto;
-    // padding-right: 0;
     ::-webkit-scrollbar {
       width: 4px;
     }
@@ -1956,7 +1964,7 @@
       }
     }
     @include media-breakpoint-up(sm) {
-      height: 60vh;
+      height: 67vh;
     }
     @include media-breakpoint-up(lg) {
       height: 57vh;

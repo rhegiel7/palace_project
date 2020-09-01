@@ -182,8 +182,7 @@
                 >
                   <h1
                     class="temp-index"
-                    onload="climatePageModule.TextContentConvert()"
-                    data-ch5-textcontent="Climate.GuestRoom.Room[{{idx}}].TempIsSet"
+                    data-ch5-textcontent=""
                     id="temp-index-{{idx}}"
                   >
                     28
@@ -200,7 +199,6 @@
                     shape="circle"
                     stretch="both"
                     iconclass="fas fa-plus"
-                    onclick="climatePageModule.BtnClickAttrUpdate()"
                     sendeventonclick="Climate.GuestRoom.Room[{{idx}}].IncrementTemp"
                   >
                   </ch5-button>
