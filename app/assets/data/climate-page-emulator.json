@@ -2,11 +2,11 @@
   "cues": [
     {
       "type": "boolean",
-      "event": "Rooms.Climate.IncrementTemp",
+      "event": "Climate.GuestRoom.Room[0].IncrementTemp",
       "trigger": true,
       "actions": [
         {
-          "state": "Rooms.Climate.TempIsSet",
+          "state": "Climate.GuestRoom.Room[0].TempIsSet",
           "type": "n",
           "logic": "increment",
           "offset": 1
@@ -15,11 +15,11 @@
     },
     {
       "type": "boolean",
-      "event": "Rooms.Climate.DecrementTemp",
+      "event": "Climate.GuestRoom.Room[0].DecrementTemp",
       "trigger": true,
       "actions": [
         {
-          "state": "Rooms.Climate.TempIsSet",
+          "state": "Climate.GuestRoom.Room[0].TempIsSet",
           "type": "n",
           "logic": "decrement",
           "offset": 1
@@ -28,14 +28,79 @@
     },
     {
       "type": "boolean",
-      "event": "Rooms.Climate.WeatherInfoBtnClicked",
+      "event": "Climate.GuestRoom.Room[1].IncrementTemp",
       "trigger": true,
       "actions": [
         {
-          "state": "Rooms.Climate.WeatherInfoBtnClicked",
-          "type": "b",
-          "logic": "set",
-          "value": true
+          "state": "Climate.GuestRoom.Room[1].TempIsSet",
+          "type": "n",
+          "logic": "increment",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Climate.GuestRoom.Room[1].DecrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Climate.GuestRoom.Room[1].TempIsSet",
+          "type": "n",
+          "logic": "decrement",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Climate.GuestRoom.Room[2].IncrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Climate.GuestRoom.Room[2].TempIsSet",
+          "type": "n",
+          "logic": "increment",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Climate.GuestRoom.Room[2].DecrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Climate.GuestRoom.Room[2].TempIsSet",
+          "type": "n",
+          "logic": "decrement",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Climate.GuestRoom.Room[3].IncrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Climate.GuestRoom.Room[3].TempIsSet",
+          "type": "n",
+          "logic": "increment",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "type": "boolean",
+      "event": "Climate.GuestRoom.Room[3].DecrementTemp",
+      "trigger": true,
+      "actions": [
+        {
+          "state": "Climate.GuestRoom.Room[3].TempIsSet",
+          "type": "n",
+          "logic": "decrement",
+          "offset": 1
         }
       ]
     },

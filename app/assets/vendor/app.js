@@ -5,7 +5,7 @@ var appModule = (function () {
   /**
    * All public and local(prefix '_') properties
    */
-  let triggerview = document.querySelector(".triggerview");
+  let triggerview = document.querySelector(".triggerview-main");
   let navbarThumb = document.querySelector(".swiper-thumb");
   let activeIndex = 0;
   let themeNav = document.getElementById("changeTheme");
@@ -91,6 +91,84 @@ var appModule = (function () {
     //   });
     // }
   }
+
+  // Activity watcher for switching to inactivity page when no action from user
+
+  function activityWatcher() {
+    //The number of seconds that have passed
+    //since the user was active.
+    var secondsSinceLastActivity = 0;
+
+    //Five minutes. 60 x 5 = 300 seconds.
+    var maxInactivity = 5;
+
+    //   Hide navbar on inactivity page
+
+    let navbar = document.getElementById("main-navbar");
+    let mainSection = document.querySelector(".main-section");
+    let thumbActionArrow = document.querySelector(".thumb-action");
+
+    function hideNavbar() {
+      if (triggerview.getAttribute("activeview") == 4) {
+        navbar.classList.add("hide");
+        mainSection.classList.add("main-section-increased");
+        navbarThumb.classList.add("hide");
+        thumbActionArrow.classList.add("hide");
+      }
+    }
+
+    //Setup the setInterval method to run
+    //every second. 1000 milliseconds = 1 second.
+    setInterval(function () {
+      secondsSinceLastActivity++;
+      // console.log(
+      //   secondsSinceLastActivity + " seconds since the user was last active"
+      // );
+      //if the user has been inactive or idle for longer
+      //then the seconds specified in maxInactivity
+      if (secondsSinceLastActivity > maxInactivity) {
+        // console.log(
+        //   "User has been inactive for more than " + maxInactivity + " seconds"
+        // );
+
+        triggerview.setActiveView(4);
+        hideNavbar();
+      }
+    }, 1000);
+
+    //The function that will be called whenever a user is active
+    function activity() {
+      //reset the secondsSinceLastActivity variable
+      //back to 0
+      secondsSinceLastActivity = 0;
+      navbar.classList.remove("hide");
+      mainSection.classList.remove("main-section-increased");
+      navbarThumb.classList.remove("hide");
+      thumbActionArrow.classList.remove("hide");
+
+      if (triggerview.getAttribute("activeview") == 4) {
+        triggerview.setActiveView(0);
+      }
+    }
+
+    //An array of DOM events that should be interpreted as
+    //user activity.
+    var activityEvents = [
+      "mousedown",
+      "mousemove",
+      "keydown",
+      "scroll",
+      "touchstart",
+    ];
+
+    //add these events to the document.
+    //register the activity function as the listener parameter.
+    activityEvents.forEach(function (eventName) {
+      document.addEventListener(eventName, activity, true);
+    });
+  }
+
+  activityWatcher();
 
   /**
    * Fetch app version info from menifest file.

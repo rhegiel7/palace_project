@@ -59,7 +59,7 @@
     class="climate-list-container d-sm-flex d-none justify-content-center align-items-center"
   >
     <ch5-list
-      size="6"
+      id="climate-horizontal-list"
       orientation="horizontal"
       indexId="idx"
       receivestatesize="Climate.GuestRoom.NumberOfRooms"
@@ -180,7 +180,14 @@
                 <div
                   class="temp-container d-flex align-items-center justify-content-center"
                 >
-                  <h1 data-ch5-textcontent="" id="temp-index">28</h1>
+                  <h1
+                    class="temp-index"
+                    onload="climatePageModule.TextContentConvert()"
+                    data-ch5-textcontent="Climate.GuestRoom.Room[{{idx}}].TempIsSet"
+                    id="temp-index-{{idx}}"
+                  >
+                    28
+                  </h1>
                   <h3>ºC</h3>
                 </div>
               </div>
@@ -188,24 +195,24 @@
                 <div class="on-off-btn plus-minus-btn">
                   <div></div>
                   <ch5-button
-                    id="plus-btn"
+                    id="plus-btn-{{idx}}"
                     label=""
                     shape="circle"
                     stretch="both"
                     iconclass="fas fa-plus"
-                    onclick=""
-                    sendeventonclick="Rooms.Climate.IncrementTemp"
+                    onclick="climatePageModule.BtnClickAttrUpdate()"
+                    sendeventonclick="Climate.GuestRoom.Room[{{idx}}].IncrementTemp"
                   >
                   </ch5-button>
 
                   <ch5-button
-                    id="minus-btn"
+                    id="minus-btn-{{idx}}"
                     label=""
                     shape="circle"
                     stretch="both"
                     iconclass="fas fa-minus"
                     onclick=""
-                    sendeventonclick="Rooms.Climate.DecrementTemp"
+                    sendeventonclick="Climate.GuestRoom.Room[{{idx}}].DecrementTemp"
                   >
                   </ch5-button>
                   <div></div>

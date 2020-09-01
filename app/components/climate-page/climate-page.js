@@ -105,10 +105,56 @@ var climatePageModule = (function () {
     }
   }
 
+  // an experiment to turn number to string (not working)
+
+  var listSize = document
+    .getElementById("climate-horizontal-list")
+    .getAttribute("receivestatesize");
+
+  function TextContentAttrUpdate(idx) {
+    // let tempIndexTextContentAttr = document
+    //   .getElementById("temp-index-" + idx)
+    //   .getAttribute("data-ch5-textcontent");
+    // tempIndexTextContentAttr.toString();
+    console.log("TextContentAttrUpdate is being  called");
+    let tempIndexElement = document.getElementsByClassName("temp-index");
+    let elementAttr = tempIndexElement[idx].getAttribute(
+      "data-ch5-textcontent"
+    );
+    tempIndexElement[idx].setAttribute(
+      "data-ch5-textcontent",
+      elementAttr.toString()
+    );
+    return;
+  }
+
+  function TextContentConvert() {
+    let elementAttr = ele.getAttribute("data-ch5-textcontent");
+    ele.setAttribute("data-ch5-textcontent", elementAttr.toString());
+  }
+
+  // var plusButton = document.getElementById("plus-btn-" + idx);
+  // var minusButton = document.getElementById("minus-btn-" + idx);
+
+  // plusButton.addEventListener("click", BtnClickAttrUpdate);
+  // minusButton.addEventListener("click", BtnClickAttrUpdate);
+
+  function BtnClickAttrUpdate() {
+    console.log("list size is:" + listSize);
+    for (let idx = 0; idx < listSize; idx++) {
+      TextContentAttrUpdate(idx);
+    }
+  }
+
+  //
+
   /**
    * All public method and properties are exported here
    */
   return {
     getOutput: getOutput,
+    BtnClickAttrUpdate: BtnClickAttrUpdate,
+    TextContentAttrUpdate: TextContentAttrUpdate,
+    TextContentConvert: TextContentConvert,
   };
 })();
