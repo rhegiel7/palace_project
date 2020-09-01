@@ -12,33 +12,33 @@
       selected="false"
       id="shades-btn"
       label="Shades"
-      size="large"
+      size="regular"
       shape="rectangle"
-      sendeventonclick="trig_shades"
-      receiveStateSelected="show_shades"
+      sendeventonclick="Rooms.Blinds.ShowShades"
+      receiveStateSelected="Rooms.Blinds.ShadesAreShown"
     >
     </ch5-button>
     <ch5-button
       id="blackout-btn"
       label="Blackout"
-      size="large"
+      size="regular"
       shape="rectangle"
-      sendeventonclick="trig_blackout"
-      receiveStateSelected="show_blackout"
+      sendeventonclick="Rooms.Blinds.ShowBlackout"
+      receiveStateSelected="Rooms.Blinds.BlackoutAreShown"
     >
     </ch5-button>
   </div>
 
   <hr />
   <ch5-triggerview activeview="0">
-    <ch5-triggerview-child receivestateshow="show_shades">
+    <ch5-triggerview-child receivestateshow="Rooms.Blinds.ShadesAreShown">
       <ch5-import-htmlsnippet
         url="./components/shades/shades.html"
         class="shades-templ"
       >
       </ch5-import-htmlsnippet>
     </ch5-triggerview-child>
-    <ch5-triggerview-child receivestateshow="show_blackout">
+    <ch5-triggerview-child receivestateshow="Rooms.Blinds.BlackoutAreShown">
       <ch5-import-htmlsnippet
         url="./components/blackout/blackout.html"
         class="blackout-templ"

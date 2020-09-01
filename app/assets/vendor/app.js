@@ -99,8 +99,8 @@ var appModule = (function () {
     //since the user was active.
     var secondsSinceLastActivity = 0;
 
-    //Five minutes. 60 x 5 = 300 seconds.
-    var maxInactivity = 5;
+    //Two minutes. 60 x 2 = 120 seconds.
+    var maxInactivity = 60 * 2;
 
     //   Hide navbar on inactivity page
 
