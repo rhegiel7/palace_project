@@ -933,8 +933,10 @@
       }
       .noUi-connect::after {
         transform: rotate(-90deg);
-        background-image: url("/assets/img/blinds/blinds_transp_white.png");
+        background-image: url("/assets/img/blinds/blinds_transp_white_resized.png");
         background-repeat: no-repeat;
+        background-size: 150% 150%;
+
         content: "";
         opacity: 0.75;
         top: 0;
@@ -954,7 +956,7 @@
   .blackout-container {
     .ch5-slider {
       .noUi-connect {
-        background-image: url("/assets/img/blinds/curtain_grey_left.png");
+        background-image: url("/assets/img/blinds/curtain_grey_left_resized.png");
 
         background-size: 150% 100%;
         background-repeat: no-repeat;
