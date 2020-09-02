@@ -14,10 +14,10 @@
       shape="circle"
       class="shadow-pulse-button"
       iconClass="fas fa-cloud-sun"
-      sendEventOnClick="Rooms.Climate.WeatherInfoBtnClicked"
+      sendEventOnClick="Room.Climate.WeatherInfoBtnClicked"
     ></ch5-button>
     <ch5-modal-dialog
-      receiveStateShowPulse="Rooms.Climate.WeatherInfoBtnClicked"
+      receiveStateShowPulse="Room.Climate.WeatherInfoBtnClicked"
       closable
       closeIcon="fa fa-window-close"
       hideOkButton="true"
@@ -61,7 +61,7 @@
         <div class="room-temp d-flex align-items-center">
           <span
             class="room-label"
-            data-ch5-textcontent="Climate.GuestRoom.Room[{{idx}}].RoomName"
+            data-ch5-textcontent="Room[{{idx}}].RoomName"
             >Room Name</span
           >
           <div class="temp-humidity ml-auto">
@@ -93,8 +93,8 @@
                   label="Fan"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.FanSetSelected"
-                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.FanIsSelected"
+                  sendeventonclick="Room[{{idx}}].Mode.FanSetSelected"
+                  receivestateselected="Room[{{idx}}].Mode.FanIsSelected"
                 >
                 </ch5-button>
                 <ch5-button
@@ -102,8 +102,8 @@
                   label="Cool"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.CoolSetSelected"
-                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.CoolIsSelected"
+                  sendeventonclick="Room[{{idx}}].Mode.CoolSetSelected"
+                  receivestateselected="Room[{{idx}}].Mode.CoolIsSelected"
                 >
                 </ch5-button>
                 <ch5-button
@@ -111,8 +111,8 @@
                   label="Off"
                   stretch="both"
                   shape="rectangle"
-                  sendeventonclick="Climate.GuestRoom.Room[{{idx}}].Mode.OffSetSelected"
-                  receivestateselected="Climate.GuestRoom.Room[{{idx}}].Mode.OffIsSelected"
+                  sendeventonclick="Room[{{idx}}].Mode.OffSetSelected"
+                  receivestateselected="Room[{{idx}}].Mode.OffIsSelected"
                 >
                 </ch5-button>
               </div>
@@ -132,8 +132,8 @@
             label="High"
             shape="rectangle"
             stretch="both"
-            sendeventonclick="Rooms.Climate.Fan.HighSetSelected"
-            receivestateselected="Rooms.Climate.Fan.HighIsSelected"
+            sendeventonclick="Room.Climate.Fan.HighSetSelected"
+            receivestateselected="Room.Climate.Fan.HighIsSelected"
           >
           </ch5-button>
 
@@ -142,8 +142,8 @@
             label="Medium"
             shape="rectangle"
             stretch="both"
-            sendeventonclick="Rooms.Climate.Fan.MediumSetSelected"
-            receivestateselected="Rooms.Climate.Fan.MediumIsSelected"
+            sendeventonclick="Room.Climate.Fan.MediumSetSelected"
+            receivestateselected="Room.Climate.Fan.MediumIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -151,8 +151,8 @@
             label="Low"
             shape="rectangle"
             stretch="both"
-            sendeventonclick="Rooms.Climate.Fan.LowSetSelected"
-            receivestateselected="Rooms.Climate.Fan.LowIsSelected"
+            sendeventonclick="Room.Climate.Fan.LowSetSelected"
+            receivestateselected="Room.Climate.Fan.LowIsSelected"
           >
           </ch5-button>
           <ch5-button
@@ -160,8 +160,8 @@
             label="Auto"
             shape="rectangle"
             stretch="both"
-            sendeventonclick="Rooms.Climate.Fan.AutoSetSelected"
-            receivestateselected="Rooms.Climate.Fan.AutoIsSelected"
+            sendeventonclick="Room.Climate.Fan.AutoSetSelected"
+            receivestateselected="Room.Climate.Fan.AutoIsSelected"
           >
           </ch5-button>
         </div>
