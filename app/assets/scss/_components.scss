@@ -1,3 +1,7 @@
+$window_bg_image: url("/assets/img/blinds/window_view1.jpeg");
+$shades_bg_image: url("/assets/img/blinds/blinds_transp_white_resized.png");
+$blackout_bg_image: url("/assets/img/blinds/curtain_grey_left_resized.png");
+
 .ch5-button {
   border: none;
 }
@@ -933,7 +937,9 @@
       }
       .noUi-connect::after {
         transform: rotate(-90deg);
-        background-image: url("/assets/img/blinds/blinds_transp_white_resized.png");
+        // background-image: url("/assets/img/blinds/blinds_transp_white_resized.png");
+        background-image: $shades_bg_image;
+
         background-repeat: no-repeat;
         background-size: 150% 150%;
 
@@ -956,7 +962,8 @@
   .blackout-container {
     .ch5-slider {
       .noUi-connect {
-        background-image: url("/assets/img/blinds/curtain_grey_left_resized.png");
+        // background-image: url("/assets/img/blinds/curtain_grey_left_resized.png");
+        background-image: $blackout_bg_image;
 
         background-size: 150% 100%;
         background-repeat: no-repeat;
@@ -981,7 +988,9 @@
     border-top: 1rem solid rgb(48, 26, 2);
     box-shadow: 0px 5px 6px 5px rgb(85, 83, 83);
     border-radius: 5px;
-    background-image: url("/assets/img/blinds/window_view1.jpeg");
+    // background-image: url("/assets/img/blinds/window_view1.jpeg");
+    background-image: $window_bg_image;
+
     background-size: 100% 100%;
     background-repeat: no-repeat;
     padding: 0 0 0 0;
