@@ -75,15 +75,37 @@
         <span class="window-label">Window #{{idx}} </span>
 
         <div class="slider-container shades-container container">
-          <!-- <ch5-slider
-            nohandle="true"
-            orientation="vertical"
-            min="0"
-            max="100"
-            receivestatevalue="receive_shades_value"
+          <ch5-image
+            alt="window-img"
+            class="window-image"
+            url="/assets/img/blinds/window_view1.jpeg"
           >
-          </ch5-slider> -->
-          <ch5-slider
+          </ch5-image>
+          <div
+            id="shades-horizontal-right-{{idx}}"
+            class="blinds-image-container-right shade-horizontal-right"
+          >
+            <ch5-image
+              alt="shades-img-right"
+              class="shades-image-right"
+              url="/assets/img/blinds/blinds_transp_white.png"
+            >
+            </ch5-image>
+          </div>
+          <div
+            id="shades-horizontal-left-{{idx}}"
+            class="blinds-image-container-left shade-horizontal-left"
+          >
+            <ch5-image
+              alt="shades-img-left"
+              class="shades-image-left"
+              url="/assets/img/blinds/blinds_transp_white.png"
+            >
+            </ch5-image>
+          </div>
+
+          <!-- Shades done with ch5-slider -->
+          <!-- <ch5-slider
             class="left-slider"
             nohandle="true"
             min="0"
@@ -98,20 +120,23 @@
             max="50"
             receivestatevalue="Rooms.Blinds.RightShadeValue"
           >
-          </ch5-slider>
+          </ch5-slider> -->
         </div>
         <div class="open-close-btn-container mt-4">
           <div class="open-close-btn">
             <ch5-button
-              id="open_blind"
+              class="open-horiz-shades-button"
+              id="open-shades-horizontal-{{idx}}"
               label="Open"
+              onclick="blindsPageModule.openShades()"
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.OpenShades"
             >
             </ch5-button>
             <ch5-button
-              id="stop_blind"
+              class="stop-horiz-shades-button"
+              id="stop-shades-horizontal-{{idx}}"
               label="Stop"
               shape="circle"
               stretch="both"
@@ -119,8 +144,10 @@
             >
             </ch5-button>
             <ch5-button
-              id="close_blind"
+              class="close-horiz-shades-button"
+              id="close-shades-horizontal-{{idx}}"
               label="Close"
+              onclick="blindsPageModule.closeShades()"
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.CloseShades"
