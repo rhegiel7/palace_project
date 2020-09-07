@@ -920,6 +920,9 @@ $blackout_bg_image: url("/assets/img/blinds/curtain_grey_left_resized.png");
       @include media-breakpoint-up(sm) {
         font-size: 1rem;
       }
+      // > * {
+      //   pointer-events: none;
+      // }
     }
   }
 
@@ -937,12 +940,9 @@ $blackout_bg_image: url("/assets/img/blinds/curtain_grey_left_resized.png");
       }
       .noUi-connect::after {
         transform: rotate(-90deg);
-        // background-image: url("/assets/img/blinds/blinds_transp_white_resized.png");
         background: $shades_bg_image !important;
-
         background-repeat: no-repeat !important;
         background-size: 150% 150% !important;
-
         content: "";
         opacity: 0.75;
         top: 0;
@@ -962,13 +962,12 @@ $blackout_bg_image: url("/assets/img/blinds/curtain_grey_left_resized.png");
   .blackout-container {
     .ch5-slider {
       .noUi-connect {
-        // background-image: url("/assets/img/blinds/curtain_grey_left_resized.png");
         background: $blackout_bg_image !important;
-
         background-size: 150% 100% !important;
         background-repeat: no-repeat !important;
         background-color: transparent;
       }
+      // ............... this block was not  in use
       // &.left-slider {
       //   .noUi-connect {
       //   }

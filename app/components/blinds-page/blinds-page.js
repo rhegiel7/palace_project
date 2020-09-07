@@ -20,6 +20,7 @@ var blindsPageModule = (function () {
   }
 
   // (HORIZONTAL SHADES AND BLACKOUT) Methods for opening, closing and stoping blinds
+
   var shadesListLengthHoriz = document.getElementById("cr-id-26").childNodes
     .length;
   var blackoutListLengthHoriz = document.getElementById("cr-id-30").childNodes
@@ -37,9 +38,27 @@ var blindsPageModule = (function () {
   var leftBlackoutHoriz = document.getElementsByClassName(
     "blackout-horizontal-left"
   );
-  var openHorizShadesButtons = document.getElementsByClassName(
-    "open-horiz-shades-button"
-  );
+  // var buttonsContainerHoriz = document.getElementByClassName(
+  //   "open-close-btn-horizontal".
+  // );
+
+  for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
+    var openHorizShadesButtons = document
+      .getElementById("open-shades-horizontal-" + idx)
+      .getElementsByClassName("cb-btn");
+  }
+
+  // var openHorizShadesButtons = document
+  //   .getElementById("blinds-horiz-list")
+  //   .getElementsByClassName("cb-btn");
+
+  //  for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
+  //   openHorizShadesButtons.classlist.add("cbBtn-open-" + idx)
+  //  }
+
+  // var openHorizShadesButtons = document.getElementsByClassName(
+  //   "open-horiz-shades-button"
+  // );
   var closeHorizShadesButtons = document.getElementsByClassName(
     "close-horiz-shades-button"
   );
@@ -60,16 +79,16 @@ var blindsPageModule = (function () {
   //   });
   // }
 
-  function openShades(idx) {
+  function openShades() {
+    console.log(openHorizShadesButtons.length);
     for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
+      console.log(event.target);
       openHorizShadesButtons[idx].addEventListener(
         "click",
         openHorizonShades(idx)
       );
     }
-    // if (openHorizShadesButtons[idx] == event.target) {
-    //   openHorizonShades(idx);
-    // }
+    // if(e.target && e.target.nodeName == "LI")
   }
   function closeShades() {
     for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
@@ -79,7 +98,7 @@ var blindsPageModule = (function () {
       );
     }
   }
-  function openBlackout(idx) {
+  function openBlackout() {
     for (let idx = 0; idx < blackoutListLengthHoriz; idx++) {
       openHorizBlackoutButtons[idx].addEventListener(
         "click",
@@ -95,7 +114,7 @@ var blindsPageModule = (function () {
       );
     }
   }
-
+  // if (openHorizShadesButtons[idx] == event.target)
   function openHorizonShades(idx) {
     rightShadesHoriz[idx].style.transform = "translateX(100%)";
     leftShadesHoriz[idx].style.transform = "translateX(-100%)";

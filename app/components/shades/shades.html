@@ -70,7 +70,12 @@
   <div
     class="blinds-list-container d-sm-flex d-none justify-content-center align-items-center"
   >
-    <ch5-list size="6" orientation="horizontal" indexId="idx">
+    <ch5-list
+      size="7"
+      orientation="horizontal"
+      indexId="idx"
+      id="blinds-horiz-list"
+    >
       <template>
         <span class="window-label">Window #{{idx}} </span>
 
@@ -78,7 +83,7 @@
           <ch5-image
             alt="window-img"
             class="window-image"
-            url="/assets/img/blinds/window_view1.jpeg"
+            url="./assets/img/blinds/window_view1.jpeg"
           >
           </ch5-image>
           <div
@@ -88,7 +93,7 @@
             <ch5-image
               alt="shades-img-right"
               class="shades-image-right"
-              url="/assets/img/blinds/blinds_transp_white.png"
+              url="./assets/img/blinds/blinds_transp_white.png"
             >
             </ch5-image>
           </div>
@@ -99,7 +104,7 @@
             <ch5-image
               alt="shades-img-left"
               class="shades-image-left"
-              url="/assets/img/blinds/blinds_transp_white.png"
+              url="./assets/img/blinds/blinds_transp_white.png"
             >
             </ch5-image>
           </div>
@@ -123,7 +128,7 @@
           </ch5-slider> -->
         </div>
         <div class="open-close-btn-container mt-4">
-          <div class="open-close-btn">
+          <div class="open-close-btn" id="horizontal-buttons">
             <ch5-button
               class="open-horiz-shades-button"
               id="open-shades-horizontal-{{idx}}"
