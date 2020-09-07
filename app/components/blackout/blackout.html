@@ -76,7 +76,26 @@
         <span class="window-label">Window #{{idx}} </span>
 
         <div class="slider-container blackout-container container">
-          <ch5-image
+          <!-- Blackout done with ch5-slider -->
+          <ch5-slider
+            class="left-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="Rooms.Blinds.LeftBlackoutValue"
+          >
+          </ch5-slider>
+          <ch5-slider
+            class="right-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="Rooms.Blinds.RightBlackoutValue"
+          >
+          </ch5-slider>
+
+          <!-- Blackout done with css and JS -->
+          <!-- <ch5-image
             alt="window-img"
             class="window-image"
             url="./assets/img/blinds/window_view1.jpeg"
@@ -97,25 +116,7 @@
               url="./assets/img/blinds/curtain_grey_left.png"
             >
             </ch5-image>
-          </div>
-
-          <!-- Blackout done with ch5-slider -->
-          <!-- <ch5-slider
-            class="left-slider"
-            nohandle="true"
-            min="0"
-            max="50"
-            receivestatevalue="Rooms.Blinds.LeftBlackoutValue"
-          >
-          </ch5-slider>
-          <ch5-slider
-            class="right-slider"
-            nohandle="true"
-            min="0"
-            max="50"
-            receivestatevalue="Rooms.Blinds.RightBlackoutValue"
-          >
-          </ch5-slider> -->
+          </div> -->
         </div>
         <div class="open-close-btn-container mt-3">
           <div class="open-close-btn">
@@ -123,7 +124,7 @@
               class="open-horiz-blackout-button"
               id="open_blind"
               label="Open"
-              onclick="blindsPageModule.openBlackout()"
+              onclick=""
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.OpenBlackout"
@@ -142,7 +143,7 @@
               class="close-horiz-blackout-button"
               id="close_blind"
               label="Close"
-              onclick="blindsPageModule.closeBlackout()"
+              onclick=""
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.CloseBlackout"

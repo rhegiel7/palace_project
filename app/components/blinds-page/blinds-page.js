@@ -59,15 +59,15 @@ var blindsPageModule = (function () {
   // var openHorizShadesButtons = document.getElementsByClassName(
   //   "open-horiz-shades-button"
   // );
-  var closeHorizShadesButtons = document.getElementsByClassName(
-    "close-horiz-shades-button"
-  );
-  var openHorizBlackoutButtons = document.getElementsByClassName(
-    "open-horiz-blackout-button"
-  );
-  var closeHorizBlackoutButtons = document.getElementsByClassName(
-    "close-horiz-blackout-button"
-  );
+  // var closeHorizShadesButtons = document.getElementsByClassName(
+  //   "close-horiz-shades-button"
+  // );
+  // var openHorizBlackoutButtons = document.getElementsByClassName(
+  //   "open-horiz-blackout-button"
+  // );
+  // var closeHorizBlackoutButtons = document.getElementsByClassName(
+  //   "close-horiz-blackout-button"
+  // );
 
   // for (var idx = 0; idx < shadesListLengthHoriz; idx++) {
   //   openHorizShadesButtons[idx].addEventListener("click", function (e) {
@@ -79,25 +79,25 @@ var blindsPageModule = (function () {
   //   });
   // }
 
-  function openShades() {
-    console.log(openHorizShadesButtons.length);
-    for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
-      console.log(event.target);
-      openHorizShadesButtons[idx].addEventListener(
-        "click",
-        openHorizonShades(idx)
-      );
-    }
-    // if(e.target && e.target.nodeName == "LI")
-  }
-  function closeShades() {
-    for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
-      closeHorizShadesButtons[idx].addEventListener(
-        "click",
-        closeHorizonShades(idx)
-      );
-    }
-  }
+  // function openShades() {
+  //   console.log(openHorizShadesButtons.length);
+  //   for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
+  //     console.log(event.target);
+  //     openHorizShadesButtons[idx].addEventListener(
+  //       "click",
+  //       openHorizonShades(idx)
+  //     );
+  //   }
+  //   // if(e.target && e.target.nodeName == "LI")
+  // }
+  // function closeShades() {
+  //   for (let idx = 0; idx < shadesListLengthHoriz; idx++) {
+  //     closeHorizShadesButtons[idx].addEventListener(
+  //       "click",
+  //       closeHorizonShades(idx)
+  //     );
+  //   }
+  // }
   function openBlackout() {
     for (let idx = 0; idx < blackoutListLengthHoriz; idx++) {
       openHorizBlackoutButtons[idx].addEventListener(
@@ -145,9 +145,9 @@ var blindsPageModule = (function () {
    */
   return {
     getOutput: getOutput,
-    openShades: openShades,
-    closeShades: closeShades,
-    openBlackout: openBlackout,
-    closeBlackout: closeBlackout,
+    // openShades: openShades,
+    // closeShades: closeShades,
+    // openBlackout: openBlackout,
+    // closeBlackout: closeBlackout,
   };
 })();

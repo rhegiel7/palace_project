@@ -80,7 +80,26 @@
         <span class="window-label">Window #{{idx}} </span>
 
         <div class="slider-container shades-container container">
-          <ch5-image
+          <!-- Shades done with ch5-slider -->
+          <ch5-slider
+            class="left-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="Rooms.Blinds.LeftShadeValue"
+          >
+          </ch5-slider>
+          <ch5-slider
+            class="right-slider"
+            nohandle="true"
+            min="0"
+            max="50"
+            receivestatevalue="Rooms.Blinds.RightShadeValue"
+          >
+          </ch5-slider>
+
+          <!-- Shades done with JS and css (using transform styles) -->
+          <!-- <ch5-image
             alt="window-img"
             class="window-image"
             url="./assets/img/blinds/window_view1.jpeg"
@@ -108,24 +127,7 @@
             >
             </ch5-image>
           </div>
-
-          <!-- Shades done with ch5-slider -->
-          <!-- <ch5-slider
-            class="left-slider"
-            nohandle="true"
-            min="0"
-            max="50"
-            receivestatevalue="Rooms.Blinds.LeftShadeValue"
-          >
-          </ch5-slider>
-          <ch5-slider
-            class="right-slider"
-            nohandle="true"
-            min="0"
-            max="50"
-            receivestatevalue="Rooms.Blinds.RightShadeValue"
-          >
-          </ch5-slider> -->
+ -->
         </div>
         <div class="open-close-btn-container mt-4">
           <div class="open-close-btn" id="horizontal-buttons">
@@ -133,7 +135,7 @@
               class="open-horiz-shades-button"
               id="open-shades-horizontal-{{idx}}"
               label="Open"
-              onclick="blindsPageModule.openShades()"
+              onclick=""
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.OpenShades"
@@ -152,7 +154,7 @@
               class="close-horiz-shades-button"
               id="close-shades-horizontal-{{idx}}"
               label="Close"
-              onclick="blindsPageModule.closeShades()"
+              onclick=""
               shape="circle"
               stretch="both"
               sendeventonclick="Rooms.Blinds.CloseShades"
